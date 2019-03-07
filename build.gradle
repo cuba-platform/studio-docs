@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2'
+    }
+}
+
+apply plugin: 'org.asciidoctor.convert'
+
+asciidoctor {
+    sourceDir = file('adoc')
+    sources {
+        include 'en/studio.adoc'
+        include 'ru/studio.adoc'
+    }
+    outputDir = file('build')
+}
+
+asciidoctor.doLast {
+    copy {
+        from 'img'
+        into 'build/html5/img'
+    }
+}
