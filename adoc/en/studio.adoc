@@ -3,11 +3,11 @@
 :toc-title: Table of contents
 :toclevels: 6
 :sectnumlevels: 6
-//:stylesheet: cuba.css
+:stylesheet: cuba.css
 :linkcss:
 :source-highlighter: coderay
 :imagesdir: ../img
-//:stylesdir: ./styles
+:stylesdir: ../styles
 :sourcesdir: ../../source
 :doctype: book
 :sectlinks:

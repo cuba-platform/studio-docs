@@ -24,4 +24,9 @@ asciidoctor.doLast {
         from 'img'
         into 'build/html5/img'
     }
+    
+    copy {
+        from 'styles'
+        into 'build/html5/styles'
+    }
 }
