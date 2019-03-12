@@ -1,6 +1,6 @@
 @import "asciidoctor.css";
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600");
 
 :root {
   --main-title-color: #0b6ec7;
@@ -52,7 +52,12 @@ body {
 
 #header, #content, #footnotes, #footer {
  max-width: 100%;
- padding: 0 40px 0 100px;
+ padding: 0px;
+}
+
+#content {
+ padding: 0 40px 0 40px;
+ margin-top: 0px;
 }
 
 #header {
@@ -73,6 +78,7 @@ body {
  position: absolute;
  right: 40px;
  top: 35px;
+ width: 150px;
 }
 
 #header .details #revremark:before {
@@ -81,34 +87,19 @@ body {
 
 #header > h1:first-child {
  margin-top: 25px;
+ margin-left: 30px;
+ width: 200px;
 }
 
-h1 {
- font-size: 2.875em;
-}
-
-h2 {
- font-size: 2.375em;
-}
-
-h3, #toctitle, .sidebarblock > .content > .title {
- font-size: 1.4875em;
-}
-
-h4 {
- font-size: 1.2875em;
-}
-
-h5 {
- font-size: 1.4em;
-}
-
-h6 {
- font-size: 1.2em;
-}
+h1 { font-size: 3.5em; }
+h2 { font-size: 3em; }
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.8em; }
+h4 { font-size: 1.6em; }
 
 h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
  color: var(--main-title-color);
+ margin-top: 0.2em;
+ line-height: 1.4;
 }
 
 #content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link {
@@ -118,20 +109,83 @@ h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
 
 #content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content>.title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover {
     color: var(--main-title-color);
-    text-decoration: underline;
 }
 
 a {
  color: var(--main-title-color);
+ text-decoration: none;
 }
 
 a:hover, a:focus {
  color: var(--a-href-color);
 }
 
+p {
+ font-size: 20px;
+ font-weight: 400;
+ margin-bottom: 0.5em;
+ line-height: 1.5;
+}
+
+p, td.content {
+ letter-spacing: 0px;
+}
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist {
+ margin-bottom: 0.25em;
+}
+
+ul, ol, dl {
+ line-height: 1.5;
+ margin-bottom: 0.5em;
+}
+
+dl dt {
+ margin-bottom: 0.3em;
+ font-size: 16px;
+}
+
+*:not(pre) > code {
+ font-size: 20px;
+ word-wrap: break-word;
+ padding: 0px;
+ word-spacing: 0px;
+ line-height: inherit;
+ border-radius: unset;
+}
+
+.sect1, .sect2, .sect3, .sect4, .sect5 {
+ padding-top: 1em;
+}
+
+.sect1 {
+ padding-bottom: 1.25em;
+}
+
+.audioblock, .imageblock, .literalblock, .listingblock, .stemblock, .videoblock {
+ margin-bottom: 1.25em;
+ margin-top: 1.25em;
+}
+
+.listingblock {
+ font-size: 20px;
+ background-color: #f1f1f1;
+ padding: 15px 0px;
+}
+
+.literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] {
+ padding: 0.75em;
+ border: none;
+ font-size: 0.90625em;
+}
+
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+ background: none;
+}
+
 /* toc menu */
-#toc.toc2 {
- border-right: 1px solid var(--header-and-toc-border-color);
+#toc {
+ padding-bottom: 0px;
 }
 
 #toc a {
@@ -149,4 +203,62 @@ a:hover, a:focus {
 #toc > #toctitle {
  color: var(--main-title-color);
  font-weight: bold;
+ font-size: 40px;
+}
+
+#toc.toc2 {
+ margin: 0 30px 0 30px;
+}
+
+#toc > ul {
+ margin-left: 0;
+ font-size: 30px;
+ margin-bottom: 0px;
+}
+
+/*
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 769px) {
+}
+*/
+
+@media only screen and (min-width:768px){
+ #toc.toc2 {
+  border-right: 1px solid var(--header-and-toc-border-color);
+ }
+
+ h1 {
+  font-size: 2.875em;
+ }
+
+ h2 {
+  font-size: 2.375em;
+ }
+
+ h3, #toctitle, .sidebarblock > .content > .title {
+  font-size: 1.4875em;
+ }
+
+ h4 {
+  font-size: 1.2875em;
+ }
+
+ h5 {
+  font-size: 1.4em;
+ }
+
+ h6 {
+  font-size: 1.2em;
+ }
+
+ #header, #content, #footnotes, #footer {
+  max-width: 100%;
+  padding: 0 40px 0 100px;
+ }
+}
+
+@media only screen and (min-width:1280px) {
+
 }
