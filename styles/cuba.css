@@ -9,12 +9,96 @@
   --toc-a-href-color: #005eb3;
 }
 
-
-#header> h1:first-child {
- color: var(--main-title-color);
+html {
+ font-size: 14px;
 }
-#header .details {
+
+html, body {
+ font-family: 'Roboto', sans-serif;
+}
+
+li.toc-item, toc-link, #toc ul {
+ font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
+ font-family: 'Roboto', sans-serif;
+}
+
+pre, pre > code {
+ font-family: 'Source Code Pro', monospace;
+}
+
+*:not(pre) > code {
+ font-family: 'Source Code Pro', monospace;
+}
+
+body {
+ color: var(--main-text-color);
+}
+
+#header> h1:first-child, #toc > #toctitle {
  color: var(--main-title-color);
+ font-weight: bold;
+ font-size: 20px;
+ line-height: 1;
+}
+
+#header, #content, #footnotes, #footer {
+ max-width: 100%;
+ padding: 0 40px 0 100px;
+}
+
+#header {
+ border-bottom: 1px solid #ddddd8;
+}
+
+#header .details {
+ border-bottom: none;
+ line-height: 2.2em;
+ margin-bottom: 22px;
+ margin-top: -10px;
+}
+
+#header .details #revremark {
+ color: #565656;
+ display: block;
+ font-size: .8em;
+ position: absolute;
+ right: 40px;
+ top: 35px;
+}
+
+#header .details #revremark:before {
+ content: "" !important;
+}
+
+#header > h1:first-child {
+ margin-top: 25px;
+}
+
+h1 {
+ font-size: 2.875em;
+}
+
+h2 {
+ font-size: 2.375em;
+}
+
+h3, #toctitle, .sidebarblock > .content > .title {
+ font-size: 1.4875em;
+}
+
+h4 {
+ font-size: 1.2875em;
+}
+
+h5 {
+ font-size: 1.4em;
+}
+
+h6 {
+ font-size: 1.2em;
 }
 
 h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
@@ -23,6 +107,7 @@ h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
 
 #content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link {
  color: var(--main-title-color);
+ font-weight: bold;
 }
 
 #content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content>.title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover {
@@ -39,10 +124,19 @@ a:hover, a:focus {
 }
 
 /* toc menu */
-#toc > #toctitle, #toc a {
+#toc a {
  color: var(--main-text-color);
 }
 
 #toc a:hover, a:focus {
  color: var(--toc-a-href-color);
+}
+
+#toc a:active {
+ text-decoration: none;
+}
+
+#toc > #toctitle {
+ color: var(--main-title-color);
+ font-weight: bold;
 }
