@@ -7,6 +7,8 @@
   --main-text-color: #222;
   --a-href-color: black;
   --toc-a-href-color: #005eb3;
+
+  --header-and-toc-border-color: #ddddd8;
 }
 
 html {
@@ -35,6 +37,10 @@ pre, pre > code {
 
 body {
  color: var(--main-text-color);
+ background: #fff;
+ padding: 0;
+ margin: 0;
+ font-style: normal;
 }
 
 #header> h1:first-child, #toc > #toctitle {
@@ -50,7 +56,7 @@ body {
 }
 
 #header {
- border-bottom: 1px solid #ddddd8;
+ border-bottom: 1px solid var(--header-and-toc-border-color);
 }
 
 #header .details {
@@ -124,6 +130,10 @@ a:hover, a:focus {
 }
 
 /* toc menu */
+#toc.toc2 {
+ border-right: 1px solid var(--header-and-toc-border-color);
+}
+
 #toc a {
  color: var(--main-text-color);
 }
