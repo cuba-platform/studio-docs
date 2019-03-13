@@ -79,6 +79,7 @@ body {
  font-size: .8em;
  position: absolute;
  right: 40px;
+ text-align: right;
  top: 35px;
  width: 150px;
 }
@@ -251,6 +252,14 @@ pre, pre>code {
   margin: 0px;
  }
 
+ #toc.toc2 ul ul {
+  padding-left: 0px;
+ }
+
+ #toc.toc2 > .sectlevel1 li {
+  padding: 0px 0px 1px 5px;
+ }
+
  h1 {
   font-size: 2.875em;
  }
@@ -313,5 +322,36 @@ pre, pre>code {
 }
 
 @media only screen and (min-width:1280px) {
+ #toc.toc2 #toctitle {
+  font-size: 21px;
+  margin-top: 8px;
+  vertical-align: top;
+  margin-left: 8px;
+  line-height: 1.4;
+  padding-left: 5px;
+ }
 
+ #toc.toc2 {
+  padding: 0px;
+ }
+
+ #toc.toc2 > .sectlevel1 {
+  padding: 5px;
+  padding-top: 10px;
+ }
+
+ #toc.toc2 > .sectlevel1 li {
+  padding: 3px 0px 3px 10px;
+ }
+
+ #toc.toc2 > ul {
+  font-size: 0.95em;
+ }
+
+ #toc.toc2 a {
+  text-decoration: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 15px;
+ }
 }
