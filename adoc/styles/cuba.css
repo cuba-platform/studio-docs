@@ -173,6 +173,40 @@ pre, pre>code {
  padding-bottom: 1.25em;
 }
 
+.admonitionblock > table {
+ margin-bottom: 0;
+}
+.admonitionblock .icon {
+ display: none;
+}
+
+.admonitionblock > table td.content {
+ border-left: none;
+}
+
+#footer {
+ display: none;
+}
+
+.warning {
+ background: #f8e8e8;
+ margin-bottom: 10px;
+ border: none;
+ padding: 8px;
+}
+
+.tip {
+ background: #ecf2ff;
+ padding: 8px;
+ margin: 10px 0;
+}
+
+.admonitionblock > table td.content {
+ padding-left: 1.125em;
+ padding-right: 1.25em;
+ color: #000;
+}
+
 #content .sect1, #content .sect2, #content .sect3, #content .sect4, #content .sect5 {
  max-width: 1100px;
 }
