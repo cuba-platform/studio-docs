@@ -2,15 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600");
 
-:root {
-  --main-title-color: #0b6ec7;
-  --main-text-color: #222;
-  --a-href-color: black;
-  --toc-a-href-color: #005eb3;
-
-  --header-and-toc-border-color: #ddddd8;
-}
-
 html {
  font-size: 14px;
  overflow-x: hidden;
@@ -37,7 +28,7 @@ pre, pre > code {
 }
 
 body {
- color: var(--main-text-color);
+ color: #222;
  background: #fff;
  padding: 0;
  margin: 0;
@@ -46,7 +37,7 @@ body {
 }
 
 #header> h1:first-child, #toc > #toctitle {
- color: var(--main-title-color);
+ color: #0b6ec7;
  font-weight: bold;
  font-size: 20px;
  line-height: 1;
@@ -63,7 +54,7 @@ body {
 }
 
 #header {
- border-bottom: 1px solid var(--header-and-toc-border-color);
+ border-bottom: 1px solid #ddddd8;
 }
 
 #header .details {
@@ -100,27 +91,31 @@ h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.8em; }
 h4 { font-size: 1.6em; }
 
 h1, h2, h3, #toctitle, .sidebarblock>.content>.title, h4, h5, h6 {
- color: var(--main-title-color);
+ color: #0b6ec7;
  margin-top: 0.2em;
  line-height: 1.4;
 }
 
 #content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link {
- color: var(--main-title-color);
+ color: #0b6ec7;
  font-weight: bold;
 }
 
 #content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content>.title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover {
-    color: var(--main-title-color);
+    color: #0b6ec7;
+}
+
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before {
+ padding-top: 0px;
 }
 
 a {
- color: var(--main-title-color);
+ color: #0b6ec7;
  text-decoration: none;
 }
 
 a:hover, a:focus {
- color: var(--a-href-color);
+ color: black;
 }
 
 p {
@@ -219,11 +214,11 @@ pre, pre>code {
 }
 
 #toc a {
- color: var(--main-text-color);
+ color: #222;
 }
 
 #toc a:hover, a:focus {
- color: var(--toc-a-href-color);
+ color: #005eb3;
 }
 
 #toc a:active {
@@ -231,7 +226,7 @@ pre, pre>code {
 }
 
 #toc > #toctitle {
- color: var(--main-title-color);
+ color: #0b6ec7;
  font-weight: bold;
  font-size: 40px;
 }
@@ -248,7 +243,7 @@ pre, pre>code {
 
 @media only screen and (min-width:768px){
  #toc.toc2 {
-  border-right: 1px solid var(--header-and-toc-border-color);
+  border-right: 1px solid #ddddd8;
   margin: 0px;
  }
 
