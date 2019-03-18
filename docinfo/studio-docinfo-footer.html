@@ -1,0 +1,12 @@
+<script>
+$('a').each(function() {
+    var path = new RegExp('/' + window.location.host + '/');
+    if(!path.test(this.href)) {
+        $(this).click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            window.open(this.href, '_blank');
+        });
+    }
+});
+</script>

@@ -22,11 +22,57 @@ asciidoctor {
 asciidoctor.doLast {
     copy {
         from 'img'
-        into 'build/html5/img'
+        into 'build/html5/en/img'
+    }
+    copy {
+        from 'img'
+        into 'build/html5/ru/img'
     }
     
     copy {
-        from 'adoc/styles/asciidoctor.css'
-        into 'build/html5/styles'
+        from 'styles'
+        into 'build/html5/en/styles'
     }
+    copy {
+        from 'styles'
+        into 'build/html5/ru/styles'
+    }
+
+    copy {
+        from 'js'
+        into 'build/html5/en/js'
+    }
+    copy {
+        from 'js'
+        into 'build/html5/ru/js'
+    }
+    
+    copy {
+        from 'redirect/en'
+        into 'build/html5/en'
+    }
+    copy {
+        from 'redirect/ru'
+        into 'build/html5/ru'
+    }
+}
+
+build.dependsOn(asciidoctor)
+
+build.doLast {
+    def tmpDir = new File(buildDir, "tmp/war/studio")
+    copy {
+        from "$buildDir/html5/en"
+        into tmpDir
+        rename 'studio.html', 'index.html'
+    }
+    ant.jar(destfile: "$buildDir/war/studio.war", basedir: tmpDir)
+    
+    def tmpRuDir = new File(buildDir, "tmp/war/studio-ru")
+    copy {
+        from "$buildDir/html5/ru"
+        into tmpRuDir
+        rename 'studio.html', 'index.html'
+    }
+    ant.jar(destfile: "$buildDir/war/studio-ru.war", basedir: tmpRuDir)
 }
