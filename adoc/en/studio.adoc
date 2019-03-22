@@ -16,7 +16,7 @@
 :sectlinks:
 :sectanchors:
 :lang: en
-:version-label: Version
+:version-label: IntelliJ Plugin Version
 :revremark: Copyright (c) 2019 Haulmont (www.haulmont.com)
 :plugin-version: 8
 :idea-version: 2018.3
