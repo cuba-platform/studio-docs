@@ -81,7 +81,7 @@ body {
 }
 
 #header #revnumber {
- margin-left: 100px;
+ margin-left: 30px;
  color: #0b6ec7;
  font-size: 16px !important;
  font-weight: 300 !important;
@@ -335,6 +335,10 @@ pre, pre>code {
 
  #header .details #revremark {
   width: auto;
+ }
+
+ #header #revnumber {
+  margin-left: 100px;
  }
 
  .sect1 {
