@@ -2,4 +2,4 @@
 
 ## Building
 
-    ./gradlew asciidoctor
+    ./gradlew build
