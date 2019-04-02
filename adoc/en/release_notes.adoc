@@ -3,6 +3,52 @@
 [[release_notes]]
 == Release Notes
 
+Version 9::
++
+--
+. BREAKING CHANGE: Studio now uses HSQL version 2.4.1. When you open a project using HSQL database, Studio prompts you to update the version of HSQL in the project's `build.gradle`. If you accept, the project will correctly work with the Studio v.9+. However, be aware of the following issues:
+.. The application will not start if the project with the new HSQL driver is opened in a previous Studio version containing the older HSQL server;
+.. In the projects with HSQL based on CUBA version before 7.1, Scheduled Tasks do not work because their table has a column named `PERIOD` which is a reserved word in HSQL 2.4.1. The column is renamed in CUBA 7.1.
+
+. Hot deploy mechanism now deploys all dependent classes together with the changed one, which eliminates `ClassCastException` on opening modified screens.
+
+. When selecting MySQL or Oracle database, Studio shows a dialog where you can click a link for downloading the JDBC driver from the vendor website and then upload it from the local file system to the correct locations in the project and Studio itself. After uploading a driver, restart Studio.
++
+The drivers can be removed from Studio using the *CUBA > Database Proprietary Drivers* settings page.
+
+. `DataGrid` and `TreeDataGrid` are available for browser and master-detail screen templates in the *Table type* field of the *Create CUBA Screen* wizard.
+
+. *Extend an existing screen* and *Entity fragment* templates have been added to the *Create CUBA Screen* wizard.
+
+. Undo/Redo actions now work correctly in the screen visual designer.
+
+. Implemented auto-complete for data loader query in the screen designer.
+
+. Screen designer now has a button in the canvas top right corner to switch to the screen controller.
+
+. Warnings in screen XML when `invoke` and `datasource` attributes are used in screens based on new API.
+
+. If you have added Groovy support in the *Project Properties* window, you can select Groovy in the *Advanced > Controller language* field of the *Create CUBA Screen* wizard.
+
+. Services written in Groovy are shown in CUBA project tree.
+
+. Notification about new platform versions on project opening.
+
+. Refined gutter icons in source code editor.
+
+. Entity attribute type can now be freely changed in the entity designer with or without refactoring.
+
+. Enumeration designer has been implemented.
+
+. View designer has been rewritten with native IntelliJ UI.
+
+. Data model generator now contains screen templates based on the new API.
+
+. All Resolved Issues:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Milestone:%20%7BRelease%209%7D%20State:%20Fixed,Verified[Studio 9.0 Resolved Issues\]]
+--
+
 Version 8::
 +
 --
