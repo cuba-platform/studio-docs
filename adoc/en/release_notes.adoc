@@ -46,6 +46,7 @@ The drivers can be removed from Studio using the *CUBA > Database Proprietary Dr
 
 . All Resolved Issues:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Milestone:%20%7BRelease%209%7D%20State:%20Fixed,Verified%20Fix%20versions:%209.1[Studio 9.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Milestone:%20%7BRelease%209%7D%20State:%20Fixed,Verified[Studio 9.0 Resolved Issues\]]
 --
 
