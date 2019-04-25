@@ -65,9 +65,9 @@
 
 . Все завершенные задачи:
 
-** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=State:%20Fixed,Verified%20Fix%20versions:%209.1[Studio 9.1 Resolved Issues\]]
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%209.1[Studio 9.1 Resolved Issues\]]
 
-** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=%23Fixed%20%23Verified%20Milestone:%20%7BRelease%209%7D%20Fix%20versions:%209.0%20[Studio 9.0 Resolved Issues\]]
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%209.0%20Milestone:%20%7BRelease%209%7D%20[Studio 9.0 Resolved Issues\]]
 --
 
 Версия 8::
@@ -93,9 +93,9 @@
 
 . Все завершенные задачи:
 
-** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%208.2.*[Studio 8.2 Resolved Issues\]]
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%208.2[Studio 8.2 Resolved Issues\]]
 
-** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%208.0.*%20Fixed%20in%20builds:%208.1.*[Studio 8.0-8.1 Resolved Issues\]]
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%208.0%20Fixed%20in%20builds:%208.1[Studio 8.0-8.1 Resolved Issues\]]
 --
 
 Версия 7::
@@ -105,7 +105,7 @@
 
 . Все завершенные задачи:
 
-** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%207.3.*%20Fixed%20in%20builds:%207.4.*[Studio 7.3-7.4 Resolved Issues\]]
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%207.3%20Fixed%20in%20builds:%207.4[Studio 7.3-7.4 Resolved Issues\]]
 
 ** https://youtrack.cuba-platform.com/issues/STUDIO?q=Milestone:%20%7BRelease%207%7D%20State:%20Fixed,%20Verified%20Fix%20versions:%207.2%20Affected%20versions:%20-SNAPSHOT%20sort%20by:%20created%20asc[Studio 7.2 Resolved Issues]
 
