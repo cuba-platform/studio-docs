@@ -9,6 +9,25 @@
 . BREAKING CHANGE: Studio теперь включает HSQL версии 2.4.1. При первом открытии проекта, использующего базу данных HSQL, Studio предлагает обновить версию HSQL в файле `build.gradle` проекта. После обновления, проект будет корректно работать в Studio версии 9+. Однако, имейте в виду следующие возможные проблемы:
 .. Приложение не сможет стартовать, если проект с новым драйвером HSQL будет открыт в предыдущей версии Studio, содержащей старый сервер HSQL;
 .. В проектах с HSQL на базе CUBA версии ниже 7.1, Scheduled Tasks не работают, так как их таблица содержит колонку с именем `PERIOD`, которое является зарезервированным словом в HSQL 2.4.1. Колонка переименована в CUBA 7.1.
++
+[TIP]
+====
+Если вы используете CUBA 7.0 или ниже, и вам нужно работать с HSQL и Scheduled Tasks во время разработки, вы можете заставить Studio использовать HSQL 2.2.9 следующим образом:
+
+. Закройте Studio.
+
+. Скопируйте каталог `cuba-studio`:
+** на Windows из `C:\Program Files\Haulmont\CUBA Studio 2018.3\plugins\` в `%userprofile%\.CubaStudio2018.3\config\plugins\`
+** на macOS из `/Applications/CUBA Studio.app/Contents/plugins/` в `~/Library/Application Support/CubaStudio2018.3/`
+
+. Замените в скопированном каталоге `cuba-studio/lib` файл `hsqldb-2.4.1.jar` файлом `hsqldb-2.2.9.jar`. Его можно загрузить http://central.maven.org/maven2/org/hsqldb/hsqldb/2.2.9/hsqldb-2.2.9.jar[отсюда].
+
+. Запустите Studio и откройте проект.
+
+. Замените строку `def hsql = 'org.hsqldb:hsqldb:2.4.1'` на `def hsql = 'org.hsqldb:hsqldb:2.2.9'` в файле `build.gradle`.
+
+Теперь и Studio, и ваш проект будут использовать HSQL 2.2.9, так что приложение на CUBA 7.0 или ниже сможет работать с Scheduled Tasks на базе данных HSQL.
+====
 
 . Механизм Hot deploy теперь деплоит все зависимые классы вместе с измененным, что исключает `ClassCastException` при открытии измененных экранов.
 
