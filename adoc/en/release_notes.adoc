@@ -3,6 +3,57 @@
 [[release_notes]]
 == Release Notes
 
+Version 10::
++
+--
+. Code editors of entities, screen controllers and screen descriptors now have a panel on top which provides quick access to CUBA-related actions and navigation between related files. For example, below is the panel in an entity class editor:
++
+image::release_notes/v-10-actions-panel.png[align="center"]
++
+Using the panel buttons you can quickly navigate to the related DDL scripts, views and screens. Also, you can create new views, screens and JPA lifecycle callback methods.
++
+The actions are also duplicated in the "intentions" context menu which is invoked by pressing Alt+Enter (Option+Enter):
++
+image::release_notes/v-10-actions-menu.png[align="center"]
+
+. Implemented scaffolding of `EntityChangedEvent` listeners. In order to run it, select an entity class, package, or the top-level *Middleware* node in the CUBA project tree and click the *New > EntityChangedEvent Listener* context menu item. Studio will create a Spring bean in the `core` module with two listener methods: one notified before and another after transaction commit.
+
+. Implemented scaffolding of JMX beans. In order to run it, select the *Middleware* node or one of the packages under the *Beans* node in the CUBA project tree and click the *New > JMX Bean* item of the context menu.
+
+. Implemented scaffolding of configuration interfaces. In order to run it, select the *Project > Config Interfaces* node in the CUBA project tree and click the *New > Configuration Interface* item of the context menu.
+
+. The *Inject* dialog now contains the *Project Beans* section which allows you to inject any Spring bean available in the project.
+
+. The *Inject* dialog now works for screen controllers written in Groovy too.
+
+. Improved injection experience: now if you put the cursor inside a method and invoke the *Inject* dialog, the resulting field will be generated on top of the class definition and the field name will be automatically copied to the cursor.
+
+. *Inject component into controller* intention is available on the XML element of the component. Try to position cursor on a component XML element and press Alt+Enter (Option+Enter).
+
+. Implemented visual designer for entity indexes and unique constraints. See the *Indexes* tab at the bottom of the entity editor.
+
+. Implemented inspections about duplicated entity name and table name. They are shown on the entity class if the same entity name or table name is defined for more than one entity class.
+
+. Implemented intentions for adding correct JPA annotations to entity fields. It simplifies manual coding of entity attributes: you can just add a field to the entity class, generate getters/setters, and then press Alt+Enter (Option+Enter) on the field to generate annotations.
+
+. In the screen controller code, you will get a warning if you inject a screen component not present in the screen's XML:
++
+image::release_notes/v-10-warn-nonexisting.png[align="center"]
+
+. In the entity class code, you will get a warning if the class has no `@NamePattern` annotation:
++
+image::release_notes/v-10-warn-namepattern.png[align="center"]
++
+You can fix the problem or suppress the warning by pressing Alt+Enter (Option+Enter) on the class name.
+
+. View designer now has a master-detail layout with the list of views on the left and the selected view editor on the right.
+
+. For projects based on CUBA 7.1 and above, the following features have been added:
+.. Main screen templates with side menu and responsive side menu.
+.. Support for passing properties to screens and fragments opened declaratively.
+.. Support for REST API add-on.
+--
+
 Version 9::
 +
 --
