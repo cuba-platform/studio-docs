@@ -52,6 +52,11 @@ You can fix the problem or suppress the warning by pressing Alt+Enter (Option+En
 .. Main screen templates with side menu and responsive side menu.
 .. Support for passing properties to screens and fragments opened declaratively.
 .. Support for REST API add-on.
+
+. All Resolved Issues:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2010.0[Studio 10.0 Resolved Issues\]]
+
 --
 
 Version 9::
