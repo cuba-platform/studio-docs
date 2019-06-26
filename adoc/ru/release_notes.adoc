@@ -52,6 +52,13 @@ image::release_notes/v-10-warn-namepattern.png[align="center"]
 .. Шаблоны главного экрана с side menu и responsive side menu.
 .. Поддержка передачи свойств в экраны и фрагменты, открываемые декларативно.
 .. Поддержка аддона REST API.
+
+. Все завершенные задачи:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2010.1[Studio 10.1 Resolved Issues\]]
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2010.0[Studio 10.0 Resolved Issues\]]
+
 --
 
 Версия 9::
