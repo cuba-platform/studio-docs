@@ -7,6 +7,8 @@ This section describes available editors and commands for managing the project i
 
 include::project/project_properties.adoc[]
 
+include::project/addons.adoc[]
+
 include::project/modules.adoc[]
 
 include::project/deployment.adoc[]

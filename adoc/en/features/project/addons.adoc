@@ -1,0 +1,69 @@
+:sourcesdir: ../../../../../source
+
+[[add_ons]]
+==== Managing Add-ons
+
+The *CUBA Add-ons* dialog allows you to manage CUBA add-ons included in your project.
+It can be opened:
+
+* by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
+* from main menu: *CUBA* -> *Marketplace...*
+
+The dialog has three tabs: *Marketplace*, *Installed* and *Updates*.
+
+Marketplace tab::
++
+--
+The Marketplace tab displays published add-ons which are compatible with your project.
+
+image::features/project/addons-market-small.png[align="center"]
+
+Add-ons are grouped into categories. Searching by filter is available, e.g. "email" or "category:Translation".
+
+Clicking on Add-on title leads to the page with detailed overview, compatibility, licensing information:
+
+image::features/project/addon-details.png[align="center"]
+
+In order to install one or more add-ons, press *Install* for the ones you're interested
+and then click *Apply* or *Apply & Close* button.
+After the confirmation Studio will make necessary changes to your project's build scripts and configuration files,
+download new libraries and refresh Gradle project configuration.
+
+--
+
+Installing add-on by coordinates::
++
+--
+Add-on coordinates is simply a Gradle dependency string, e.g. "com.mycompany.cuba-addons:myaddon:0.1.5".
+This string can be published on CUBA platform web site or by author of the add-on.
+In order to install necessary add-on by coordinates (or by gradle dependency string),
+click Gear icon located right to *Updates* tab header, and then choose *Install by coordinates*:
+
+image::features/project/addon-by-coords.png[align="center"]
+
+--
+
+Installed tab::
++
+--
+The *Installed* tab displays add-ons which are already connected to current project.
+
+image::features/project/addons-installed.png[align="center"]
+
+Installed add-ons are grouped into two categories.
+*Marketplace Add-Ons* are those which are installed from CUBA Marketplace.
+*Custom Add-Ons* are those which are developed by 3rd parties and hosted in 3rd-party repositories, including local Maven.
+
+In order to detach add-on from your project, select corresponding item in the list and press *Delete*,
+or right-click -> *Uninstall*.
+Then click *Apply* in the dialog. Studio will remove the add-on from the list of project dependencies and update project configuration.
+
+--
+
+Updates tab::
++
+--
+todo
+
+image::features/project/addons-updates.png[align="center"]
+--
