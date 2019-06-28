@@ -2,8 +2,11 @@
 
 [[add_ons]]
 ==== Managing Add-ons
+Add-ons are publicly distributed full-stack libraries extending your project with additional functionality.
+More information about add-ons and application components can be found in the
+{main_man_url}/app_components_recipes.html[CUBA Developer's Manual].
 
-The *CUBA Add-ons* dialog allows you to manage CUBA add-ons included in your project.
+The *CUBA Add-ons* dialog allows you to manage add-ons included in your project.
 It can be opened:
 
 * by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
@@ -20,7 +23,7 @@ image::features/project/addons-market-small.png[align="center"]
 
 Add-ons are grouped into categories. Searching by filter is available, e.g. "email" or "category:Translation".
 
-Clicking on Add-on title leads to the page with detailed overview, compatibility, licensing information:
+Clicking on add-on title leads to the page with detailed overview, compatibility, licensing information:
 
 image::features/project/addon-details.png[align="center"]
 
@@ -63,7 +66,17 @@ Then click *Apply* in the dialog. Studio will remove the add-on from the list of
 Updates tab::
 +
 --
-todo
+Studio automatically checks whether there are any updates available for add-ons included in your project.
+The *Updates* tab displays information about add-ons which can be updated.
 
 image::features/project/addons-updates.png[align="center"]
+
+In order to update the add-on, click *Update* button, then *Apply* or *Apply & Close* button.
+Studio will upgrade the dependency, download required libraries and refresh project configuration.
+
+Additionally, after the project is opened, notification about available updates is displayed
+in the down-right corner of the screen:
+
+image::features/project/addon-update-notification.png[align="center"]
+
 --
