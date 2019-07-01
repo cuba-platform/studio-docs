@@ -3,15 +3,15 @@
 Version 11::
 +
 --
-. A "CUBA Add-ons" screen has been added which allows to manage add-ons included in your project.
+. The "CUBA Add-ons" screen has been added which allows to manage add-ons included in your project.
 The screen can be opened by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
 or from main menu: *CUBA* -> *Marketplace...*.
 Detailed description of the screen is available in the <<add_ons,corresponding section>>.
 +
 image::features/project/addons-market-small.png[align="center"]
 
-
-. Implemented scaffolding of `EntityChangedEvent` listeners. In order to run it, select an entity class, package, or the top-level *Middleware* node in the CUBA project tree and click the *New > EntityChangedEvent Listener* context menu item. Studio will create a Spring bean in the `core` module with two listener methods: one notified before and another after transaction commit.
+. The <<welcome_screen,*Welcome* screen>> has been added.
+It simplifies access to common project settings and actions, holds links to documentation and community web pages.
 
 . Implemented scaffolding of JMX beans. In order to run it, select the *Middleware* node or one of the packages under the *Beans* node in the CUBA project tree and click the *New > JMX Bean* item of the context menu.
 

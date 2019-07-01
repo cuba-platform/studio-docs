@@ -1,0 +1,11 @@
+:sourcesdir: ../../../source
+
+[[welcome_screen]]
+=== Welcome Screen
+
+*Welcome* screen is always opened in the workspace after new project is created. It also can be opened from main menu: *CUBA* -> *Welcome*.
+
+This screen provides quick access to main project settings, frequently used actions, documentation and community web pages.
+It also shows CUBA version used in your project, Studio version and subscription information.
+
+image::ui/welcome_screen.png[align="center"]
