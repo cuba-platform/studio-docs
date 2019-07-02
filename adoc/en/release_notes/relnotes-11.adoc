@@ -16,7 +16,12 @@ It simplifies access to common project settings and actions, holds links to docu
 . Implemented UI to manage 3rd-party libraries used by the project.
 It is available in the <<project_properties_dependencies,Project Properties Editor>>.
 
-. All Resolved Issues:
+. Data Store settings have been moved out from the *Project Properties* screen.
+From now Data Store settings are available for viewing and editing in the CUBA project tree -> *Data Stores* section.
+Main Data Store settings also can be opened from main menu: *CUBA* -> *Main Data Store Settings...*.
+Please refer to the <<data_stores,Managing Data Stores>> section for more details.
+
+. Numerous small improvements and bug fixes:
 
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.0[Studio 11.0 Resolved Issues\]]
 
