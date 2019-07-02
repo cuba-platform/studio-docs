@@ -63,3 +63,66 @@ The *Data Stores* tab displays database connections of your project.
 
 ** *Database type*, *URL*, etc. - database connection parameters.
 --
+
+[[project_properties_dependencies]]
+Dependencies section::
++
+--
+The *Dependencies* section displays and allows to manage 3rd-party dependencies (libraries) connected to your project.
+
+image::features/project/dependencies.png[align="center"]
+
+Project dependencies are displayed in a table grouped by module into three or more sections,
+depending on how many modules your project consists of.
+If library is added to *global* module - it effectively becomes globally accessible in the project,
+because all other CUBA project's modules depend on the global module.
+
+The *Type* column in the table shows dependency type:
+
+* *compile* - library is used for compilation and runtime
+* *provided* - for dependencies that are necessary to compile your production code
+but shouldn't be part of the runtime classpath (JDBC drivers, Servlet API implementation etc.)
+* *runtime* - library is only used in runtime
+* *testCompile* - library is used to compile and run tests
+* *testRuntime* - library is used by tests, only in runtime
+
+The *Text* column displays library coordinates in the format of Gradle dependency string: *"name.of.the.group:name:version"*.
+
+Dependency management actions are located right of the dependencies table:
+
+* *Add dependency* - add new dependency to your project. Specify Maven dependency declaration or Gradle dependency string.
+The dialog automatically validates that dependency declaration is correct.
+* *Remove dependency* - remove dependency from your project.
+* *Edit dependency* - change dependency declaration text.
+
+Read more about 3rd-party dependencies in the
+{gradle_user_guide_url}/building_java_projects.html#sec:java_dependency_management_overview[Gradle documentation].
+
+--
+
+Adding new 3rd-party dependency::
++
+--
+Adding a 3rd-party dependency to your project requires the following steps:
+
+* Find out *Maven* dependency declaration or *Gradle dependency string* for the required library.
+
+image::features/project/newdep-gradle.png[align="center"]
+image::features/project/newdep-maven.png[align="center"]
+
+* Copy dependency declaration into the clipboard
+* Open *Project Properties* dialog
+* Choose the module to attach the dependency to, or use *global* module to make the library globally available in the project.
+* Press *+* button right of the *Dependencies* table. The *Dependency Editor* dialog opens.
+Dependency declaration from the clipboard is automatically pasted into the text area.
+* Click *OK* in the Dependency Editor dialog. Fix the declaration if validation errors are prompted.
+* Click *OK* in the *CUBA Project Properties* dialog to apply the changes. Studio will add necessary declarations
+to the project build script and refresh project configuration.
+* Now you can use library's classes in your code.
+
+[TIP]
+====
+Gradle *implementation 'a.b.c'* dependency type is not supported yet, please use *compile 'a.b.c'* instead of it.
+====
+
+--

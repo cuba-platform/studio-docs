@@ -13,9 +13,8 @@ image::features/project/addons-market-small.png[align="center"]
 . The <<welcome_screen,*Welcome* screen>> has been added.
 It simplifies access to common project settings and actions, holds links to documentation and community web pages.
 
-. Implemented scaffolding of JMX beans. In order to run it, select the *Middleware* node or one of the packages under the *Beans* node in the CUBA project tree and click the *New > JMX Bean* item of the context menu.
-
-. Implemented scaffolding of configuration interfaces. In order to run it, select the *Project > Config Interfaces* node in the CUBA project tree and click the *New > Configuration Interface* item of the context menu.
+. Implemented UI to manage 3rd-party libraries used by the project.
+It is available in the <<project_properties_dependencies,Project Properties Editor>>.
 
 . All Resolved Issues:
 
