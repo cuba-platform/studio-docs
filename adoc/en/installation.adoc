@@ -7,9 +7,9 @@ Before installing CUBA Studio, make sure your system meets the requirements expl
 
 You can install CUBA Studio in two different forms: as a standalone IDE for your operating system or as a plugin for existing IntelliJ IDEA. The Studio standalone IDE is a special build of IntelliJ IDEA Community Edition which includes the CUBA plugin. If you haven't used IntelliJ IDEA before, we recommend using the standalone IDE.
 
-The IDE has a version corresponding to the IntelliJ IDEA in use, for example, {idea-version}. The CUBA plugin has its own version starting from {plugin-version}.
+The IDE has a version corresponding to the IntelliJ IDEA in use, for example {idea-version}. The CUBA plugin has its own version starting from {plugin-version}.
 
-Installers of the standalone IDE for Windows, macOS and Linux can be downloaded from https://www.cuba-platform.com/download. The plugin is available in the IntelliJ plugins repository (see <<install_plugin,below>>).
+Installers of the standalone IDE for Windows, macOS and Linux can be downloaded from {cuba-download-site}. The plugin is available in the IntelliJ plugins repository (see <<install_plugin,below>>).
 
 [[install_windows]]
 Installation on Windows::
@@ -76,27 +76,13 @@ When you launch the standalone CUBA Studio IDE for the first time, you are asked
 IntelliJ IDEA plugin installation::
 +
 --
-. Start IntelliJ IDEA {idea-version} or newer.
+. Start IntelliJ IDEA {minimal-idea-version} or newer.
 
 . Open the *Plugins* dialog.
 
-. Click to the "gear" icon and select *Manage Plugin Repositories*.
+. Switch to the *Marketplace* tab.
 
-. Click *Add* and enter the following in the *Repository URL* field:
-+
-----
-https://plugins.jetbrains.com/plugins/haulmont/list
-----
-
-. After adding the repository, switch to the *Marketplace* tab.
-
-. Enter the following into the search field:
-+
-----
-repository:"https://plugins.jetbrains.com/plugins/haulmont/list"
-----
-
-. You will see the CUBA plugin in search results.
+. Enter "CUBA" into the search field. You will see the CUBA plugin in search results.
 
 . Click *Install* and follow further instructions of the IDE.
 --

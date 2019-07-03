@@ -5,7 +5,7 @@ Version 11::
 --
 . The "CUBA Add-ons" screen has been added which allows to manage add-ons included in your project.
 The screen can be opened by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
-or from main menu: *CUBA* -> *Marketplace...*.
+or from the main menu: *CUBA* -> *Marketplace*.
 Detailed description of the screen is available in the <<add_ons,corresponding section>>.
 +
 image::features/project/addons-market-small.png[align="center"]
@@ -16,9 +16,24 @@ It simplifies access to common project settings and actions, holds links to docu
 . Implemented UI to manage 3rd-party libraries used by the project.
 It is available in the <<project_properties_dependencies,Project Properties Editor>>.
 
+. The Entity Designer has been re-implemented using native IntelliJ UI components. New designer has the following benefits:
+.. Better responsiveness, faster opening time
+.. Changes to the entity and its attributes are instantly committed into the source code
+.. Integration with IntelliJ smart refactorings such as *Safe Delete* of entity attributes
++
+image::release_notes/v-11-entity-designer.png[align="center"]
+
+. Implemented *Safe Delete* refactoring of entity attributes.
+To start this refactoring, remove the attribute in the entity designer
+or right-click the attribute declaration and choose from the context menu: *Refactor* -> *Safe Delete...*.
+This refactoring searches for attribute usages in views, screens and other configuration files.
+It automatically removes attribute usages which are safe to delete and warns about usages in the code which would need manual repair.
++
+image::release_notes/v-11-safe-delete-attr.png[align="center"]
+
 . Data Store settings have been moved out from the *Project Properties* screen.
 From now Data Store settings are available for viewing and editing in the CUBA project tree -> *Data Stores* section.
-Main Data Store settings also can be opened from main menu: *CUBA* -> *Main Data Store Settings...*.
+Main Data Store settings also can be opened from main menu: *CUBA* -> *Main Data Store Settings*.
 Please refer to the <<data_stores,Managing Data Stores>> section for more details.
 
 . An ability to use *HSQLDB InMemory* as an additional data store has been added.
@@ -40,6 +55,47 @@ image::release_notes/v-11-entity-changed-action-panel.png[align="center"]
 Now it allows to create several listener methods in one class and to choose two additional event phases.
 +
 image::release_notes/v-11-new-entity-changed-dialog.png[align="center"]
+
+. Added support for more BeanValidation 2.0 annotations in the Entity designer: `@NotEmpty`, `@Positive`, `@PastOrPresent` and others.
+
+. When adding attributes to an entity, the entity designer automatically recognizes attribute name which can be displayed as instance caption
+(`name`, `caption`, `title` etc) and generates
+{main_man_url}/entity_class_annotations.html#namePattern_annotation[@NamePattern annotation]
+if it hasn't been defined yet.
+
+. View designer is now able to rename an already existing view, migrating its usages in the code.
+
+. The *Inject 'xxx'* quick fix which allows to inject bean based on variable name - has been extended to work in the context of both screen controllers and Spring beans.
+The example how one can utilize this quick fix is presented below:
++
+image::release_notes/v-11-inject-before.png[align="center"]
++
+image::release_notes/v-11-inject-after.png[align="center"]
++
+To utilize this feature, type variable name of the desired bean in the code of a Spring bean or a CUBA screen controller.
+Then press Alt+Enter and choose *Inject 'beanName'* suggestion in the popup list.
+Class name of the bean is determined automatically based on variable name which must exactly match bean interface name.
+For example: `dataManager`, `fileStorageService`, `messageBundle` and `clusterManagerAPI` variable names will be recognized and successfully injected as corresponding CUBA beans.
+
+. Added a Java code inspection checking that localization messages targeted by `getMessage` and `formatMessage` method calls exist.
++
+image::release_notes/v-11-message-quick-fix.png[align="center"]
++
+Checks are performed for `getMessage` and `formatMessage` methods of `MessageBundle`, `Messages` and `AbstractWindow` (legacy screens) classes.
+If the message with given key in a given message pack does not exist, message key is highlighted in red.
++
+If you press Alt+Enter and choose *Create message in the message bundle* quick fix item -
+Studio will open *Localization Message* dialog to input localized message for all configured project locales.
+
+. Standalone IDE version of the Studio has been upgraded to IntelliJ Community platform *2019.1*.
+Previously downloaded standalone Studio IDE will not be upgraded - you should download new version from the
+{cuba-download-site}[CUBA Platform] web site.
+
+. CUBA plugin for IntelliJ IDEA containing this release of the Studio has been uploaded to the main (Stable) plugins channel.
+So it's not necessary to set up additional plugins repository anymore.
+If you have used previous versions of CUBA Studio plugin, you can now remove
+https://plugins.jetbrains.com/plugins/haulmont/list from the list of *Custom Plugin Repositories*.
+Custom repositories list is located here: *File* -> *Settings* -> *Plugins* -> "gear" icon -> *Manage Plugin Repositories*.
 
 . Numerous small improvements and bug fixes:
 

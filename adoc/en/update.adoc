@@ -13,15 +13,7 @@ Instead of downloading and installing the entire IDE application, you can set up
 
 . Open the *Plugins* dialog.
 
-. Click to the "gear" icon and select *Manage Plugin Repositories*.
-
-. Click *Add* and enter the following in the *Repository URL* field:
-+
-----
-https://plugins.jetbrains.com/plugins/haulmont/list
-----
-
-. After adding the repository, switch to the *Updates* tab.
+. Switch to the *Updates* tab.
 
 . If there are updates available, you will see them in the list. Click *Update* for the CUBA plugin, and the IDE will download the plugin.
 

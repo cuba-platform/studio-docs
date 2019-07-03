@@ -25,6 +25,6 @@ image::getting_started/app_start_4.png[align="center"]
 
 Рекомендуемый способ запуска приложения при разработке - описанное выше использование Run/Debug Configuration, однако вы также можете управлять локальным сервером Tomcat с помощью команд меню CUBA:
 
-image::getting_started/cuba_menu_2.png[align="center"]
+image::getting_started/cuba_menu_appserver.png[align="center"]
 
 При запуске сервера командой *Start Application Server*, в Windows вы увидите консольное окно с выводом сервера. В Linux и macOS консоль не отображается, однако логи сервера можно увидеть, выполнив `tail -f deploy/tomcat/logs/app.log` в окне инструментов *Terminal*. Команда *Stop Application Server* останавливает сервер Tomcat, посылая сигнал SHUTDOWN на shutdown port, указанный в свойствах проекта (8005 по умолчанию).

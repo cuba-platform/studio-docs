@@ -25,6 +25,6 @@ image::getting_started/app_start_4.png[align="center"]
 
 Use of Run/Debug Configuration is the preferred way to start the application in development, but Studio also allows you to control the local Tomcat application server through the CUBA main menu items:
 
-image::getting_started/cuba_menu_2.png[align="center"]
+image::getting_started/cuba_menu_appserver.png[align="center"]
 
 When starting the server by the *Start Application Server* main menu command, on Windows you will see a console window with the server output. On Linux and macOS, the console is not shown, but you can see the server log by executing `tail -f deploy/tomcat/logs/app.log` in the *Terminal* tool window. The *Stop Application Server* command stops Tomcat by sending the SHUTDOWN signal to the shutdown port specified in the project properties (8005 by default).
