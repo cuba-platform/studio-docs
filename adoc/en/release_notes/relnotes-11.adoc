@@ -21,6 +21,26 @@ From now Data Store settings are available for viewing and editing in the CUBA p
 Main Data Store settings also can be opened from main menu: *CUBA* -> *Main Data Store Settings...*.
 Please refer to the <<data_stores,Managing Data Stores>> section for more details.
 
+. An ability to use *HSQLDB InMemory* as an additional data store has been added.
+
+. Support for https://mariadb.org/[MariaDB] as a main or additional data store.
+
+. Support for https://aws.amazon.com/redshift/[Amazon Redshift] as an additional data store.
+
+. *Add attribute* action has been added to the actions panel of the entity source code editor.
++
+image::release_notes/v-11-add-attr.png[align="center"]
+
+. Actions supporting `EntityChangedEvent` listeners have been added to the actions panel of the entity source code editor.
+They allow to create new listener or to navigate to already existing listener methods.
++
+image::release_notes/v-11-entity-changed-action-panel.png[align="center"]
+
+. The *Create CUBA EntityChangedEvent Listener* scaffolding dialog has been improved.
+Now it allows to create several listener methods in one class and to choose two additional event phases.
++
+image::release_notes/v-11-new-entity-changed-dialog.png[align="center"]
+
 . Numerous small improvements and bug fixes:
 
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.0[Studio 11.0 Resolved Issues\]]

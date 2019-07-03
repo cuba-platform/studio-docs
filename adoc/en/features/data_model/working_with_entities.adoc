@@ -32,7 +32,10 @@ The button next to the *Name* field lets you immediately set a user-friendly nam
 +
 image::features/data_model/attribute_l10n.png[align="center"]
 
-* Using a separate window opened from the source code. Position the cursor below the last existing field and press Alt+Insert (Cmd+N). In the *Generate* menu, select *Add Attribute*. Studio will show the *New Attribute* window as it would be opened from the graphical designer.
+* Using a separate window opened from the source code, using the button
+Position the cursor below the last existing field and press Alt+Insert (Cmd+N).
+In the *Generate* menu, select *Add Attribute...*. Studio will show the *New Attribute* window as it would be opened from the graphical designer.
+The same window can be opened by clicking the *Add attribute* button located in the code editor actions panel.
 +
 image::features/data_model/new_attribute_2.png[align="center"]
 
