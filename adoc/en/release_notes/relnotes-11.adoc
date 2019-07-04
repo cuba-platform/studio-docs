@@ -10,7 +10,7 @@ Detailed description of the screen is available in the <<add_ons,corresponding s
 +
 image::features/project/addons-market-small.png[align="center"]
 
-. The <<welcome_screen,*Welcome* screen>> has been added.
+. The <<welcome_screen,Welcome screen>> has been added.
 It simplifies access to common project settings and actions, holds links to documentation and community web pages.
 
 . Implemented UI to manage 3rd-party libraries used by the project.
@@ -27,7 +27,7 @@ image::release_notes/v-11-entity-designer.png[align="center"]
 To start this refactoring, remove the attribute in the entity designer
 or right-click the attribute declaration and choose from the context menu: *Refactor* -> *Safe Delete...*.
 This refactoring searches for attribute usages in views, screens and other configuration files.
-It automatically removes attribute usages which are safe to delete and warns about usages in the code which would need manual repair.
+It automatically removes attribute usages that are safe to delete and warns about usages in the code that would need manual repair.
 +
 image::release_notes/v-11-safe-delete-attr.png[align="center"]
 
@@ -38,34 +38,34 @@ Please refer to the <<data_stores,Managing Data Stores>> section for more detail
 
 . An ability to use *HSQLDB InMemory* as an additional data store has been added.
 
-. Support for https://mariadb.org/[MariaDB] as a main or additional data store.
+. Added support for https://mariadb.org/[MariaDB] as a main or additional data store.
 
-. Support for https://aws.amazon.com/redshift/[Amazon Redshift] as an additional data store.
+. Added support for https://aws.amazon.com/redshift/[Amazon Redshift] as an additional data store.
 
 . *Add attribute* action has been added to the actions panel of the entity source code editor.
 +
 image::release_notes/v-11-add-attr.png[align="center"]
 
 . Actions supporting `EntityChangedEvent` listeners have been added to the actions panel of the entity source code editor.
-They allow to create new listener or to navigate to already existing listener methods.
+They allow you to create new listener or to navigate to already existing listener methods.
 +
 image::release_notes/v-11-entity-changed-action-panel.png[align="center"]
 
 . The *Create CUBA EntityChangedEvent Listener* scaffolding dialog has been improved.
-Now it allows to create several listener methods in one class and to choose two additional event phases.
+Now it allows you to create several listener methods in one class and to choose two additional event phases.
 +
 image::release_notes/v-11-new-entity-changed-dialog.png[align="center"]
 
 . Added support for more BeanValidation 2.0 annotations in the Entity designer: `@NotEmpty`, `@Positive`, `@PastOrPresent` and others.
 
-. When adding attributes to an entity, the entity designer automatically recognizes attribute name which can be displayed as instance caption
+. When adding attributes to an entity, the entity designer automatically recognizes attribute name that can be displayed as instance caption
 (`name`, `caption`, `title` etc) and generates
 {main_man_url}/entity_class_annotations.html#namePattern_annotation[@NamePattern annotation]
 if it hasn't been defined yet.
 
 . View designer is now able to rename an already existing view, migrating its usages in the code.
 
-. The *Inject 'xxx'* quick fix which allows to inject bean based on variable name - has been extended to work in the context of both screen controllers and Spring beans.
+. The *Inject 'xxx'* quick fix which allows you to inject bean based on variable name has been extended to work in the context of both screen controllers and Spring beans.
 The example how one can utilize this quick fix is presented below:
 +
 image::release_notes/v-11-inject-before.png[align="center"]
@@ -84,7 +84,7 @@ image::release_notes/v-11-message-quick-fix.png[align="center"]
 Checks are performed for `getMessage` and `formatMessage` methods of `MessageBundle`, `Messages` and `AbstractWindow` (legacy screens) classes.
 If the message with given key in a given message pack does not exist, message key is highlighted in red.
 +
-If you press Alt+Enter and choose *Create message in the message bundle* quick fix item -
+If you press Alt+Enter and choose *Create message in the message bundle* quick fix item,
 Studio will open *Localization Message* dialog to input localized message for all configured project locales.
 
 . Standalone IDE version of the Studio has been upgraded to IntelliJ Community platform *2019.1*.

@@ -17,7 +17,7 @@ The dialog has three tabs: *Marketplace*, *Installed* and *Updates*.
 Marketplace tab::
 +
 --
-The Marketplace tab displays published add-ons which are compatible with your project.
+The Marketplace tab displays published add-ons that are compatible with your project.
 
 image::features/project/addons-market-small.png[align="center"]
 
@@ -39,8 +39,8 @@ Installing add-on by coordinates::
 --
 Add-on coordinates is simply a Gradle dependency string, e.g. "com.mycompany.cuba-addons:myaddon:0.1.5".
 This string can be published on CUBA platform web site or by author of the add-on.
-In order to install necessary add-on by coordinates (or by gradle dependency string),
-click Gear icon located right to *Updates* tab header, and then choose *Install by coordinates*:
+In order to install necessary add-on by coordinates (or by Gradle dependency string),
+click "gear" icon located right to *Updates* tab header, and then choose *Install by coordinates*:
 
 image::features/project/addon-by-coords.png[align="center"]
 
@@ -49,7 +49,7 @@ image::features/project/addon-by-coords.png[align="center"]
 Installed tab::
 +
 --
-The *Installed* tab displays add-ons which are already connected to current project.
+The *Installed* tab displays add-ons that are already connected to current project.
 
 image::features/project/addons-installed.png[align="center"]
 
@@ -67,7 +67,7 @@ Updates tab::
 +
 --
 Studio automatically checks whether there are any updates available for add-ons included in your project.
-The *Updates* tab displays information about add-ons which can be updated.
+The *Updates* tab displays information about add-ons that can be updated.
 
 image::features/project/addons-updates.png[align="center"]
 

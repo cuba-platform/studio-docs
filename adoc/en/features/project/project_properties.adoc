@@ -55,7 +55,7 @@ but shouldn't be part of the runtime classpath (JDBC drivers, Servlet API implem
 * *testCompile* - library is used to compile and run tests
 * *testRuntime* - library is used by tests, only in runtime
 
-The *Text* column displays library coordinates in the format of Gradle dependency string: *"name.of.the.group:name:version"*.
+The *Text* column displays library coordinates in the format of Gradle dependency string: *"group:name:version"*.
 
 Dependency management actions are located right of the dependencies table:
 
