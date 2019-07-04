@@ -7,7 +7,7 @@
 Updating the standalone IDE::
 +
 --
-You can just download the newer version of the standalone Studio IDE from the https://www.cuba-platform.com/download[website] and install it on top of the existing version. All your settings will be preserved.
+You can just download the newer version of the standalone Studio IDE from the {cuba-download-site}[website] and install it on top of the existing version. All your settings will be preserved.
 
 Instead of downloading and installing the entire IDE application, you can set up automatic update of the CUBA plugin from the plugins repository:
 
