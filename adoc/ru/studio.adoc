@@ -18,11 +18,14 @@
 :lang: en
 :version-label: IntelliJ Plugin Version
 :revremark: Copyright (c) 2019 Haulmont (www.haulmont.ru)
-:plugin-version: 10
-:idea-version: 2018.3
+:plugin-version: 11
+:idea-version: 2019.1
+:minimal-idea-version: 2018.3
 :main_man_url: https://doc.cuba-platform.com/manual-7.0-ru
 :rel_notes_url: http://files.cuba-platform.com/cuba/release-notes/7.0
-:revnumber: 10
+:gradle_user_guide_url: https://docs.gradle.org/4.10.3/userguide
+:cuba-download-site: https://www.cuba-platform.ru/download
+:revnumber: 11
 
 :!sectnums:
 

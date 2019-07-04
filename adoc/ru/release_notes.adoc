@@ -3,6 +3,8 @@
 [[release_notes]]
 == Release Notes
 
+include::release_notes/relnotes-11.adoc[]
+
 Версия 10::
 +
 --
