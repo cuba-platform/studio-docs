@@ -7,6 +7,10 @@
 
 include::project/project_properties.adoc[]
 
+include::project/addons.adoc[]
+
 include::project/modules.adoc[]
+
+include::project/data_stores.adoc[]
 
 include::project/deployment.adoc[]

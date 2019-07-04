@@ -9,4 +9,6 @@ include::ui/project_tree.adoc[]
 
 include::ui/ui_menu.adoc[]
 
+include::ui/welcome_screen.adoc[]
+
 include::ui/settings.adoc[]

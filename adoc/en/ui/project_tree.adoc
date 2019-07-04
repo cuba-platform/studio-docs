@@ -9,51 +9,6 @@ The project tree contains the following elements:
 
 image::ui/cuba_tree.png[align="center"]
 
-////
-[source, plain]
-----
-CUBA
-    Application
-            http://localhost:8080/app
-    Project
-        Properties
-        Build Script
-            build.gradle
-            settings.gradle
-        Modules
-            global
-                metadata.xml
-                persistence.xml
-                views.xml
-            core
-                app.properties
-                spring.xml
-            web
-                web-app.properties
-                web-dispatcher-spring.xml
-                web-menu.xml
-                web-permissions.xml
-                web-screens.xml
-                web-spring.xml
-        Data Stores
-            _MAIN_
-        Deployment
-            WAR Settings
-            UberJAR Settings
-    Data Model
-    Middleware
-        Services
-        Beans
-    Generic UI
-        Web menu
-        Main Message Pack
-            messages.properties
-        Screens
-        Themes
-    REST API
-----
-////
-
 . *Project*
 +
 --
