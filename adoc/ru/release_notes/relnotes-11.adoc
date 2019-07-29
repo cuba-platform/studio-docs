@@ -100,6 +100,7 @@ https://plugins.jetbrains.com/plugins/haulmont/list из списка *Custom Pl
 
 . Небольшие улучшения и исправления:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.1[Studio 11.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.0[Studio 11.0 Resolved Issues\]]
 
 --
