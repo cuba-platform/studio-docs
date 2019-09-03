@@ -99,6 +99,7 @@ Custom repositories list is located here: *File* -> *Settings* -> *Plugins* -> "
 
 . Numerous small improvements and bug fixes:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.3[Studio 11.3 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.2[Studio 11.2 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.1[Studio 11.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2011.0[Studio 11.0 Resolved Issues\]]
