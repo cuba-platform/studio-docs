@@ -1,0 +1,83 @@
+[[relnotes_12]]
+
+Version 12::
++
+--
+. The Screen Designer has been re-implemented using native IntelliJ UI components. New designer has better responsiveness and faster opening time.
+Many improvements were made to the designer, some of them are mentioned below.
++
+image::release_notes/v-12-screen-designer.png[align="center"]
+
+. A new *Handlers* tab has been added to the Screen Designer, next to Palette and Properties.
+It displays existing methods along with all possible options for event listeners and component delegates associated with the selected component.
+In order to generate necessary handler method - just double-click the corresponding row.
++
+image::release_notes/v-12-sd-handlers.png[align="center"]
+
+. *Preview* action has been added to the top actions panel of the screen descriptor.
+It opens a window with preview of the edited screen. This preview interacts with the XML editor and automatically updates its content according to the layout changes.
++
+image::release_notes/v-12-sd-preview.png[align="center"]
+
+. Added *Inject to controller* and *Go to XML* actions to the context menu in the Screen Designer hierarchy tree.
+
+. Added *CUBA Documentation* actions to the context menu of the hierarchy tree and components palette. These actions open the corresponding component's section in the CUBA Developer's Manual.
+
+. *Add Column* button has been added to the Properties tab of the *Form* component.
+
+. Added class name auto completion for the *class* field in the *Validator* and *Formatter* Screen Designer dialogs.
+
+. Added scaffolding for various application event listeners. It is accessible in two ways:
+.. Open existing Spring Bean and press *Subscribe to event* in the top actions panel of the source code editor.
+.. In the *Middleware* section of the CUBA project tree invoke a right click -> *New* -> *Event Listener* context menu item.
++
+image::release_notes/v-12-event-listeners.png[align="center"]
+
+. Added project-wide options affecting screen generation. These settings are used by the *New* -> *Screen...* wizard.
+To change the settings, open Main Menu -> *CUBA* -> *Settings* -> *Screen Generation Settings*.
+The following screen settings are available:
+.. Form field width (450px by default) - used by entity editors
+.. Keep editor actions at the bottom - used by entity editors that are opened as a "full screen" (not as dialog)
+.. Force modal open type for editors - used by entity editors opened as a dialog
+
+. Added ability to specify menu item caption in the screen creation wizard.
+
+. Added ability to scaffold handlers for components which don't have *id* yet. Studio asks user to enter component id when required.
+
+. *Main Menu* action has been added to the actions panel of the screen controller. It allows to include current screen to the main menu or to navigate to the main menu configuration.
++
+image::release_notes/v-12-main-menu-action.png[align="center"]
+
+. Build WAR and UberJAR UI in the Deployment section of the CUBA project tree has been improved. From now you can build WAR or UberJar just by double-clicking the corresponding element *Build WAR* or *Build UberJAR*, if building the corresponding artifact is turned on. Configuration files related to these artifacts (`single-war-web.xml`, `logback.xml`, `jetty-env.xml` etc) are now shown near to the *WAR/UberJAR Settings* project tree elements for convenient access.
++
+image::release_notes/v-12-uber-jar.png[align="center"]
+
+. Added new actions that allow to create new database init/update scripts. These actions are available from the CUBA project tree, under the *Data Stores* -> *Main Data Store* section:
+.. init -> context menu -> *New* -> *Database init script*
+.. update -> context menu -> *New* -> *Database update script*
+
+. The *Install Delegate* dialog that is invoked from the screen controller now allows to generate formatter, custom column generator or value provider for any table column.
+
+. Added suggestions for the *icon* attribute of the screen XML descriptor, also added icon preview as a gutter icon.
++
+image::release_notes/v-12-icon-gutter.png[align="center"]
+
+. Added suggestions for the *optionsEnum* XML descriptor attribute of the `LookupField` component.
+
+. *Quick Documentation* popup invoked for UI components now provides a link to the CUBA documentation:
++
+image::release_notes/v-12-quick-doc.png[align="center"]
+
+. Localized Message dialog in the Entity Designer now automatically constructs message keys for Bean Validation messages, e.g. "playground_Rank.queueSize.validation.Digits" or "playground_Tariff.taxType.validation.NotNull".
+
+. Added support for the *Integrated Security* option of the *Microsoft SQL Server* database type.
+
+. Performance for large projects has been improved (data model designer, views.xml static analysis, CUBA project tree).
+
+. Oldest compatible IntelliJ IDEA version has been increased to *2019.1*. This means that if you are using an older IDEA (or CUBA Studio) version, you will not be able to update your CUBA plugin to newer releases; you would need to upgrade your IDEA or CUBA Studio installation.
+
+. Numerous small improvements and bug fixes:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2012.0[Studio 12.0 Resolved Issues\]]
+
+--
