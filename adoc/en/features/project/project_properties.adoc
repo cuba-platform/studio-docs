@@ -15,9 +15,6 @@ Basic settings::
 
 * *Groovy support* checkbox enables Groovy code within the application: for example, in screen controller classes.
 
-* The *App components* group allows you to specify additional platform components that will be used in your project.
-Custom application components are managed in a separate <<add_ons,CUBA Add-ons>> window.
-
 * If you need to change the path to the application server, specify the new path in the *Tomcat path* field. The next execution of `gradlew deploy` or `gradlew start` will install Tomcat into that location.
 
 * The *Tomcat ports* group allows you to assign non-standard ports for the Tomcat application server installed in the `deploy/tomcat` folder as a result of {main_man_url}/fast_deployment.html[fast deployment].

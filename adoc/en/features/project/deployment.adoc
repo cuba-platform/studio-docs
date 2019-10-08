@@ -5,6 +5,8 @@
 
 Studio contains editors for setting up Gradle tasks that build deployment artifacts. These editors can be opened through the *CUBA > Deployment* main menu or by double-clicking the items in *Project > Deployment* project tree section.
 
+image::features/project/deployment-settings.png[align="center"]
+
 *WAR Settings* editor allows you to set up building of WAR files. After completing the setup, the {main_man_url}/build.gradle_buildWar.html[buildWar] task will be created in your `build.gradle`.
 
 * *Build WAR* - if checked, the `buildWar` task is configured in `build.gradle`.
@@ -23,6 +25,8 @@ Studio contains editors for setting up Gradle tasks that build deployment artifa
 
 * *App properties* - a set of application properties to define for this deployment. The properties will be added to the `/WEB-INF/local.app.properties` file inside the WAR.
 
+The *Build WAR* sub-element is shown if the corresponding option is enabled in the settings. Clicking it executes the `gradlew buildWar` task.
+
 *UberJAR Settings* editor allows you to set up building of an Uber JAR. After completing the setup, the {main_man_url}/build.gradle_buildUberJar.html[buildUberJar] task will be created in your `build.gradle`.
 
 * *Build Uber JAR* - if checked, the `buildUberJar` task is configured in `build.gradle`.
@@ -36,3 +40,5 @@ Studio contains editors for setting up Gradle tasks that build deployment artifa
 * *App properties* - a set of application properties to define for this deployment. The properties will be added to the `/WEB-INF/local.app.properties` file inside the Uber JARs.
 
 * *Core port, Web port, Portal port* fields allow you to set ports for the embedded servers of the corresponding application blocks. Not available if Single Uber JAR checked. Default port values are described in the {main_man_url}/build.gradle_buildUberJar.html[documentation]. You can also set ports when running the JARs using the `-port` command line argument.
+
+The *Build UberJAR* sub-element is shown if the corresponding option is enabled in the settings. Clicking it executes the `gradlew buildUberJar` task.

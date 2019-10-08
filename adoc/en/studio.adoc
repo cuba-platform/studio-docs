@@ -18,7 +18,7 @@
 :lang: en
 :version-label: IntelliJ Plugin Version
 :revremark: Copyright (c) 2019 Haulmont (www.haulmont.com)
-:plugin-version: 11
+:plugin-version: 12
 :idea-version: 2019.1
 :minimal-idea-version: 2019.1
 :main_man_url: https://doc.cuba-platform.com/manual-7.1

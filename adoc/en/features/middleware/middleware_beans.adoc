@@ -7,4 +7,10 @@ Studio shows all {main_man_url}/managed_beans.html[managed beans] of the middle 
 
 image::features/middleware/studio_beans.png[align="center"]
 
-In order to create a managed bean, create a Java class by selecting a package in the project tree and clicking *New > Java Class* in the context menu. Then add the `@Component` annotation to the class as in the example above. To minimize the risk of name conflicts, especially if you are developing an application component, provide a name to the bean explicitly by specifying it in the annotation.
+In order to create a new managed bean in the core module, select the *Middleware* -> *Beans* project tree section and click *New > Bean* in the context menu:
+
+image::features/middleware/create_bean.png[align="center"]
+
+When you enter the name of the bean class, the corresponding bean name is generated automatically.
+
+It is also possible to create a managed bean manually in other modules of the project. To do that, create a Java class by selecting a package in the project tree and clicking *New > Java Class* in the context menu. Then add the `@Component` annotation to the class as in the example above. To minimize the risk of name conflicts, especially if you are developing an application component, provide a name to the bean explicitly by specifying it in the annotation.
