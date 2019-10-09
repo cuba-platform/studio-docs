@@ -15,7 +15,7 @@ In order to generate necessary handler method - just double-click the correspond
 image::release_notes/v-12-sd-handlers.png[align="center"]
 
 . *Preview* action has been added to the top actions panel of the screen descriptor.
-It opens a window with preview of the edited screen. This preview interacts with the XML editor and automatically updates its content according to the layout changes.
+It opens a window with the preview of the edited screen. Canvas of the preview window interacts with the XML editor and automatically updates its content according to the layout changes.
 +
 image::release_notes/v-12-sd-preview.png[align="center"]
 

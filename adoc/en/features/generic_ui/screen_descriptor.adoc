@@ -7,8 +7,23 @@ The {main_man_url}/screen_descriptors.html[screen XML descriptor] editor contain
 
 image::features/generic_ui/xml_descriptor.png[align="center"]
 
-You can switch from the screen descriptor to its controller and back using the marker on the gutter or by selecting the descriptor in the project tree and clicking *Go to controller* in the context menu.
+You can switch from the screen descriptor to its controller and back using the marker on the gutter or by clicking the *Controller* action on the top panel.
 
+[[screen_descriptor_actions_panel]]
+Top actions panel::
++
+--
+Actions panel is located on top of the source code editor. It provides access to the following actions:
+
+* *Controller* - navigates to the screen controller.
+* *Preview* - opens a window with the preview of the edited screen. Canvas of the preview window interacts with the XML editor and automatically updates its content according to the layout changes. This action is available only when the subscription is active.
+* *Customer* (or other entity class name) - displayed if this screen represents an entity browser or editor. Allows to navigate to the entity associated with the current screen.
+--
+
+[[screen_descriptor_inspections]]
+Inspections::
++
+--
 Studio inspects the screen layout for errors and inconsistency, checks the internal and external references. It will alert you with warnings or by highlighting XML elements in the following cases:
 
 * The screen layout cannot be assembled due to an XML error.
@@ -23,10 +38,20 @@ Studio inspects the screen layout for errors and inconsistency, checks the inter
 * `messagesPack` descriptor attribute does not belong to a valid package which contains at least one `messages_xx.properties` file.
 * Outdated XSD reference.
 * `id` values are not unique within the screen.
+* and other problems
 
-The inspections can be configured in the *Settings* window (*CUBA > Settings > Editor > Inspections*).
+CUBA inspections can be configured in the *Settings* window (*File > Settings > Editor > Inspections*).
+--
 
-Studio intentions facilitate working with screen components. Use Alt+Insert (Cmd+N) to find out the features for working with particular UI and data components. For example, to add a new field to a {main_man_url}/gui_Form.html[Form] component, you can move the cursor inside the `form` element and do one of the following:
+[[screen_descriptor_intentions]]
+Intentions and generate menu::
++
+--
+Intention action is a context-sensitive action that can be invoked by developer from the source code editor by pressing Alt+Enter (Option+Enter). Intentions help with refactorings, code generation, navigation and other tasks. You can read more about intention actions here: https://www.jetbrains.com/help/idea/intention-actions.html.
+
+The *Generate* menu contains context-sensitive actions helping to generate various code constructs. It can be invoked by pressing Alt+Insert (Cmd+N). Read more about this menu here: https://www.jetbrains.com/help/idea/generating-code.html.
+
+Studio-bundled intentions and items of the generate menu facilitate working with screen components. Use Alt+Insert (Cmd+N) and Alt+Enter (Option+Enter) to find out the features for working with particular UI and data components. For example, to add a new field to a {main_man_url}/gui_Form.html[Form] component, you can move the cursor inside the `form` element and do one of the following:
 
 * Press Alt+Insert (Cmd+N), select *Add field*, then choose the property and the field tag,
 +
@@ -35,10 +60,15 @@ image::features/generic_ui/gui_Form_add.png[align="center"]
 * Type `field` and press TAB, then choose the property and the field tag.
 +
 image::features/generic_ui/gui_Form_add_tab.png[align="center"]
+--
 
+[[screen_descriptor_designer]]
+Screen Designer::
++
+--
 The *Designer* tab displays the visual designer which allows you to develop the screen layout and set UI components properties in WYSIWYG style.
 
-image::features/generic_ui/xml_descriptor_2.png[align="center"]
+image::features/generic_ui/screen_designer.png[align="center"]
 
 The designer workspace is divided into four panels:
 
@@ -53,8 +83,11 @@ The designer workspace is divided into four panels:
 ** Data components: containers and loaders;
 ** Non-visual components: actions, dialog mode settings, timers.
 
-In order to add a component to the layout, drag it from the palette onto the canvas or the hierarchy panel.
+In order to add a component to the layout, drag it from the palette onto the hierarchy panel.
 
 * The *Hierarchy* panel displays the tree of components added to the layout. Elements of the tree can be rearranged using drag-and-drop, as sometimes this is more convenient than doing the same on the canvas. You can remove, copy, cut or paste an element in the hierarchy using its context menu opened by right-click.
 
 * The *Properties* panel displays visual component properties.
+
+* The *Handlers* panel displays event listeners and component delegates that can be associated with the selected component. In order to generate necessary handler method - just double-click the corresponding row.
+--
