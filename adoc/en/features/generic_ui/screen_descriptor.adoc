@@ -17,7 +17,7 @@ Actions panel is located on top of the source code editor. It provides access to
 
 * *Controller* - navigates to the screen controller.
 * *Preview* - opens a window with the preview of the edited screen. Canvas of the preview window interacts with the XML editor and automatically updates its content according to the layout changes. This action is available only when the subscription is active.
-* *Customer* (or other entity class name) - displayed if this screen represents an entity browser or editor. Allows to navigate to the entity associated with the current screen.
+* *<entity class name>* - displayed if this screen represents an entity browser or editor. Allows to navigate to the entity associated with the current screen.
 --
 
 [[screen_descriptor_inspections]]

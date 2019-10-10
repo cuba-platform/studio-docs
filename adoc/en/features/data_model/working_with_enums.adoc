@@ -1,0 +1,35 @@
+:sourcesdir: ../../../../source
+
+[[data_model_enums]]
+==== Working with Enumerations
+Studio helps to work with {main_man_url}/enum_attributes.html[enumerations] by providing a set of actions and the visual designer.
+
+Enumerations are displayed along with entities in the *Data Model* section of the CUBA project tree.
+
+[[data_model_enum_creation]]
+Creating new enumeration::
++
+--
+. Select *Data Model* section or a package below it in the project tree and choose *New > Enumeration* from the context menu.
+
+. The *New CUBA Enumeration* dialog appears. Enter the name of the enumeration class in the *Class* field, select the package to put class to and the Id type (String is recommended).
+
+image::features/data_model/create_enum.png[align="center"]
+
+. Studio will create the enumeration class. The created class will be opened in the source code editor. Two tabs will be displayed at the bottom of the editor:
+
+** *Text* contains the source code.
+
+** *Designer* shows the enumeration designer where you can configure the enum and its values (constants)  using graphical interface instead of writing Java code.
+
+image::features/data_model/enum_designer.png[align="center"]
+
+Use the *Values* table and its associated buttons to set up enumeration constants.
+
+* *Name* column allows to enter enumeration constant name to be used in the code. It can be renamed later without affecting existing data in the database.
+* *Value* column allows to enter *id* of the enumeration constant. This is the actual value stored in the database.
+* The globe button allows to set localized captions (user-friendly names) for the selected enum constant.
+
+Designer also provides the ability to change the *Id type* used by the enumeration from String to Integer and visa versa. To perform this migration, open the enumeration designer and switch the *Id type* value. Studio will migrate usages of the enumeration in the code. After that you should change values of the existing enumeration constants. Note that such migration does not migrate enumeration values already stored in the database tables, you would need to implement such migration yourself, e.g. with a help of a database update script.
+
+--

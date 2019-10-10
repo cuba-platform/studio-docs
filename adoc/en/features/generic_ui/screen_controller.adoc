@@ -9,11 +9,29 @@ Gutter icons enable quick switching to the corresponding XML descriptor, locatin
 
 image::features/generic_ui/controller.png[align="center"]
 
+[[controller_action_panel]]
+Top actions panel::
++
+--
+Actions panel is located on the top of the controller source code editor. It displays the following actions:
+
+* *<entity class name>* - navigates to the entity associated with current browser or editor screen.
+* *Descriptor* - navigates to the corresponding screen descriptor
+* *Main Menu* - allows to include current screen to the main menu or to navigate to the main menu configuration.
+* *Inject* - helps to inject dependencies to the controller class, described below.
+* *Subscribe to Event* - allows to subscribe the controller to various events, described below.
+* *Install Delegate* - allows to generate components' delegates, described below.
+
+--
+
 [[controller_injection]]
 Dependency injection::
 +
 --
-Dependency injection is the main way of getting references to visual components and API endpoints in the screen controller code. Of course, you can write a field of the required type and annotate it manually, but Studio has a special window that allows you to select an object from the list and create the appropriate field automatically. This window is opened if you press Alt+Insert (Cmd+N) and select *Inject...* in the *Generate* popup menu:
+Dependency injection is the main way of getting references to visual components and API endpoints in the screen controller code. Of course, you can write a field of the required type and annotate it manually, but Studio has a special window that allows you to select an object from the list and create the appropriate field automatically. This window can be opened:
+
+* by clicking the *Inject* action on the top actions panel,
+* or by pressing Alt+Insert (Cmd+N) and selecting *Inject...* in the *Generate* popup menu:
 
 image::features/generic_ui/controller_injection.png[align="center"]
 
@@ -23,14 +41,19 @@ The following objects can be injected into controllers:
 * Screen API interfaces,
 * Infrastructure interfaces,
 * Middleware services,
-* Configuration interfaces.
+* Other Spring beans defined in the project,
+* Configuration interfaces,
+* SLF4J Logger instance.
 --
 
 [[controller_events]]
 Event handling::
 +
 --
-By creating event handlers, you can execute code at various points in the screen lifecycle and react to user actions. A handler is a controller method annotated with `@Subscribe` and having the event as a parameter. You can create such method in Studio if you press Alt+Insert (Cmd+N) and select *Subscribe to Event* in the *Generate* popup menu:
+By creating event handlers, you can execute code at various points in the screen lifecycle and react to user actions. A handler is a controller method annotated with `@Subscribe` and having the event as a parameter. You can create such method in Studio:
+
+* by clicking the *Subscribe to Event* action on the top actions panel,
+* or by pressing Alt+Insert (Cmd+N) and selecting *Subscribe to Event* in the *Generate* popup menu:
 
 image::features/generic_ui/subscribe_dialog.png[align="center"]
 
@@ -55,9 +78,12 @@ Delegates::
 --
 Using delegates, you can provide code that will be used by various screen mechanisms instead of their standard implementations. For example, you can provide your own function to commit data or to select icons for table rows.
 
-A delegate is a controller method with a specific signature and annotated with `@Install`. You can create such method in Studio if you press Alt+Insert (Cmd+N) and select *Install Delegate* in the *Generate* popup menu:
+A delegate is a controller method with a specific signature and annotated with `@Install`. You can create such method in Studio:
+
+* by clicking the *Install Delegate* action on the top actions panel,
+* or by pressing Alt+Insert (Cmd+N) and selecting *Install Delegate* in the *Generate* popup menu:
 
 image::features/generic_ui/install_dialog.png[align="center"]
 
-Each event in the window is provided with a description on the right which is extracted from the framework Javadocs.
+Each delegate in the window is provided with a description on the right which is extracted from the framework Javadocs.
 --

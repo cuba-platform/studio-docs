@@ -30,10 +30,12 @@ A custom database connection URL can be specified if *Custom database URL* check
 In case of HSQLDB the Studio itself serves the database and stores its files in the `build/hsqldb` directory.
 --
 
+[[data_stores_additional]]
 Additional Data Stores::
++
 --
 
-In order to create the {main_man_url}//data_store.html[additional data store] in the project,
+In order to create the {main_man_url}/data_store.html[additional data store] in the project,
 right-click *Data Stores* item in the CUBA project tree and choose *New* -> *Additional Data Store* context menu item.
 Additional data stores registered in the project are displayed as sub-items under the *Data Stores* section:
 
@@ -48,11 +50,33 @@ By right-clicking on an additional datastore item, a context menu is opened:
 The *Data Store* dialog appears when you create or edit an additional data store. It has the following fields:
 
 * *Data store name* - the name of the data store. It may contain only alphanumeric characters and underscores and should be different from the project name.
-* *Data store type* - the type of the data store: either `RdbmsStore` or `Custom`, see the {main_man_url}//data_store.html[documentation] for details.
+* *Data store type* - the type of the data store: either `RdbmsStore` or `Custom`, see the {main_man_url}/data_store.html[documentation] for details.
 The fields explained below should be set in case of `RdbmsStore`.
 * *DataSource JNDI name* - automatically set by Studio on the basis of the data store name.
 * *Database type*, *URL*, etc. - database connection parameters.
 
 image::features/project/add-store-settings.png[align="center"]
+
+--
+
+[[data_stores_db_scripts]]
+Database init and update scripts::
++
+--
+{main_man_url}/db_scripts.html[Database init and update scripts] are available for *Main Data Store* and displayed under its element:
+
+image::features/project/db-scripts.png[align="center"]
+
+* *Init* scripts contain DDL and DML statements creating the database from scratch, bringing the database structure to the state consistent with the current state of the data model.
+* *Update* scripts contain statements that update already existing database structure to the current state of the data model from any of the previous states.
+
+Studio automatically maintains init and update scripts according to the data model changes, read more about it in the  <<database_migration>> section.
+
+You can also create additional database scripts if necessary. Use the following actions in the CUBA project tree under the *Data Stores* -> *Main Data Store* section:
+
+* init -> context menu -> *New* -> *Database init script*
+* update -> context menu -> *New* -> *Database update script*
+
+image::features/project/new-update-script.png[align="center"]
 
 --
