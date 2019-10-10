@@ -70,7 +70,7 @@ image::release_notes/v-12-quick-doc.png[align="center"]
 
 . Localized Message dialog in the Entity Designer now automatically constructs message keys for Bean Validation messages, e.g. "playground_Rank.queueSize.validation.Digits" or "playground_Tariff.taxType.validation.NotNull".
 
-. Added support for the *Integrated Security* option of the *Microsoft SQL Server* database type.
+. Added support for the *Integrated Security* option of the *Microsoft SQL Server (2012+)* database type. Please note that it's available only for projects based on CUBA 7.1.0 and later.
 
 . Performance for large projects has been improved (data model designer, views.xml static analysis, CUBA project tree).
 
