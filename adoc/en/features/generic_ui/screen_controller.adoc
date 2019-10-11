@@ -17,10 +17,10 @@ Actions panel is located on the top of the controller source code editor. It dis
 
 * *<entity class name>* - navigates to the entity associated with current browser or editor screen.
 * *Descriptor* - navigates to the corresponding screen descriptor
-* *Main Menu* - allows to include current screen to the main menu or to navigate to the main menu configuration.
+* *Main Menu* - allows you to include current screen to the main menu or to navigate to the main menu configuration.
 * *Inject* - helps to inject dependencies to the controller class, described below.
-* *Subscribe to Event* - allows to subscribe the controller to various events, described below.
-* *Install Delegate* - allows to generate components' delegates, described below.
+* *Subscribe to Event* - allows subscribing the controller to various events, described below.
+* *Install Delegate* - allows generating components' delegates, described below.
 
 --
 

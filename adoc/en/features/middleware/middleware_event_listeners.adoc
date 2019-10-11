@@ -5,7 +5,7 @@
 
 Event listener is a Spring bean having one or more listener methods that accept an Event object and contain reaction on that event. You can read more about events and event listeners in the {main_man_url}/events.html[Developer's Manual].
 
-Studio allows to scaffold listeners for various application events:
+Studio allows you to scaffold listeners for various application events:
 
 * {main_man_url}/entityChangedEvent.html[EntityChangedEvent]
 * {main_man_url}/app_lifecycle_events.html[Application lifecycle events]

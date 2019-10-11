@@ -3,7 +3,7 @@
 Version 11::
 +
 --
-. The "CUBA Add-ons" screen has been added which allows to manage add-ons included in your project.
+. The "CUBA Add-ons" screen has been added which allows you to manage add-ons included in your project.
 The screen can be opened by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
 or from the main menu: *CUBA* -> *Marketplace*.
 Detailed description of the screen is available in the <<add_ons,corresponding section>>.

@@ -41,7 +41,7 @@ You should specify the following properties for a *Screen* item:
 * *Caption* - a menu item caption. The *Edit* button opens the localization window where you should enter captions in languages available for the project. Menu captions are placed in the corresponding main message pack with keys in `menu-config.{item_id}` format, where `{item_id}` is the item identifier, which in this case equals to the ID of the screen being opened.
 * *Insert before / Insert after* - a menu item, before/after which you want to insert the current item. This property helps to combine the project menu items with the items inherited from the app components in the *Composite* mode. For example, if you want to place your menu structure to the left of the _Administration_ item, set administration in the *Insert before* field of the root item of your hierarchy.
 * *Params* - screen parameters passed to the `init()` method of the opening screen's controller. See {main_man_url}/menu.xml.html[menu.xml] for detailed explanation.
-* *Permissions* - allows to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. For detailed explanation see {main_man_url}/menu.xml.html[menu.xml], however there is a simpler way to manage access - through the *Screens* tab of the security role editor.
+* *Permissions* - allows user to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. For detailed explanation see {main_man_url}/menu.xml.html[menu.xml], however there is a simpler way to manage access - through the *Screens* tab of the security role editor.
 ////
 --
 

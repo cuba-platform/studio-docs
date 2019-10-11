@@ -44,7 +44,7 @@ The following screen settings are available:
 
 . Added ability to scaffold handlers for components which don't have *id* yet. Studio asks user to enter component id when required.
 
-. *Main Menu* action has been added to the actions panel of the screen controller. It allows to include current screen to the main menu or to navigate to the main menu configuration.
+. *Main Menu* action has been added to the actions panel of the screen controller. It allows developer to include current screen to the main menu or to navigate to the main menu configuration.
 +
 image::release_notes/v-12-main-menu-action.png[align="center"]
 
@@ -52,11 +52,11 @@ image::release_notes/v-12-main-menu-action.png[align="center"]
 +
 image::release_notes/v-12-uber-jar.png[align="center"]
 
-. Added new actions that allow to create new database init/update scripts. These actions are available from the CUBA project tree, under the *Data Stores* -> *Main Data Store* section:
+. Added new actions that allow developer to create new database init/update scripts. These actions are available from the CUBA project tree, under the *Data Stores* -> *Main Data Store* section:
 .. init -> context menu -> *New* -> *Database init script*
 .. update -> context menu -> *New* -> *Database update script*
 
-. The *Install Delegate* dialog that is invoked from the screen controller now allows to generate formatter, custom column generator or value provider for any table column.
+. The *Install Delegate* dialog that is invoked from the screen controller now allows developer to generate a formatter, custom column generator or value provider for any table column.
 
 . Added suggestions for the *icon* attribute of the screen XML descriptor, also added icon preview as a gutter icon.
 +

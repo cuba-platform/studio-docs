@@ -26,9 +26,9 @@ image::features/data_model/enum_designer.png[align="center"]
 
 Use the *Values* table and its associated buttons to set up enumeration constants.
 
-* *Name* column allows to enter enumeration constant name to be used in the code. It can be renamed later without affecting existing data in the database.
-* *Value* column allows to enter *id* of the enumeration constant. This is the actual value stored in the database.
-* The globe button allows to set localized captions (user-friendly names) for the selected enum constant.
+* *Name* column allows you to enter enumeration constant name to be used in the code. It can be renamed later without affecting existing data in the database.
+* *Value* column allows entering the *id* of the enumeration constant. This is the actual value stored in the database.
+* The globe button allows you to set localized captions (user-friendly names) for the selected enum constant.
 
 Designer also provides the ability to change the *Id type* used by the enumeration from String to Integer and visa versa. To perform this migration, open the enumeration designer and switch the *Id type* value. Studio will migrate usages of the enumeration in the code. After that you should change values of the existing enumeration constants. Note that such migration does not migrate enumeration values already stored in the database tables, you would need to implement such migration yourself, e.g. with a help of a database update script.
 

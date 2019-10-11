@@ -34,7 +34,7 @@ Basic settings::
 Dependencies section::
 +
 --
-The *Dependencies* section displays and allows to manage 3rd-party dependencies (libraries) connected to your project.
+The *Dependencies* section displays and allows you to manage 3rd-party dependencies (libraries) connected to your project.
 
 image::features/project/dependencies.png[align="center"]
 
