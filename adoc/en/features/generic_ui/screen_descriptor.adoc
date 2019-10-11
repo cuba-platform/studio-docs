@@ -53,11 +53,11 @@ The *Generate* menu contains context-sensitive actions helping to generate vario
 
 Studio-bundled intentions and items of the generate menu facilitate working with screen components. Use Alt+Insert (Cmd+N) and Alt+Enter (Option+Enter) to find out the features for working with particular UI and data components. For example, to add a new field to a {main_man_url}/gui_Form.html[Form] component, you can move the cursor inside the `form` element and do one of the following:
 
-* Press Alt+Insert (Cmd+N), select *Add field*, then choose the property and the field tag,
+* Press Alt+Insert (Cmd+N), select *Add field*, then choose the value of the `property` attribute,
 +
 image::features/generic_ui/gui_Form_add.png[align="center"]
 
-* Type `field` and press TAB, then choose the property and the field tag.
+* Type `field` and press TAB, then choose the value of the `property` attribute.
 +
 image::features/generic_ui/gui_Form_add_tab.png[align="center"]
 --
@@ -85,7 +85,7 @@ The designer workspace is divided into four panels:
 
 In order to add a component to the layout, drag it from the palette onto the hierarchy panel.
 
-* The *Hierarchy* panel displays the tree of components added to the layout. Elements of the tree can be rearranged using drag-and-drop, as sometimes this is more convenient than doing the same on the canvas. You can remove, copy, cut or paste an element in the hierarchy using its context menu opened by right-click.
+* The *Hierarchy* panel displays the tree of components added to the layout. Elements of the tree can be rearranged using drag-and-drop. You can remove, copy, cut or paste an element in the hierarchy using its context menu opened by right-click.
 
 * The *Properties* panel displays visual component properties.
 

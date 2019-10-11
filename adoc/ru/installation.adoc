@@ -86,3 +86,51 @@ $ ./cuba-studio.sh
 
 . Нажмите *Install* и следуйте инструкциям IDE.
 --
+
+[[install_proxy_setup]]
+=== Работа за прокси-сервером
+--
+Чтобы сконфигурировать CUBA Studio для доступа к интернету через прокси-сервер, вам нужно проделать следующие шаги:
+
+. Настроить IntelliJ IDEA (или CUBA Studio)
+. Настроить Gradle
+. Настроить Git (необязательно)
+--
+
+Настройка прокси в IntelliJ IDEA (CUBA Studio)::
++
+--
+* Открыть диалог *Settings*: главное меню -> *File* -> *Settings*.
+* Выбрать секцию настроек *Appearance & Behavior* -> *System Settings* -> *HTTP Proxy*.
+* Проставить необходимые значения настроек и нажать *Check connection* для проверки:
+
+image::proxy-idea.png[align="center"]
+
+При необходимости обратитесь к https://www.jetbrains.com/help/idea/settings-http-proxy.html[этой странице] за дополнительной информацией.
+
+--
+Настройка прокси в Gradle::
++
+--
+* Найдите файл *~/.gradle/gradle.properties* в домашнем каталоге пользователя.
+* Отредактируйте этот файл и добавьте необходимые параметры, как описано в https://docs.gradle.org/current/userguide/build_environment.html#sec:accessing_the_web_via_a_proxy[документации Gradle]:
+
+[source, java]
+----
+include::{sourcesdir}/gradle-proxy.properties[]
+----
+--
+
+Настройка прокси в Git (необязательно)::
++
+--
+Возможно вы захотите задать настройки прокси в том числе и для инструмента контроля версий Git, например чтобы скачивать проекты-примеры из https://github.com/cuba-platform?utf8=✓&q=sample&type=&language=[GitHub репозиториев] CUBA:
+
+Выполните эту команду:
+[source]
+----
+include::{sourcesdir}/git-proxy.txt[]
+----
+
+Или обратитесь к https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy[документации Git] для детального описания.
+--

@@ -7,6 +7,8 @@
 
 include::data_model/working_with_entities.adoc[]
 
+include::data_model/working_with_enums.adoc[]
+
 include::data_model/working_with_views.adoc[]
 
 include::data_model/database_migration.adoc[]
