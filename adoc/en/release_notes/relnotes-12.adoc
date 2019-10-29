@@ -78,6 +78,7 @@ image::release_notes/v-12-quick-doc.png[align="center"]
 
 . Numerous small improvements and bug fixes:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2012.1[Studio 12.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2012.0[Studio 12.0 Resolved Issues\]]
 
 --
