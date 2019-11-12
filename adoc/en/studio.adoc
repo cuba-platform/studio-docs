@@ -42,3 +42,5 @@ include::getting_started.adoc[]
 include::ui.adoc[]
 
 include::features.adoc[]
+
+include::ultimate_features.adoc[]

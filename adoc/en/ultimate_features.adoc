@@ -1,0 +1,22 @@
+:sourcesdir: ../../source
+
+[[ultimate_features]]
+== Integration with the IDEA Ultimate Edition
+--
+The IntelliJ IDEA Ultimate Edition is a commercial IDE containing many additional features useful for CUBA application development: support for CSS and JavaScript, JPA, Spring, Docker, Database access and so on.
+
+Studio can be installed like a regular plugin into the IDEA Ultimate Edition. It integrates with some of the Ultimate IDEA features improving development experience.
+--
+
+=== Turning off conflicting features
+--
+Some Studio features may conflict with those of IntelliJ Ultimate Edition or some third-party plugins.
+
+For example, to avoid conflicts of gutter icons provided by the CUBA Studio with ones shown by the Ultimate IDEA Spring plugin, do the following:
+
+* Open Main menu > *Settings > Editor > General > Gutter Icons*,
+* Uncheck *Injection points* and *Producers for Disposer methods* options,
+* Apply the changes.
+--
+
+include::ultimate_features/jpa_plugin.adoc[]

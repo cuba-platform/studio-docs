@@ -1,0 +1,20 @@
+:sourcesdir: ../../source
+
+[[ultimate_features]]
+== Интеграция с IDEA Ultimate Edition
+--
+IntelliJ IDEA Ultimate Edition - это платная среда разработки, включающая в себя множество дополнительных функций, полезных для разработки CUBA приложений: поддержка CSS и JavaScript, JPA, Spring, Docker, подключение к БД и другие.
+
+Studio может быть установлена в IDEA Ultimate Edition как обычный плагин. Studio дополнительно интегрируется с некоторыми функциями Ultimate IDEA, улучшая поддержку процесса разработки.
+--
+
+=== Отключение конфликтующих функций
+--
+Некоторые функции Studio могут пересекаться с отдельными функциями IntelliJ Ultimate Edition или сторонних плагинов. К примеру, чтобы избежать конфликта значков в жёлобе (gutter), показываемых Studio и плагином Spring из Ultimate IDEA, можно отключить показ конфликтующих Ultimate-значков. Сделать это можно следующим образом:
+
+* Откройте главное меню > *Settings > Editor > General > Gutter Icons*,
+* Снимите флажки с опций *Injection points* и *Producers for Disposer methods*,
+* Сохраните изменения.
+--
+
+include::ultimate_features/jpa_plugin.adoc[]

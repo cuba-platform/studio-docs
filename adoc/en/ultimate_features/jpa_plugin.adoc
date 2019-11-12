@@ -3,10 +3,10 @@
 [[jpa_support]]
 === Enabling the JPA Support
 --
-The JPA support is provided by the *Java EE: EJB, JPA, Servlets* plugin which is a part of the *IntelliJ IDEA Ultimate Edition*.
+The JPA (Java Persistence Annotation) support is provided by the *Java EE: EJB, JPA, Servlets* plugin.
 [WARNING]
 ====
-The functionality described below is not available neither in the standalone CUBA Studio nor IntelliJ IDEA Community Edition.
+The functionality described below is not available in the standalone CUBA Studio or IntelliJ IDEA Community Edition.
 ====
 
 The JPA support provides the following features useful for CUBA application development:
@@ -19,10 +19,10 @@ The JPA support provides the following features useful for CUBA application deve
 
 To make use of these features you need to setup two things in your project:
 
-- Set up a Database Data Source
+- Set up a Data Source for the main data store
 - Add JPA facets to all project modules
 
-Studio helps with both of these tasks.
+Studio helps to perform these tasks quicker. Instructions below are actual for the IDEA 2019.2 version.
 --
 
 [[jpa_support_datasource]]
@@ -44,7 +44,7 @@ The Data Source detection mechanism automatically discovers parameters based on 
 - Press the *Download missing driver files* link in the bottom of the dialog. Driver files will be downloaded automatically.
 - Press *Test Connection* to ensure that connection properties were discovered correctly. Change properties if necessary.
 - Set value of the *Save* field to *Forever*. Otherwise the password will be forgotten after IDE restart.
-- Press OK in the dialog.
+- Close the dialog by pressing *OK* button.
 
 If JPA facets are already created, assign the new Data Source to them by opening *Persistence* tool window. Make a right click on every facet -> *Assign Data Sources...* -> change Data Source -> *OK*.
 
@@ -83,12 +83,12 @@ Manual JPA facet setup::
 --
 You can also setup or tweak JPA facets manually through the *File* -> *Project Structure* dialog.
 
-- Open the *Project Structure* dialog
-- Select *Facets* in the left menu
-- Remove all existing JPA facets
+- Open the *Project Structure* dialog,
+- Select *Facets* in the left menu,
+- Remove all existing JPA facets,
 - For all modules in your project: global, core, gui, web, portal - do the following actions:
-- Press "+" (Add) icon
-- Choose JPA facet type
+- Press "+" (Add) icon,
+- Choose JPA facet type,
 - Choose the sub-module ending with "main", e.g. "sample-sales.app-global.main". Press *OK*.
 - In the bottom right of the dialog change *Default JPA Provider* to *CUBA EclipseLink*.
 - Repeat these steps for other modules.
