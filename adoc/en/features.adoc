@@ -20,3 +20,5 @@ include::features/data_model.adoc[]
 include::features/middleware.adoc[]
 
 include::features/generic_ui.adoc[]
+
+include::features/jpa_plugin.adoc[]

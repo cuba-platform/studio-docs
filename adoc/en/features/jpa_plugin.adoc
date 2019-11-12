@@ -1,0 +1,131 @@
+:sourcesdir: ../../../../source
+
+[[jpa_support]]
+=== Enabling the JPA Support
+--
+The JPA support is provided by the *Java EE: EJB, JPA, Servlets* plugin which is a part of the *IntelliJ IDEA Ultimate Edition*.
+[WARNING]
+====
+The functionality described below is not available neither in the standalone CUBA Studio nor IntelliJ IDEA Community Edition.
+====
+
+The JPA support provides the following features useful for CUBA application development:
+
+- JPQL highlighting, auto completion and inspections,
+- JPA Console (for projects based on CUBA 7.1 or later),
+- Code inspections in the entities source code,
+- ER diagram,
+- Other features described at the https://www.jetbrains.com/help/idea/overview-of-jpa-support.html[JetBrains site].
+
+To make use of these features you need to setup two things in your project:
+
+- Set up a Database Data Source
+- Add JPA facets to all project modules
+
+Studio helps with both of these tasks.
+--
+
+[[jpa_support_datasource]]
+==== Setup Data Source
+--
+You can setup the Data Source manually through the *Database* tool window located on the right side of the IDE.
+Studio also provides data source detection when the project is opened:
+
+image::features/jpa_support/datasource-notification.png[align="center"]
+
+In case if you've missed the notification, it is also recorded in the *Event Log* tool window which can be opened by clicking the appropriate button in the right corner of the screen.
+
+Press *Configure* to open the pre-filled *Data Sources and Drivers* dialog.
+
+image::features/jpa_support/add-ds-dialog.png[align="center"]
+
+The Data Source detection mechanism automatically discovers parameters based on main data store settings and fills Driver and other connection properties. However you need to configure the database driver in the "Data Sources and Drivers" dialog:
+
+- Press the *Download missing driver files* link in the bottom of the dialog. Driver files will be downloaded automatically.
+- Press *Test Connection* to ensure that connection properties were discovered correctly. Change properties if necessary.
+- Set value of the *Save* field to *Forever*. Otherwise the password will be forgotten after IDE restart.
+- Press OK in the dialog.
+
+If JPA facets are already created, assign the new Data Source to them by opening *Persistence* tool window. Make a right click on every facet -> *Assign Data Sources...* -> change Data Source -> *OK*.
+
+--
+
+[[jpa_support_facets]]
+==== Set up JPA facets
+Every module in the project should have a *JPA* facet, otherwise features related to the JPQL language will not be available in that module.
+
+JPA facet auto-detection::
++
+--
+Studio helps you with facet auto-detection. When opening a new project for the first time, you will see the *Frameworks Detected* notification in the right corner of the IDE:
+
+image::features/jpa_support/facet-detection.png[align="center"]
+
+If JPA facets were already set up in your project, the notification won't appear. To get the notification, you can go to the Main Menu -> *File* -> *Project Structure* dialog and remove existing facets. Then reopen the project and perform a Gradle project refresh (*Gradle* tool window -> *Reimport All Gradle Projects* button).
+
+In case if you've missed the notification, it is also recorded in the *Event Log* tool window which can be opened by clicking the appropriate button in the right corner of the screen:
+
+image::features/jpa_support/event-log.png[align="center"]
+
+Click the *Configure* link, and the *Setup Framework* dialog appears.
+
+Untick items in the *Web* group and press *OK*:
+
+image::features/jpa_support/setup-frameworks.png[align="center"]
+
+To check the facet configuration, open the *Persistence* Tool Window located on the left side of the IDE window. Then expand one of nodes, e.g. one that corresponds to the *app-global* module, and expand the *Entities* sub-node. You should see the list of entities defined in your project or inherited from application components:
+
+image::features/jpa_support/persistence-tool-window.png[align="center"]
+--
+
+Manual JPA facet setup::
++
+--
+You can also setup or tweak JPA facets manually through the *File* -> *Project Structure* dialog.
+
+- Open the *Project Structure* dialog
+- Select *Facets* in the left menu
+- Remove all existing JPA facets
+- For all modules in your project: global, core, gui, web, portal - do the following actions:
+- Press "+" (Add) icon
+- Choose JPA facet type
+- Choose the sub-module ending with "main", e.g. "sample-sales.app-global.main". Press *OK*.
+- In the bottom right of the dialog change *Default JPA Provider* to *CUBA EclipseLink*.
+- Repeat these steps for other modules.
+
+[TIP]
+====
+Don't forget to set *Default JPA Provider* field to *CUBA EclipseLink* in the bottom, otherwise JPA Console won't work.
+====
+
+image::features/jpa_support/add-facet-manually.png[align="center"]
+
+--
+
+==== Feature examples
+--
+JPQL syntax highlighting, auto completion and inspections work automatically in Java and XML files for modules where JPA facet is configured:
+
+image::features/jpa_support/jpql_highlighting.png[align="center"]
+image::features/jpa_support/jpql_java.png[align="center"]
+
+The ER diagram can be opened from the *Persistence* tool window: right click any module -> *Entities* -> *ER Diagram*. You may want to deselect the *Superclasses* option on the top to disable displaying common base classes:
+
+image::features/jpa_support/er_diagram.png[align="center"]
+
+JPA Console::
+
+[TIP]
+====
+Note that JPA Console is available only for projects based on CUBA 7.1 or later.
+====
+
+JPA Console can be opened from the *Persistence* tool window: expand any module -> choose *Entities* and then press the *Console* button:
+
+image::features/jpa_support/jpa_console_button.png[align="center"]
+
+Console window will open. Now you are able to invoke JPQL queries on your development database:
+
+image::features/jpa_support/jpa_console.png[align="center"]
+
+--
