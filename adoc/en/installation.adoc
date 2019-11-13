@@ -134,3 +134,15 @@ include::{sourcesdir}/git-proxy.txt[]
 
 Or refer to the https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy[Git documentation] for more details.
 --
+
+[[gradle_offline_mode]]
+=== Working offline
+--
+It is possible to develop projects using Studio without internet connection, provided that all project dependencies have been already downloaded, i.e. the project was been already opened and assembled by this Studio installation. Part of Studio functionality will not be available in offline mode, e.g. it will not be possible to change Platform version or browse CUBA Add-Ons Marketplace.
+
+To start working offline, open the *Gradle* tool window in the right part of the IDE and click the *Toggle Offline Mode* button:
+
+image::gradle-offline-mode.png[align="center"]
+
+In offline mode, Gradle uses dependencies from the cache when executing all project build tasks. Gradle will not attempt to access the network to perform dependency resolution. If the required dependencies are not present in the cache, build execution will fail.
+--
