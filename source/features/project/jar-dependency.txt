@@ -1,0 +1,6 @@
+configure(globalModule) {
+    ...
+    dependencies {
+        compile(name: 'custom-lib')
+    }
+}

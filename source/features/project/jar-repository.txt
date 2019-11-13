@@ -1,0 +1,8 @@
+    repositories {
+        maven {
+            ...
+        }
+        flatDir {
+            dirs "${project.rootDir}/lib"
+        }
+     }

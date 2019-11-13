@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../source
+:sourcesdir: ../../../../source
 
 [[project_properties]]
 ==== Редактор свойств проекта
@@ -30,10 +30,9 @@
 --
 
 [[project_properties_dependencies]]
-Секция Dependencies::
-+
+==== Зависимости проекта
 --
-Секция *Dependencies* отображает и позволяет управлять сторонними зависимостями (библиотеками), подключенными к вашему проекту.
+Секция *Dependencies* диалога *Project Properties* отображает и позволяет управлять сторонними зависимостями (библиотеками), подключенными к вашему проекту.
 
 image::features/project/dependencies.png[align="center"]
 
@@ -90,4 +89,27 @@ image::features/project/newdep-maven.png[align="center"]
 Вид зависимости Gradle *implementation 'a.b.c'* пока не поддерживается, пожалуйста используйте *compile 'a.b.c'* вместо него.
 ====
 
+--
+
+[[project_properties_jar_dependency]]
+Добавление зависимости от JAR файла::
++
+--
+Случаются ситуации, когда у вас имеется библиотека в виде JAR-файла, не загруженного в публичные или внутренние Maven репозитории, и вам нужно добавить этот файл как зависимость к вашему проекту. В этом случае вам нужно проделать ручные изменения в скрипте build.gradle.
+
+* Создайте папку `lib` в корневом каталоге проекта;
+* Скопируйте JAR файл в этот каталог, например как `<my-project>/lib/custom-lib.jar`
+* Откройте скрипт сборки Gradle: дерево проектов CUBA -> *Build Script* -> *build.gradle*;
+* Модифицируйте файл build.gradle, добавив элемент `flatDir` в секцию `repositories`:
+[source]
+----
+include::{sourcesdir}/features/project/jar-repository.txt[]
+----
+* Измените секцию `configure(globalModule)` файла build.gradle, добавив зависимость и указав имя JAR файла:
+[source]
+----
+include::{sourcesdir}/features/project/jar-dependency.txt[]
+----
+* Обновите конфигурацию проекта Gradle: панель инструментов *Gradle* -> *Reimport All Gradle Projects*;
+* Теперь в коде можно использовать классы библиотеки.
 --

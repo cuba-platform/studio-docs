@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../source
+:sourcesdir: ../../../../source
 
 [[project_properties]]
 ==== Project Properties Editor
@@ -31,10 +31,9 @@ Basic settings::
 --
 
 [[project_properties_dependencies]]
-Dependencies section::
-+
+==== Project Dependencies
 --
-The *Dependencies* section displays and allows you to manage 3rd-party dependencies (libraries) connected to your project.
+The *Dependencies* section of the *Project Properties* dialog displays and allows you to manage 3rd-party dependencies (libraries) connected to your project.
 
 image::features/project/dependencies.png[align="center"]
 
@@ -91,4 +90,27 @@ to the project build script and refresh project configuration.
 Gradle *implementation 'a.b.c'* dependency type is not supported yet, please use *compile 'a.b.c'* instead of it.
 ====
 
+--
+
+[[project_properties_jar_dependency]]
+Adding a JAR file dependency::
++
+--
+Sometimes you have a JAR file that isn't present in any of public or internal Maven repositories and you need to add this file as a dependency to your project. In this case you need to modify the build.gradle script manually.
+
+* Create the `lib` directory in the project root folder;
+* Copy the JAR file to this folder, e.g. as `<my-project>/lib/custom-lib.jar`
+* Open the Gradle build script: CUBA project tree -> *Build Script* -> *build.gradle*;
+* Modify the build.gradle by adding a `flatDir` clause to the `repositories` section:
+[source]
+----
+include::{sourcesdir}/features/project/jar-repository.txt[]
+----
+* Modify the build.gradle `configure(globalModule)` section by adding a dependency specifying JAR file name:
+[source]
+----
+include::{sourcesdir}/features/project/jar-dependency.txt[]
+----
+* Refresh the Gradle project configuration: *Gradle* tool window -> *Reimport All Gradle Projects*;
+* Now you can use library's classes in your code.
 --
