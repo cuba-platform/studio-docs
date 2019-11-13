@@ -1,0 +1,5 @@
+configure([globalModule, coreModule, webModule]) {
+    ...
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+}
