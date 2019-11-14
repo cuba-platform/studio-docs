@@ -12,3 +12,5 @@ include::getting_started/open_project.adoc[]
 include::getting_started/upgrade_project.adoc[]
 
 include::getting_started/start_app.adoc[]
+
+include::getting_started/non_default_jdk.adoc[]

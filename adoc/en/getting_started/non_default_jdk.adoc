@@ -3,7 +3,7 @@
 [[using_non_default_jdk]]
 === Using non-default JDK
 --
-Both IntelliJ IDEA and Gradle by default use Java Development Kit (JDK) defined by the `JAVA_HOME` environment variable to assemble and run Java projects. In order to use the non-default JDK in your project you need to change quite a few settings.
+Both IntelliJ IDEA and Gradle by default use Java Development Kit (JDK) defined by the `JAVA_HOME` environment variable to assemble and run Java projects. In order to use the non-default JDK in your project without touching global system settings, you need to perform several steps.
 
 Let's consider this environment configuration:
 
@@ -13,7 +13,7 @@ Let's consider this environment configuration:
 
 You need to perform the following steps:
 
-* Add JDK 11 to the global list of IDEA SDKs if it's hasn't been added yet. Go to the Main menu -> *File* -> *Project Structure*. Select *SDKs* in the left menu. Press *+* button -> choose *JDK* -> select JDK 11 installation folder. Press *OK* to save changes.
+* Add JDK 11 to the global list of IDEA SDKs if it hasn't been added yet. Go to the Main menu -> *File* -> *Project Structure*. Select *SDKs* in the left menu. Press *+* button -> choose *JDK* -> select JDK 11 installation folder. Press *OK* to save changes.
 
 * When creating a new CUBA project, select "11" for the *Project SDK* field.
 
@@ -26,7 +26,7 @@ You need to perform the following steps:
 org.gradle.java.home = C:/Java/jdk-11.0.5.10-hotspot
 ----
 
-* Modify the *build.gradle* file located in the project root folder. Add the following statements to the end of  `configure([globalModule, coreModule, webModule])` block:
+* Modify the *build.gradle* file located in the project root folder. Add the following statements to the end of `configure([globalModule, coreModule, webModule])` block:
 ----
 include::{sourcesdir}/getting_started/source-compat-11.txt[]
 ----
