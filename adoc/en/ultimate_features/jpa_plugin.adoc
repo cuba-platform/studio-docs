@@ -19,7 +19,7 @@ The JPA support provides the following features useful for CUBA application deve
 
 To make use of these features you need to setup two things in your project:
 
-- Set up a Data Source for the main data store
+- Setup a Data Source for the main data store
 - Add JPA facets to all project modules
 
 Studio helps to perform these tasks quicker. Instructions below are actual for the IDEA 2019.2 version.
@@ -51,7 +51,7 @@ If JPA facets are already created, assign the new Data Source to them by opening
 --
 
 [[jpa_support_facets]]
-==== Set up JPA facets
+==== Setup JPA facets
 Every module in the project should have a *JPA* facet, otherwise features related to the JPQL language will not be available in that module.
 
 JPA facet auto-detection::
@@ -102,7 +102,7 @@ image::features/jpa_support/add-facet-manually.png[align="center"]
 
 --
 
-==== Feature examples
+==== Feature Examples
 --
 JPQL syntax highlighting, auto completion and inspections work automatically in Java and XML files for modules where JPA facet is configured:
 

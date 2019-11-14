@@ -1,7 +1,7 @@
 :sourcesdir: ../../source
 
 [[ultimate_features]]
-== Интеграция с IDEA Ultimate Edition
+== Интеграция с IntelliJ IDEA Ultimate Edition
 --
 IntelliJ IDEA Ultimate Edition - это платная среда разработки, включающая в себя множество дополнительных функций, полезных для разработки CUBA приложений: поддержка CSS и JavaScript, JPA, Spring, Docker, подключение к БД и другие.
 
