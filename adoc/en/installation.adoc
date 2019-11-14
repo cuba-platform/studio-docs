@@ -88,7 +88,7 @@ IntelliJ IDEA plugin installation::
 --
 
 [[install_proxy_setup]]
-=== Working behind a proxy
+=== Working Behind a Proxy
 --
 In order to configure CUBA Studio to access the internet via a proxy server, you need to perform the following steps:
 
@@ -136,9 +136,9 @@ Or refer to the https://git-scm.com/docs/git-config#Documentation/git-config.txt
 --
 
 [[gradle_offline_mode]]
-=== Working offline
+=== Working Offline
 --
-It is possible to develop projects using Studio without internet connection, provided that all project dependencies have been already downloaded, i.e. the project was been already opened and assembled by this Studio installation. Part of Studio functionality will not be available in offline mode, e.g. it will not be possible to change Platform version or browse CUBA Add-Ons Marketplace.
+It is possible to develop projects using Studio without internet connection, provided that all project dependencies have been already downloaded, i.e. the project was already opened and assembled by this Studio installation. Part of Studio functionality will not be available in offline mode, e.g. it will not be possible to change the platform version or browse CUBA Add-Ons Marketplace.
 
 To start working offline, open the *Gradle* tool window in the right part of the IDE and click the *Toggle Offline Mode* button:
 
