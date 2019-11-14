@@ -19,14 +19,14 @@
 
 * Для уже существующих проектов - откройте диалог через главное меню -> *File* -> *Project Structure* и измените значение поля *Project* -> *Project SDK*.
 
-* Перейдите в корневой каталог проекта и создайте там файл *gradle.properties* со следующим содержимым:
+* Перейдите в корневой каталог проекта и создайте там файл `gradle.properties` со следующим содержимым:
 [source]
 ----
 # Путь к JDK 11
 org.gradle.java.home = C:/Java/jdk-11.0.5.10-hotspot
 ----
 
-* Подредактируйте файл *build.gradle*, расположенный в корневом каталоге проекта. Добавьте следующие выражения в конец блока `configure([globalModule, coreModule, webModule])`:
+* Подредактируйте файл `build.gradle`, расположенный в корневом каталоге проекта. Добавьте следующие выражения в конец блока `configure([globalModule, coreModule, webModule])`:
 ----
 include::{sourcesdir}/getting_started/source-compat-11.txt[]
 ----
