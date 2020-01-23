@@ -1,0 +1,95 @@
+[[relnotes_13]]
+
+Version 13::
++
+--
+Layout of the Screen Designer has been rearranged, targeting the following goals:
+
+* Efficient usage of the IDE window space.
+* Convenient switching between XML descriptor source code and layout preview.
+* Allow experienced developers to use Designer capabilities when viewing and editing the XML code.
+
+The following changes and improvements have been implemented for the Screen Designer:
+
+. Screen Designer panels became independent IDE tool windows. *Component Hierarchy* is displayed in the up-right corner of the IDE, as it was before. *Component Palette* is displayed in the bottom-right corner. *Component Inspector* is displayed in the bottom-left corner and contains Properties and Handlers tabs.
++
+These tool windows appear automatically when you open screen descriptor in the editor. When you switch active screen descriptor file in the editor, the content of the tool windows is updated. Sometimes when you open other IDE tool windows (such as Gradle, Persistence etc.), Designer’s panels become hidden, and you can re-open them by clicking the corresponding buttons in the left and right sides of the IDE window.
++
+The ability to display *Component Inspector* in the bottom-right corner was kept for those users who prefer the old layout. In order to move this panel to the right side, click the *Move to Right Bottom* button located in the panel's title.
++
+image::release_notes/v-13-sd-tool-windows.png[align="center"]
+
+. Layout preview panel now shares editor space with the source code of the screen descriptor. The tabsheet with *Text* and *Designer* tabs has gone. On the right side of the top panel of the screen descriptor there are four buttons that switch preview display mode:
+.. *Editor only* - only source code is displayed in the editor.
+.. *Editor and Preview* - editor space is split to contain both source code and preview.
+.. *Preview only* - only preview is displayed in the editor (similar to the old Screen Designer layout).
+.. *Preview in Window* - source code is displayed in the editor, while preview is displayed in the separate window which can be moved to another display.
+
+. Designer panels are active when editing XML code and interact with the editor. Experienced developers who navigate and modify screen descriptors by editing the XML source code can now benefit from the editing capabilities of the screen designer:
+.. When the editor caret is moved from one XML tag to another, the corresponding component is selected in the *Component Hierarchy* and *Component Inspector* panels.
+.. Clicking element in the Hierarchy panel moves the caret to the corresponding XML tag in the source code.
+.. You can drag new components from the Palette to the Hierarchy, reorder components and edit component properties in the Inspector panel when only source code is displayed in the editor. The source code immediately reflects all changes.
+
+. Screen Designer now displays Table (and DataGrid) columns and actions in the *Component Hierarchy* tree. As a part of this change, several modal dialogs were removed that were used previously to edit columns and actions. Now you can view and edit column and action properties and event handlers right in the *Component Inspector* panel. Adding a new table column or action also became easier. When a table, one of table columns or actions is selected, the *Component Inspector* displays the *+ Add* button. By pressing it you can add one or more columns or actions to the table.
+
+. Component creation wizard dialogs have been added to the Screen Designer. Adding data containers, tables and grids, table column, table action and form field components to the screen has become easier.
++
+When you add one of mentioned components to the screen, a dialog appears that allows you to specify the most important component properties. For example, when adding a DataGrid to the screen, you are able to choose existing or create new data container, specify component id and select a set of standard actions and buttons to be added to the table.
++
+image::release_notes/v-13-datagrid-wizard.png[align="center"]
+
+. Ability to search component by typing text from keyboard has been added to the Screen Designer's *Component Hierarchy* panel:
++
+image::release_notes/v-13-search-hierarchy.png[align="center"]
+
+. Additional conversions have been added to the context menu of the *Component Hierarchy* panel. Now you can quickly convert `TextField` component to `TextArea` and other components:
++
+image::release_notes/v-13-text-field-conversions.png[align="center"]
+
+. The *Inject to Controller* context menu action available in the *Component Hierarchy* panel now supports injecting more then one selected components at once.
+
+Other features and improvements:
+
+. Support for https://kotlinlang.org[Kotlin] as a programming language has been added. You can select Kotlin as a project’s programming language in the project creation wizard, if selected platform version is `7.2.0` or later. All elements of the CUBA project: entities, screens, services can be generated using Kotlin. Studio visual designers, smart auto completions, inspections and hot deploy support Kotlin language as well.
+
+. The *Hot Deploy* mechanism for projects using platform `7.2.0` or later has been reworked (for all languages) in order to support Kotlin language. If you encounter any problems with Java / Groovy projects, you can switch back to the old mechanism by turning off the following setting: Main Menu -> *CUBA* -> *Settings* -> *Project Settings* -> *Hot deploy compiled classes*.
+
+. The CUBA project creation wizard has been extended. Fields were rearranged between steps and more fields were added to the wizard: Module Prefix, supported programming languages, Locales, Main Data Store properties.
+
+. Two additional settings were added to the *CUBA Application* run configuration: *Command line arguments* and *Environment Variables*. These settings are applied to the tomcat process running the CUBA application in debug mode. For example, by specifying command line arguments you can set non-default timezone: `-Duser.timezone=Europe/London` or increase memory settings: `-Xmx1500m` for the application server.
++
+image::release_notes/v-13-run-configuration.png[align="center"]
+
+. New template for the login screen with updated layout and design is now available for projects based on CUBA platform `7.2.0` or later. Examples of how the new login screen looks like can be found in the https://github.com/cuba-platform/cuba/issues/2455[GitHub ticket]. In order to add new login screen to your project, choose the *Login screen with branding image* template in the *New* -> *Screen* wizard.
+
+. Ability to edit project artifact version has been added to the *Project Properties* dialog:
++
+image::release_notes/v-13-artifact-version.png[align="center"]
+
+. The *Inject* action has been added to the top actions panel of Middleware services and Spring Beans source code. Previously it was available only through Generate (Alt+Insert) menu.
+
+. Added convenient dialog to specify connection parameters in the *Data Store Properties* window. A "pencil" button has been added to the *Connection params* field, and pressing this button opens a dialog that helps to specify connection parameters. Studio converts parameters to connection string taking into account DBMS-specific separators:
++
+image::release_notes/v-13-connection-params.png[align="center"]
+
+. The *Locales* dialog now suggests available languages and countries and automatically fills locale code according to selected language:
++
+image::release_notes/v-13-locales-dialog.png[align="center"]
+
+. The *Attribute is not included into the view* code inspection has been extended. Now it also checks usages of non-persistent attributes that have associated persistent attributes specified by the `@MetaProperty#related` annotation parameter.
+
+. Improved Studio behavior for problematic cases when Gradle project synchronization fails for some reason. The *CUBA* main menu stays visible and contains additional menu items:
+.. The *Re-import Gradle project* item helps to deal with one-time network inaccessibility problem.
+.. The *Restore failed project to the latest stable state* item reverts Gradle build script to the state after last successful import, which helps with unintended or erroneous build script changes.
++
+image::release_notes/v-13-menu-import-failed.png[align="center"]
+
+. Standalone IDE version of the Studio has been upgraded to IntelliJ Community platform *2019.2*.
+Previously downloaded standalone Studio IDE will not be upgraded - you should download new version from the
+{cuba-download-site}[CUBA Platform] web site.
+
+. Numerous small improvements and bug fixes:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2013.0[Studio 13.0 Resolved Issues\]]
+
+--

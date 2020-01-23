@@ -3,6 +3,8 @@
 [[release_notes]]
 == Release Notes
 
+include::release_notes/relnotes-13.adoc[]
+
 include::release_notes/relnotes-12.adoc[]
 
 include::release_notes/relnotes-11.adoc[]
