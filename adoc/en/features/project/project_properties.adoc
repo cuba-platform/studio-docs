@@ -9,9 +9,15 @@ Basic settings::
 +
 --
 
-* The *Repositories* field display the repositories currently used in the project. Studio scans these repositories to discover what platform versions are available. Use the buttons next to the field to configure the access to repository. For more details see {main_man_url}/access_to_repo.html[documentation]. You can also manually register in `build.gradle` any number of additional repositories containing application components.
+* The *Module prefix* field displays name prefix of the project modules. Module name in its turn determines the name of the project artifacts, e.g. `sales-global` module assembles the `sales-global-0.1.jar` artifact. You can change module prefix in order to rename the modules. E.g. basic CUBA project with "wages" module prefix has modules with names `wages-global`, `wages-core` and `wages-web`.
+
+* The *Artifact version* field allows you to change version for the project artifacts. Disable the *Snapshot* checkbox if the version is a final build, not a snapshot (snapshot a is build which can be replaced by another build which has the same name).
+
+* The *Repositories* table displays the repositories currently used in the project. Studio scans these repositories to discover what platform versions are available. Use the buttons next to the field to configure the access to repository. For more details see {main_man_url}/access_to_repo.html[documentation]. You can also manually register any number of additional repositories containing application components in the `build.gradle` script.
 
 * The *Platform version* field allows you to select a version of the platform. If you choose a newer version, an automatic migration will be performed if required.
+
+* The *Show unstable versions* checkbox enables displaying of unstable CUBA releases whose versions end with `BETA` or `SNAPSHOT` suffixes.
 
 * *Groovy support* checkbox enables Groovy code within the application: for example, in screen controller classes.
 

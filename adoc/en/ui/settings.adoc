@@ -2,8 +2,8 @@
 
 [[settings]]
 === CUBA Settings
-
-If you click the *CUBA > Settings* main menu item, you will see the IDE settings window filtered by the *cuba* word. Find the *CUBA* section under *Languages & Frameworks*.
+--
+If you click the *CUBA > Settings* main menu item, you will see the IDE settings window with the *CUBA* section selected.
 
 The *CUBA* section itself contains the settings common to all projects opened in this Studio instance.
 
@@ -15,10 +15,14 @@ The *CUBA* section itself contains the settings common to all projects opened in
 
 * *Visual designer and embedded browser zoom percentage* - default zoom for screen designer's layout preview. You can adjust it later using one of actions located on the top of the preview panel.
 
-* *Old Studio integration enabled* - select this checkbox if you want to integrate this IDE instance with the old Studio SE or Studio Browser Edition. You will be able to open projects from the old Studio in this IDE.
+* *Enable integration* - select this checkbox if you want to integrate this IDE instance with the old Studio SE or Studio Browser Edition. You will be able to open projects from the old Studio in this IDE. Also this checkbox enables communicating with the Frontend Generator command line tool.
 
 * *Listening port* - a port for the old Studio integration. Make sure it is the same as specified in the old Studio *IDE Port* field.
+--
 
+Project settings::
++
+--
 The nested *Project settings* section contains the settings of the currently opened project. All non-default values are stored in the `studio-intellij.xml` file in the project root directory, which can be added to the version control system to share project settings between all developers in your team.
 
 * *Check compatibility between data model and database scheme* - show a warning whenever you start the application server and the current state of the data model differs from the database schema.
@@ -49,6 +53,8 @@ The nested *Project settings* section contains the settings of the currently ope
 
 * *Instant hot deploy* - this checkbox allows you to turn off hot deploy. If hot deployment is enabled, Studio dynamically updates the UI of your deployed web application as you apply or save changes to views, screens, messages or the main menu.
 
+* *Hot deploy compiled classes* - enables new hot deploy mechanism for projects based on CUBA 7.2 or later. The old mechanism used to copy Java sources to tomcat configuration folders and compile them with a custom classloader. The new mechanism compiles source code on the side of the IDE and thus enables hot deploying Kotlin code. If you encounter problems with the new hot deploy mechanism, you can try to switch off this setting.
+
 * *Hot Deploy Settings* - opens a dialog to customize hot deployment directories. For example, you might want to add folders where your web portal HTML and JavaScript files are located. When you change these files, Studio will copy them to respective destinations inside Tomcat. So you can just reload your web portal page to view the changes.
 
 * *Screen Generation Settings* - options affecting screen generation. These settings are used by the *New* -> *Screen...* wizard. The following screen settings are available:
@@ -59,3 +65,4 @@ The nested *Project settings* section contains the settings of the currently ope
 * *Fold messages in* - allows you to control message folding in screen descriptors and controllers. If selected, the message keys will be replaced with actual values from the appropriate message pack.
 
 * *Message folding locale* - what message file to use when folding messages.
+--

@@ -5,27 +5,37 @@
 
 CUBA Studio provides an easy way to create new CUBA projects from scratch. Just use the *New Project* wizard and follow the steps below:
 
-. In the *Welcome to CUBA Studio* window, click *Create New Project*.
+. In the *Welcome to CUBA Studio* window click *Create New Project*, or use Main Menu -> *File* -> *New* -> *Project*.
 
 . Select *CUBA Project*.
 
+. Specify *Project namespace* – the namespace which will be used as a prefix for entity names and database tables. The namespace can consist of Latin letters only and should be as short as possible. Think carefully on the name at this stage, as changing it later on will require complex manual intervention.
+
+. Change *Root package* if necessary. It is the root (or base) package for Java classes. It can be adjusted later, but the classes generated at project creation will not be moved.
+
+. Change *Module prefix* if required. Module names of the CUBA project are prepended with this prefix. Module prefix can be adjusted later.
+
 . In the *Project SDK* field, select a JDK corresponding to `JAVA_HOME` which is set in your environment. If you see the `<No SDK>` value, click *New* and select the folder where the JDK is installed, for example `++C:\Java\jdk8u202-b08++` on Windows or `/Library/Java/JavaVirtualMachines/jdk8u202-b08/Contents/Home` on macOS.
 
-. Accept the default repositories configuration, or {main_man_url}/access_to_repo.html[customize] it for the project, and click *Next*.
+. Accept the default repositories configuration, or {main_man_url}/access_to_repo.html[customize] it for the project.
 
-. Specify the name of the new project in the *Project name* field. The name should contain only Latin letters, numbers and underscores. Think carefully on the project name at this stage, as changing it later on will require complex manual intervention.
+. Select the *Platform version* to be used in the project. If you don't have any specific requirements, use the latest released version.
 
-. The following fields below will be automatically populated:
-+
---
-* *Project location* – the path to the new project directory. You can select another directory by typing it in the field or clicking the ellipsis button next to the field.
+. For the purpose of beta-testing or early accessing new CUBA platform features you might want to use one of unstable CUBA platform versions, ones that end with `BETA` or `SNAPSHOT` suffixes. To see them in the *Platform version* drop-down list, you need to select the *Show unstable versions* checkbox. Also note that `SNAPSHOT` releases are published only to the `repo.cuba-platform.com` artifact repository.
 
-* *Project namespace* – the namespace which will be used as a prefix for entity names and database tables. The namespace can consist of Latin letters only and should be as short as possible.
+. Select value in the *Languages support* drop down field to change set of programming languages used in the project, or leave recommended *Java* value.
 
-* *Root package* − the root (or base) package of Java classes. It can be adjusted later, but the classes generated at project creation will not be moved.
+. Use the *Available locales* field to open the *Locales* editor dialog and add more supported locales to the project. You will be able to change them later if required.
 
-* *Platform version* – the platform version used in the project. If you don't have any specific requirements, use the latest released version, i.e. without `BETA` or `SNAPSHOT` suffixes. The platform artifacts will be automatically downloaded from the repository on project import.
---
+. Click *Next*.
+
+. On the second wizard step you can set up main data store properties, e.g. select local PostgreSQL database for the new project. These properties can be changed later.
+
+. Click *Next*.
+
+. Change value of the *Project name* field, if required. The name should contain only Latin letters, numbers and underscores.
+
+. *Project location* is the path to the new project directory. You can select another directory by typing it in the field or clicking the ellipsis button next to the field.
 
 . Click *Finish*. The empty project will be created in the specified directory, and Studio will start building the project information from Gradle files and indexing the project.
 
