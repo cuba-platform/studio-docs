@@ -11,34 +11,6 @@ It can be opened:
 
 * by double-clicking *Project* -> *Data Stores* -> *Main Data Store* in the CUBA project tree
 * from main menu: *CUBA* -> *Main Data Store Settings...*
-
-Available properties are described in a section <<data_stores_properties, below>>.
---
-
-[[data_stores_additional]]
-Additional Data Stores::
-+
---
-
-In order to create the {main_man_url}/data_store.html[additional data store] in the project,
-right-click *Data Stores* item in the CUBA project tree and choose *New* -> *Additional Data Store* context menu item.
-Additional data stores registered in the project are displayed as sub-items under the *Data Stores* section:
-
-image::features/project/additional-stores.png[align="center"]
-
-By right-clicking on an additional datastore item, a context menu is opened:
-
-* *Delete Data Store* - remove the data store from the project
-* *Edit Data Store* - open the dialog to edit data store settings
-* *Generate Model...* - <<generate_model,generate data model>> from the selected data store
-
-The *Data Store* dialog appears when you create or edit an additional data store. It has the following fields:
-
-* *Data store name* - the name of the data store. It may contain only alphanumeric characters and underscores and should be different from the project name.
-* *Data store type* - the type of the data store: either `RdbmsStore` or `Custom`, see the {main_man_url}/data_store.html[documentation] for details.
-* *DataSource JNDI name* - automatically set by Studio on the basis of the data store name.
-* In case of `RdbmsStore` you need to specify additional properties which are described below.
-
 --
 
 [[data_stores_properties]]
@@ -70,6 +42,33 @@ In case of HSQLDB the Studio itself serves the database and stores its files in 
 image::features/project/add-store-settings.png[align="center"]
 
 --
+
+[[data_stores_additional]]
+Additional Data Stores::
++
+--
+
+In order to create the {main_man_url}/data_store.html[additional data store] in the project,
+right-click *Data Stores* item in the CUBA project tree and choose *New* -> *Additional Data Store* context menu item.
+Additional data stores registered in the project are displayed as sub-items under the *Data Stores* section:
+
+image::features/project/additional-stores.png[align="center"]
+
+By right-clicking on an additional datastore item, a context menu is opened:
+
+* *Delete Data Store* - remove the data store from the project
+* *Edit Data Store* - open the dialog to edit data store settings
+* *Generate Model...* - <<generate_model,generate data model>> from the selected data store
+
+The *Data Store* dialog appears when you create or edit an additional data store. It has the following fields:
+
+* *Data store name* - the name of the data store. It may contain only alphanumeric characters and underscores and should be different from the project name.
+* *Data store type* - the type of the data store: either `RdbmsStore` or `Custom`, see the {main_man_url}/data_store.html[documentation] for details.
+* *DataSource JNDI name* - automatically set by Studio on the basis of the data store name.
+* In case of `RdbmsStore` you need to specify additional properties which are described in a section above.
+
+--
+
 
 [[data_stores_db_scripts]]
 Database init and update scripts::
