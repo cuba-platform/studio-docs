@@ -3,11 +3,24 @@
 [[screen_descriptor]]
 ==== Working with Screen Descriptors
 
-The {main_man_url}/screen_descriptors.html[screen XML descriptor] editor contains two tabs at the bottom: *Text* and *Designer*. On the *Text* tab, you can edit the XML directly, while the *Designer* tab contains a visual editor of the screen layout.
+The {main_man_url}/screen_descriptors.html[screen XML descriptor] editor is integrated with the *Screen Designer*. Screen Designer represents a number of panels and tool windows that allow you to develop layout of the screen and set UI components properties in WYSIWYG style. You can edit the XML directly or use Designer's panels to generate the code for you.
 
-image::features/generic_ui/xml_descriptor.png[align="center"]
+The *Screen Designer* consists of the following elements:
 
-You can switch from the screen descriptor to its controller and back using the marker on the gutter or by clicking the *Controller* action on the top panel.
+* *Source code editor* - displays and provides editing of the XML source code.
+* *Top actions panel* - provides several easily accessible actions.
+* *Layout preview panel* - displays interactive schematic presentation of the screen layout.
+* *Component Hierarchy* - displays elements of the screen as a hierarchy tree.
+* *Component Palette* - displays available components that can be added to the current screen.
+* *Component Inspector* - displays and provides editing of the component properties and event handlers.
+
+[TIP]
+====
+Screen Designer panels and tool windows are available only for users with active CUBA Studio subscription.
+====
+
+image::features/generic_ui/screen_designer.png[align="center"]
+
 
 [[screen_descriptor_actions_panel]]
 Top actions panel::
@@ -18,10 +31,126 @@ Actions panel is located on top of the source code editor. It provides access to
 * *Controller* - navigates to the screen controller.
 * *Preview* - opens a window with the preview of the edited screen. Canvas of the preview window interacts with the XML editor and automatically updates its content according to the layout changes. This action is available only when the subscription is active.
 * *<entity class name>* - displayed if this screen represents an entity browser or editor. Allows you to navigate to the entity associated with the current screen.
+
+You can also switch from the screen descriptor to its controller and back using the marker on the gutter.
+
+--
+
+[[screen_descriptor_tool_windows]]
+Tool windows::
++
+--
+The *Component Hierarchy*, *Component Palette* and *Component Inspector* panels are implemented as independent IDE tool windows. These tool windows appear automatically when you open screen descriptor in the editor. When you switch active screen descriptor file in the editor, the content of the tool windows is updated. Sometimes when you open other IDE tool windows (such as Gradle, Persistence etc.), Designer’s panels become hidden, and you can re-open them by clicking the corresponding buttons in the left and right sides of the IDE window.
+
+The ability to display *Component Inspector* in the bottom-right corner was kept for those users who prefer the old layout used by previous versions of the CUBA Studio. In order to move this panel to the right side, click the *Move to Right Bottom* button located in the panel's title.
+
+Designer panels are also active when editing XML code and interact with the editor. Experienced developers who navigate and modify screen descriptors by editing the XML source code can also benefit from the editing capabilities of the screen designer tool windows. You can drag new components from the Palette to the Hierarchy, reorder components and edit component properties in the Inspector panel when only source code is displayed in the editor. The source code immediately reflects all changes.
+--
+
+[[screen_descriptor_layout_preview]]
+Layout Preview panel::
++
+--
+The *Layout Preview* panel is used to display interactive schematic presentation of the screen layout. It shares editor space with the source code of the screen descriptor. On the right side of the top panel of the screen descriptor there are four buttons that switch preview display mode:
+
+* *Editor only* - only source code is displayed in the editor.
+* *Editor and Preview* - editor space is split to contain both source code and preview.
+* *Preview only* - only preview is displayed in the editor.
+* *Preview in Window* - source code is displayed in the editor, while preview is displayed in the separate window which can be moved to another display.
+
+image::features/generic_ui/layout_preview_modes.png[align="center"]
+
+The panel has several controls located in the top-right corner:
+
+image::features/generic_ui/layout_preview_controls.png[align="center"]
+
+* The *100% x 100%* drop-down allows you to select fixed *canvas size*. The canvas size can be larger than the size of the preview panel, in this case additional scroll bars are added. For example, if you are developing a complex screen containing many controls and want to see the preview, you can choose *1920 x 1080* canvas size and observe how layout looks like on a big screen.
+* The *Refresh* button reloads contents of the preview page.
+* The *Zoom In*, *Zoom Out* and *Zoom Reset* buttons change zoom of the preview page.
+* The right-most icon displays results of the automatic screen layout problems inspection. Move the cursor over the icon to see the list of discovered problems.
+
+In the *Layout Preview* panel you can also arrange the components in the desired layout. Components can be resized and aligned using the controls:
+
+* expand horizontally,
+* expand vertically,
+* align the component vertically/horizontally.
+
+image::features/generic_ui/layout_component_controls.png[align="center"]
+
+--
+
+[[screen_descriptor_palette]]
+Component Palette::
++
+--
+The *Component Palette* tool window is displayed in the down-right corner of the IDE. It displays the set of available screen components:
+
+* Containers;
+* Components;
+* Data components: containers and loaders;
+* Non-visual: actions, dialog mode settings, timers and other auxiliary screen elements;
+* Main window: components specific to the main screen.
+
+You can search components in the palette by typing name in the search box.
+
+In order to add a component to the layout, drag it from the palette onto the *Component Hierarchy* panel.
+
+By right-clicking the component in the palette, you can open context menu with the following actions:
+
+* *Add to Design* - adds selected component to the screen, placing it to the place determined by the selected element in the hierarchy.
+* *CUBA Documentation* - opens component's documentation page in the Developer's Manual.
+
+image::features/generic_ui/component_palette.png[align="center"]
+
+--
+
+[[screen_descriptor_hierarchy]]
+Component Hierarchy::
++
+--
+The *Component Hierarchy* tool window is displayed in the up-right corner of the IDE. It displays the tree of components added to the layout.
+
+Elements of the tree can be rearranged using drag-and-drop.
+
+Right-click the element in the hierarchy to open its context menu:
+
+* *Convert* the component to the one of similar alternative components.
+* *Wrap* the component into one of the suggested containers.
+* *Go to XML* - navigate to the XML tag in the source code.
+* *Inject* the element to the screen controller or navigate to the existing injection declaration.
+* *Delete*, *Copy*, *Cut* or *Paste* the element.
+* Open the *CUBA Documentation* page for the selected component.
+
+image::features/generic_ui/component_hierarchy.png[align="center"]
+
+
+--
+
+[[screen_descriptor_inspector]]
+Component Inspector::
++
+--
+The *Component Inspector* tool window is displayed in the bottom-left corner of the IDE window. It displays and allows you to edit properties of the selected screen element:
+
+* The *Properties* panel displays visual component properties.
+* The *Handlers* panel displays event listeners and component delegates that can be associated with the selected component. In order to generate necessary handler method - just double-click the corresponding row.
+
+You can type text in the search field for quick search of the attributes:
+
+image::features/generic_ui/component_inspector.png[align="center"]
+
+For some types of selected elements the *+ Add* button is shown that provides a way to quickly add a related sub-element, such as table action, column or form field. If the selected element is:
+
+* `Table`, `Grid` or one of their actions and columns - *Add* -> *Column*, *Add* -> *Group*, *Add* -> *Action* are available.
+* `Form` or one of its columns and fields - *Add* -> *Column*, *Add* -> *Field* are available.
+* `DataLoadCoordinator` - *Add* -> *onScreenEvent trigger* and other triggers are available.
+
+image::features/generic_ui/component_inspector_add_button.png[align="center"]
+
 --
 
 [[screen_descriptor_inspections]]
-Inspections::
+Source Code Inspections::
 +
 --
 Studio inspects the screen layout for errors and inconsistency, checks the internal and external references. It will alert you with warnings or by highlighting XML elements in the following cases:
@@ -44,15 +173,17 @@ CUBA inspections can be configured in the *Settings* window (*File > Settings > 
 --
 
 [[screen_descriptor_intentions]]
-Intentions and generate menu::
+Source Code Intentions and Generate Menu::
 +
 --
 Intention action is a context-sensitive action that can be invoked by developer from the source code editor by pressing Alt+Enter (Option+Enter). Intentions help with refactorings, code generation, navigation and other tasks. You can read more about intention actions here: https://www.jetbrains.com/help/idea/intention-actions.html.
 
 The *Generate* menu contains context-sensitive actions helping to generate various code constructs. It can be invoked by pressing Alt+Insert (Cmd+N). Read more about this menu here: https://www.jetbrains.com/help/idea/generating-code.html.
 
-Studio-bundled intentions and items of the generate menu facilitate working with screen components. Use Alt+Insert (Cmd+N) and Alt+Enter (Option+Enter) to find out the features for working with particular UI and data components. For example, to add a new field to a {main_man_url}/gui_Form.html[Form] component, you can move the cursor inside the `form` element and do one of the following:
+Studio-bundled intentions and items of the generate menu facilitate working with screen components. Use Alt+Insert (Cmd+N) and Alt+Enter (Option+Enter) to find out the features for working with particular UI and data components.
 
+. For example, to add a new field to a {main_man_url}/gui_Form.html[Form] component, you can move the cursor inside the `form` element and do one of the following:
++
 * Press Alt+Insert (Cmd+N), select *Add field*, then choose the value of the `property` attribute,
 +
 image::features/generic_ui/gui_Form_add.png[align="center"]
@@ -60,34 +191,9 @@ image::features/generic_ui/gui_Form_add.png[align="center"]
 * Type `field` and press TAB, then choose the value of the `property` attribute.
 +
 image::features/generic_ui/gui_Form_add_tab.png[align="center"]
---
 
-[[screen_descriptor_designer]]
-Screen Designer::
+. Another example is adding the new localized caption to one of components. You can type the message key in the source code of the localized message that doesn't exist yet. The referencing element will be highlighted in red. Then press Alt+Enter (Option+Enter) and choose *Create message in the message bundle*:
 +
---
-The *Designer* tab displays the visual designer which allows you to develop the screen layout and set UI components properties in WYSIWYG style.
+image::features/generic_ui/intention_add_localized_message.png[align="center"]
 
-image::features/generic_ui/screen_designer.png[align="center"]
-
-The designer workspace is divided into four panels:
-
-* *Canvas* is the workspace where you can arrange the components in the desired layout. Components can be resized and aligned using the controls:
-** expand horizontally,
-** expand vertically,
-** align the component vertically/horizontally.
-
-* The *Palette* panel displays the set of available screen component:
-** Containers;
-** Components;
-** Data components: containers and loaders;
-** Non-visual components: actions, dialog mode settings, timers.
-
-In order to add a component to the layout, drag it from the palette onto the hierarchy panel.
-
-* The *Hierarchy* panel displays the tree of components added to the layout. Elements of the tree can be rearranged using drag-and-drop. You can remove, copy, cut or paste an element in the hierarchy using its context menu opened by right-click.
-
-* The *Properties* panel displays visual component properties.
-
-* The *Handlers* panel displays event listeners and component delegates that can be associated with the selected component. In order to generate necessary handler method - just double-click the corresponding row.
 --
