@@ -55,6 +55,8 @@ The nested *Project settings* section contains the settings of the currently ope
 
 * *Hot deploy compiled classes* - enables new hot deploy mechanism for projects based on CUBA 7.2 or later. The old mechanism used to copy Java sources to tomcat configuration folders and compile them with a custom classloader. The new mechanism compiles source code on the side of the IDE and thus enables hot deploying Kotlin code. If you encounter problems with the new hot deploy mechanism, you can try to switch off this setting.
 
+* *Scaffolding language* - chooses which programming language is used to generate code in projects with Kotlin support. Available options are: *Kotlin*, *Java* and *Always Ask*. If your project has mixed Java / Kotlin content and you want to have control over scaffolding language for every new entity, service or screen - choose the *Always Ask* value in the drop-down. This setting is displayed only for projects with Kotlin support enabled.
+
 * *Hot Deploy Settings* - opens a dialog to customize hot deployment directories. For example, you might want to add folders where your web portal HTML and JavaScript files are located. When you change these files, Studio will copy them to respective destinations inside Tomcat. So you can just reload your web portal page to view the changes.
 
 * *Screen Generation Settings* - options affecting screen generation. These settings are used by the *New* -> *Screen...* wizard. The following screen settings are available:
