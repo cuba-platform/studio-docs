@@ -1,7 +1,9 @@
 :sourcesdir: ../../source
 
 [[release_notes]]
-== Release Notes
+== Примечания к выпускам
+
+include::release_notes/relnotes-13.adoc[]
 
 include::release_notes/relnotes-12.adoc[]
 
