@@ -20,7 +20,7 @@ Data Store Properties::
 The following properties are available both for Main and Additional data stores:
 
 * *Define JDBC DataSource in* - determines which component is responsible to create connection pool to the database (available for projects based on CUBA 7.2 or later). Available values are *Application* and *JNDI*.
-** *Application* - connection pool is created and managed by the CUBA framework using the https://github.com/brettwooldridge/HikariCP[HikariCP] library. This is the recommended DataSource mode.
+** *Application* - connection pool is created and managed by the CUBA platform using the https://github.com/brettwooldridge/HikariCP[HikariCP] library. This is the recommended DataSource mode.
 ** *JNDI* - connection pool is created by the application server and put into JNDI. CUBA application obtains the data source from the JNDI registry by its JNDI name.
 * *Database type* - {main_man_url}/dbms_types.html[type of the database server]. Studio supports *PostgreSQL*, *Microsoft SQL Server*, *Oracle*, *MySQL*, *MariaDB*, *Amazon RedShift* and *HSQLDB* out of the box. It is also possible to integrate with other databases if necessary, refer to <<custom_db, this section>> for details.
 * *Database URL* - specify host, port and database name.

@@ -9,7 +9,7 @@ CUBA Studio provides an easy way to create new CUBA projects from scratch. Just 
 
 . Select *CUBA Project*.
 
-. Specify *Project namespace* – the namespace which will be used as a prefix for entity names and database tables. The namespace can consist of Latin letters only and should be as short as possible. Think carefully on the name at this stage, as changing it later on will require complex manual intervention.
+. Specify *Project namespace* – the namespace which will be used as a prefix for entity names and database tables. The namespace can consist of Latin letters only and should be as short as possible. *Think carefully on the name at this stage*, as changing it later on will require complex manual intervention.
 
 . Change *Root package* if necessary. It is the root (or base) package for Java classes. It can be adjusted later, but the classes generated at project creation will not be moved.
 
