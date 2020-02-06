@@ -79,12 +79,12 @@ image::release_notes/v-13-locales-dialog.png[align="center"]
 . The *Attribute is not included into the view* code inspection has been extended. Now it also checks usages of non-persistent attributes that have associated persistent attributes specified by the `@MetaProperty#related` annotation parameter.
 
 . Improved Studio behavior for problematic cases when Gradle project synchronization fails for some reason. The *CUBA* main menu stays visible and contains additional menu items:
-.. The *Re-import Gradle project* item helps to deal with one-time network inaccessibility problem.
-.. The *Restore failed project to the latest stable state* item reverts Gradle build script to the state after last successful import, which helps with unintended or erroneous build script changes.
+.. The *Re-Import Gradle Project* item helps to deal with one-time network inaccessibility problem.
+.. The *Restore Project to the Latest State* item reverts Gradle build script to the state after last successful import, which helps with unintended or erroneous build script changes.
 +
 image::release_notes/v-13-menu-import-failed.png[align="center"]
 
-. Standalone IDE version of the Studio has been upgraded to IntelliJ Community platform *2019.2*.
+. Standalone IDE version of the Studio has been upgraded to the IntelliJ Community platform *2019.2*.
 Previously downloaded standalone Studio IDE will not be upgraded - you should download new version from the
 {cuba-download-site}[CUBA Platform] web site.
 
