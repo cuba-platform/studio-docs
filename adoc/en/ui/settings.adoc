@@ -53,7 +53,7 @@ The nested *Project settings* section contains the settings of the currently ope
 
 * *Instant hot deploy* - this checkbox allows you to turn off hot deploy. If hot deployment is enabled, Studio dynamically updates the UI of your deployed web application as you apply or save changes to views, screens, messages or the main menu.
 
-* *Hot deploy compiled classes* - enables new hot deploy mechanism for projects based on CUBA 7.2 or later. The old mechanism used to copy Java sources to tomcat configuration folders and compile them with a custom classloader. The new mechanism compiles source code on the side of the IDE and thus enables hot deploying Kotlin code. If you encounter problems with the new hot deploy mechanism, you can try to switch off this setting.
+* *Hot deploy compiled classes* - enables new hot deploy mechanism for projects based on CUBA 7.2 or later. The old mechanism used to copy Java sources to Tomcat configuration folders and compile them with a custom classloader. The new mechanism compiles source code on the side of the IDE and thus enables hot deploying Kotlin code. If you encounter problems with the new hot deploy mechanism, you can try to switch off this setting.
 
 * *Scaffolding language* - chooses which programming language is used to generate code in projects with Kotlin support. Available options are: *Kotlin*, *Java* and *Always Ask*. If your project has mixed Java / Kotlin content and you want to have control over scaffolding language for every new entity, service or screen - choose the *Always Ask* value in the drop-down. This setting is displayed only for projects with Kotlin support enabled.
 

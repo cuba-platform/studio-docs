@@ -9,7 +9,7 @@ Basic settings::
 +
 --
 
-* The *Module prefix* field displays name prefix of the project modules. Module name in its turn determines the name of the project artifacts, e.g. `sales-global` module assembles the `sales-global-0.1.jar` artifact. You can change module prefix in order to rename the modules. E.g. basic CUBA project with "wages" module prefix has modules with names `wages-global`, `wages-core` and `wages-web`.
+* The *Module prefix* field displays name prefix of the project modules. Module name in its turn determines the name of the project artifacts, e.g. `sales-global` module assembles the `sales-global-0.1.jar` artifact. You can change module prefix in order to rename the modules. E.g. basic CUBA project with `wages` module prefix has modules with names `wages-global`, `wages-core` and `wages-web`.
 
 * The *Artifact version* field allows you to change version for the project artifacts. Disable the *Snapshot* checkbox if the version is a final build, not a snapshot (snapshot a is build which can be replaced by another build which has the same name).
 
