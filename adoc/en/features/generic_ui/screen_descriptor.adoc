@@ -29,7 +29,6 @@ Top actions panel::
 Actions panel is located on top of the source code editor. It provides access to the following actions:
 
 * *Controller* - navigates to the screen controller.
-* *Preview* - opens a window with the preview of the edited screen. Canvas of the preview window interacts with the XML editor and automatically updates its content according to the layout changes. This action is available only when the subscription is active.
 * *<entity class name>* - displayed if this screen represents an entity browser or editor. Allows you to navigate to the entity associated with the current screen.
 
 You can also switch from the screen descriptor to its controller and back using the marker on the gutter.
@@ -192,7 +191,7 @@ image::features/generic_ui/gui_Form_add.png[align="center"]
 +
 image::features/generic_ui/gui_Form_add_tab.png[align="center"]
 
-. Another example is adding the new localized caption to one of components. You can type the message key in the source code of the localized message that doesn't exist yet. The referencing element will be highlighted in red. Then press Alt+Enter (Option+Enter) and choose *Create message in the message bundle*:
+. Another example is adding the new localized caption to one of components. You can type in the source code the message key of the localized message that doesn't exist yet. The referencing element will be highlighted in red. Then press Alt+Enter (Option+Enter) and choose *Create message in the message bundle*:
 +
 image::features/generic_ui/intention_add_localized_message.png[align="center"]
 
