@@ -146,3 +146,92 @@ image::gradle-offline-mode.png[align="center"]
 
 In offline mode, Gradle uses dependencies from the cache when executing all project build tasks. Gradle will not attempt to access the network to perform dependency resolution. If the required dependencies are not present in the cache, build execution will fail.
 --
+
+[[install_plugin_nonstandard]]
+=== Non-Standard Studio Builds
+--
+Sometimes you might need to use one of non-standard Studio builds in your IDE. It may be necessary to get the early access for the newest Studio features or to participate in the Beta testing. Using non-standard Studio build requires to install the specific plugin version into the IntelliJ IDEA.
+
+[TIP]
+====
+Non-standard Studio builds have the same subscription requirements as stable releases.
+====
+
+--
+
+[[install_plugin_beta]]
+Beta releases::
++
+--
+Beta Studio releases are published a few weeks before next major Studio release becomes available. These releases are tested but still can contain some unresolved problems. Beta releases are intended for the following purposes:
+
+* Provide early access for the new Studio features to interested users.
+* Help CUBA team by trying upcoming Studio versions on a wide range of workspaces and projects and providing user feedback.
+
+In order to try the beta version, you need to do the following:
+
+. Open the Main Menu -> *File* -> *Settings* -> *Plugins* dialog.
+. Click the image:gear_button.png[gear] icon and select *Manage Plugin Repositories*.
+. Click *+* (*Add*) and enter the following in the Repository URL field:
+https://plugins.jetbrains.com/plugins/beta/list
+. Switch to the *Marketplace* tab. You should immediately see that CUBA plugin requests for update to the `BETA` version.
+. Click *Update*.
+. Restart IDE if prompted to do so.
+
+If (when) you need to return back to stable plugin version, do the following:
+
+. Open the Main Menu -> *File* -> *Settings* -> *Plugins* dialog.
+. Uninstall CUBA plugin
+. Click the image:gear_button.png[gear] icon and select *Manage Plugin Repositories*.
+. Remove "beta" repository from the list.
+. Install CUBA plugin again, it will come from the stable plugins channel.
+
+--
+
+[[install_plugin_nightly]]
+Nightly builds::
++
+--
+Nightly Studio builds are published every night as a part of continuous integration process. These builds contain the latest changes implemented by the CUBA Studio team. You can switch to nightly builds if you want to be the first person who gets newest features, improvements and support for upcoming CUBA platform versions.
+
+[WARNING]
+====
+Nightly builds contain changes that have not passed through the quality assurance process. Therefore they can contain severe functionality defects.
+====
+
+In order to try the nightly build, you need to do the following:
+
+. Open the Main Menu -> *File* -> *Settings* -> *Plugins* dialog.
+. Click the image:gear_button.png[gear] icon and select *Manage Plugin Repositories*.
+. Click *+* (*Add*) and enter the following in the Repository URL field:
+https://plugins.jetbrains.com/plugins/haulmont_nightly/list
+. Switch to the *Marketplace* tab. You should immediately see that CUBA plugin requests for update to the `NIGHTLY` version.
+. Click *Update*.
+. Restart IDE if prompted to do so.
+
+As new nightly builds are published every night, you will start receiving a "plugin can be updated" notification from the IDE on a daily basis.
+
+If (when) you need to return back to stable plugin version, do the following:
+
+. Open the Main Menu -> *File* -> *Settings* -> *Plugins* dialog.
+. Uninstall CUBA plugin
+. Click the image:gear_button.png[gear] icon and select *Manage Plugin Repositories*.
+. Remove "nightly" repository from the list.
+. Install CUBA plugin again, it will come from the stable plugins channel.
+--
+
+[[install_plugin_from_disk]]
+Installing plugin from disk::
++
+--
+Any release of the Studio plugin, including previous releases, can also be manually downloaded from the plugin repository site and installed into the IntelliJ IDEA. Follow these steps:
+
+. Open the {plugin-repository-site}[CUBA Plugin] page in the JetBrains Plugin Repository.
+. Select the channel you need to download release from (Stable, Beta or Nightly).
+. Find required build in the *Version History* list.
+. Press *Download* to download the build.
+. Open the Main Menu -> *File* -> *Settings* -> *Plugins* dialog.
+. Click the image:gear_button.png[gear] icon and select *Install Plugin from Disk...*.
+. Select just downloaded zip file in the file tree and press *OK*.
+. Restart IDE if prompted to do so.
+--
