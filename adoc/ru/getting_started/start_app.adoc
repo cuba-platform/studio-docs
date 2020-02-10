@@ -2,7 +2,7 @@
 
 [[start_app]]
 === Запуск приложения
-
+--
 Когда Studio импортирует проект CUBA-приложения, автоматически создается Run/Debug Configuration, предназначенная для запуска локального сервера Tomcat. Поэтому для того, чтобы запустить приложение и подключиться к нему отладчиком, достаточно кликнуть на кнопку "debug" рядом с выбранной конфигурацией `CUBA Application` в главной панели инструментов:
 
 image::getting_started/app_start_1.png[align="center"]
@@ -28,3 +28,24 @@ image::getting_started/app_start_4.png[align="center"]
 image::getting_started/cuba_menu_appserver.png[align="center"]
 
 При запуске сервера командой *Start Application Server*, в Windows вы увидите консольное окно с выводом сервера. В Linux и macOS консоль не отображается, однако логи сервера можно увидеть, выполнив `tail -f deploy/tomcat/logs/app.log` в окне инструментов *Terminal*. Команда *Stop Application Server* останавливает сервер Tomcat, посылая сигнал SHUTDOWN на shutdown port, указанный в свойствах проекта (8005 по умолчанию).
+--
+
+Настройки конфигурации запуска (Run/Debug Configuration)::
++
+--
+При необходимости вы можете задавать настройки отладочного сервера Tomcat, который используется конфигурацией запуска (Run/Debug configuration) *CUBA Application*. Диалог с настройками можно открыть следующим образом:
+
+* Кликнуть элемент *CUBA Application* на панели инструментов и выбрать *Edit Configurations...* в выпадающем меню.
+* Или использовать главное меню -> *Run* -> *Edit Configurations...*
+
+image::getting_started/run_configuration_toolbar.png[align="center"]
+
+Появится диалог *Run/Debug Configuration*. Вас могут заинтересовать следующие настройки:
+
+* *JRE* - среда запуска (Java Runtime Environment), используемая для запуска отладочного сервера Tomcat. Вы можете выбрать JRE, отличающуюся от проектной JDK, не забывая при этом про требования совместимости (приложение, скомпилированное под Java 11, не запустится под Java 8).
+* *Command line arguments* - опции JVM, используемые при запуске отладочного сервера. Например укажите `-Xmx1500m`, чтобы увеличить максимально допустимый объем используемой сервером памяти.
+* *Environment Variables* - переменные среды, которые должны быть доступны процессу отладочного сервера.
+
+image::getting_started/run_configuration_settings.png[align="center"]
+
+--

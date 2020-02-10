@@ -2,7 +2,7 @@
 
 [[start_app]]
 === Starting the Application
-
+--
 When Studio imports a CUBA project, it creates a Run/Debug Configuration specifically tailored to run local Tomcat server with the deployed application. So in order to run the application and connect to it with the debugger, just click the debug button next to the selected `CUBA Application` configuration in the main toolbar:
 
 image::getting_started/app_start_1.png[align="center"]
@@ -28,3 +28,24 @@ Use of Run/Debug Configuration is the preferred way to start the application in 
 image::getting_started/cuba_menu_appserver.png[align="center"]
 
 When starting the server by the *Start Application Server* main menu command, on Windows you will see a console window with the server output. On Linux and macOS, the console is not shown, but you can see the server log by executing `tail -f deploy/tomcat/logs/app.log` in the *Terminal* tool window. The *Stop Application Server* command stops Tomcat by sending the SHUTDOWN signal to the shutdown port specified in the project properties (8005 by default).
+--
+
+Run/Debug Configuration Settings::
++
+--
+It is possible to adjust settings of the debug Tomcat server which is used by the *CUBA Application* Run/Debug configuration. You can open the settings dialog the following way:
+
+* Click the *CUBA Application* element in the tool bar and choose *Edit Configurations...* in the context menu.
+* Or use the Main Menu -> *Run* -> *Edit Configurations...*
+
+image::getting_started/run_configuration_toolbar.png[align="center"]
+
+The *Run/Debug Configuration* dialog appears. You might be interested in editing the following settings:
+
+* *JRE* - Java Runtime Environment used to launch the debug Tomcat server. You can choose JRE that is different from the project JDK, while considering binary compatibility requirements (application compiled with Java 11 will not run under Java 8).
+* *Command line arguments* - JVM options to be passed to the debug server. For example, specify `-Xmx1500m` to increase maximum allowed memory usage for the server.
+* *Environment Variables* - environment variables that should be available to the debug server process.
+
+image::getting_started/run_configuration_settings.png[align="center"]
+
+--
