@@ -2,10 +2,10 @@
 
 [[preface]]
 == Preface
-
+--
 This manual provides the reference information for CUBA Studio IDE and the features it offers to enhance your productivity when developing applications based on CUBA Platform.
 
-CUBA Studio is based on open-source https://www.jetbrains.com/opensource/idea/[IntelliJ IDEA Platform] and extends its functionality with the following CUBA-specific features:
+CUBA Studio is based on open-source https://www.jetbrains.com/opensource/idea/[IntelliJ Platform] and extends its functionality with the following CUBA-specific features:
 
 * Scaffolding of Gradle build scripts.
 
@@ -23,4 +23,5 @@ CUBA Studio is based on open-source https://www.jetbrains.com/opensource/idea/[I
 
 * Easy migration to new versions of CUBA Platform and Add-ons.
 
-
+IntelliJ Platform provides a strong foundation for the CUBA Studio. It contains many features that boost CUBA developer productivity, such as ergonomic user interface, smart completion, safe code refactorings, background inspections, built-in version control and integration with Gradle. If you have not used IntelliJ IDEA before, we highly recommend you to visit https://www.jetbrains.com/idea/documentation/[Learn & Support section] of the IntelliJ IDEA web site to get a quick tour of its basic features.
+--
