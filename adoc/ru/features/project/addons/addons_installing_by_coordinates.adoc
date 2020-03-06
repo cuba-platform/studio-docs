@@ -1,0 +1,10 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_installing_by_coordinates]]
+===== Установка аддона по координатам
+Координаты аддона - это просто строка зависимости Gradle, например "com.mycompany.cuba-addons:myaddon:0.1.5".
+Эта строка опубликовывается автором аддона или в каталоге на сайте CUBA platform.
+Чтобы установить необходимый аддон по координатам (или по строке зависимости Gradle),
+кликните кнопку "Install Add-on Manually" справа от заголовка вкладки *Updates*:
+
+image::features/project/addon-by-coords.png[align="center"]

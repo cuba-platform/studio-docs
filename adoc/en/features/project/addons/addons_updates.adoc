@@ -1,0 +1,17 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_updates]]
+===== Add-ons Updates
+
+Studio automatically checks whether there are any updates available for add-ons included in your project.
+The *Updates* tab displays information about add-ons that can be updated.
+
+image::features/project/addons-updates.png[align="center"]
+
+In order to update the add-on, click *Update* button, then *Apply* or *Apply & Close* button.
+Studio will upgrade the dependency, download required libraries and refresh project configuration.
+
+Additionally, after the project is opened, notification about available updates is displayed
+in the down-right corner of the screen:
+
+image::features/project/addon-update-notification.png[align="center"]
