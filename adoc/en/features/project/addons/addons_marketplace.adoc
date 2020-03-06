@@ -1,0 +1,19 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_marketplace]]
+===== Marketplace
+
+The Marketplace tab displays published add-ons that are compatible with your project.
+
+image::features/project/addons-market-small.png[align="center"]
+
+Add-ons are grouped into categories. Searching by filter is available, e.g. "email" or "category:Translation".
+
+Clicking on add-on title leads to the page with detailed overview, compatibility, licensing information:
+
+image::features/project/addon-details.png[align="center"]
+
+In order to install one or more add-ons, press *Install* for the ones you're interested
+and then click *Apply* or *Apply & Close* button.
+After the confirmation Studio will make necessary changes to your project's build scripts and configuration files,
+download new libraries and refresh Gradle project configuration.

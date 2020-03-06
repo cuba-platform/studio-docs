@@ -1,0 +1,16 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_installed]]
+===== Installed Add-ons
+
+The *Installed* tab displays add-ons that are already connected to current project.
+
+image::features/project/addons-installed.png[align="center"]
+
+Installed add-ons are grouped into two categories.
+*Marketplace Add-Ons* are those which are installed from CUBA Marketplace.
+*Custom Add-Ons* are those which are developed by 3rd parties and hosted in 3rd-party repositories, including local Maven.
+
+In order to detach add-on from your project, select corresponding item in the list and press *Delete*,
+or right-click -> *Uninstall*.
+Then click *Apply* in the dialog. Studio will remove the add-on from the list of project dependencies and update project configuration.

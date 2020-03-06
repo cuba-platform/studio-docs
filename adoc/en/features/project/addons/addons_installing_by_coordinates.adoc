@@ -1,0 +1,11 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_installing_by_coordinates]]
+===== Installing Add-on by Coordinates
+
+Add-on coordinates is simply a Gradle dependency string, e.g. "com.mycompany.cuba-addons:myaddon:0.1.5".
+This string can be published on CUBA platform web site or by author of the add-on.
+In order to install necessary add-on by coordinates (or by Gradle dependency string),
+click the "Install Add-on Manually" icon located right to *Updates* tab header:
+
+image::features/project/addon-by-coords.png[align="center"]
