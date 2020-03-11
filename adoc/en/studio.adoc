@@ -21,9 +21,9 @@
 :plugin-version: 13
 :idea-version: 2019.2
 :minimal-idea-version: 2019.1
-:main_man_url: https://doc.cuba-platform.com/manual-7.1
-:rel_notes_url: http://files.cuba-platform.com/cuba/release-notes/7.1
-:gradle_user_guide_url: https://docs.gradle.org/4.10.3/userguide
+:main_man_url: https://doc.cuba-platform.com/manual-7.2
+:rel_notes_url: http://files.cuba-platform.com/cuba/release-notes/7.2
+:gradle_user_guide_url: https://docs.gradle.org/5.6.4/userguide
 :cuba-download-site: https://www.cuba-platform.com/tools/
 :plugin-repository-site: https://plugins.jetbrains.com/plugin/7249-cuba/versions
 :revnumber: 13
