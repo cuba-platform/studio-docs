@@ -90,6 +90,7 @@ Previously downloaded standalone Studio IDE will not be upgraded - you should do
 
 . Numerous small improvements and bug fixes:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2013.1[Studio 13.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2013.0[Studio 13.0 Resolved Issues\]]
 
 --
