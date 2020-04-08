@@ -1,0 +1,10 @@
+:sourcesdir: ../../../source
+
+[[frontend_ui]]
+=== Фронтенд интерфейс
+
+Студия позволяет сгенерировать модуль и компоненты {main_man_url}/front_ui.html[фронтенд интерфейса]. Для этого используется https://www.npmjs.com[npm] пакет https://www.npmjs.com/package/@cuba-platform/front-generator[@cuba-platform/front-generator].
+
+include::frontend_ui/create_frontend_module.adoc[]
+
+include::frontend_ui/add_components.adoc[]

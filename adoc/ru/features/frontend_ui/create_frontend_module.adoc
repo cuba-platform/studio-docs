@@ -1,0 +1,18 @@
+:sourcesdir: ../../../../source
+
+[[create_frontend_module]]
+==== Создание модуля фронтенд интерфейса
+
+В дереве проекта CUBA щелкните правой кнопкой мыши по элементу *Project > Modules* и выберите *Manage modules > Create 'front' module*.
+
+image::features/frontend_ui/create-front-module.gif[Создание модуля фронтенд интерфейса,align="center"]
+
+Студия установит https://www.npmjs.com/package/@cuba-platform/front-generator[Frontend Generator] в директорию `modules/front/generation` (это может занять некоторое время). После этого откроется экран выбора шаблона. Выберите шаблон в зависимости от того, какой фреймворк вы хотите использовать. Также вы можете раскрыть секцию *Advanced* и указать конкретную версию https://www.npmjs.com/package/@cuba-platform/front-generator[Frontend Generator], которая будет использована для генерации.
+
+image::features/frontend_ui/select-preset.png[Выбор шаблона,align="center"]
+
+WARNING: Шаблоны Polymer объявлены устаревшими (deprecated).
+
+Сгенерированное приложение (фронтенд клиент) будет помещено в директорию `modules/front`.
+
+Чтобы удалить модуль фронтенд интерфейса, щелкните правой кнопкой мыши по элементу *Project > Modules* и выберите *Manage modules > Remove 'front' module*.

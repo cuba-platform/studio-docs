@@ -1,0 +1,18 @@
+:sourcesdir: ../../../../source
+
+[[create_frontend_module]]
+==== Creating Frontend UI Module
+
+Right-click on *Project > Modules* in the CUBA project tree and select *Manage modules > Create 'front' module*.
+
+image::features/frontend_ui/create-front-module.gif[Creating front module,align="center"]
+
+Studio will install the https://www.npmjs.com/package/@cuba-platform/front-generator[Frontend Generator] in `modules/front/generation` folder (it may take a while). Then you will see a preset selection screen. Select a preset based on the framework you are going to use. You can also expand *Advanced* section and set a specific version of https://www.npmjs.com/package/@cuba-platform/front-generator[Frontend Generator] to be used.
+
+image::features/frontend_ui/select-preset.png[Selecting preset,align="center"]
+
+WARNING: Polymer presets are deprecated.
+
+The generated Frontend UI application (the frontend client) will placed into `modules/front` directory.
+
+To remove the *front* module right-click *Project > Modules* and select *Manage modules > Remove 'front' module*.

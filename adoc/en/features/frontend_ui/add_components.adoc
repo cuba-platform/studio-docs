@@ -1,0 +1,22 @@
+:sourcesdir: ../../../../source
+
+[[add_components]]
+==== React-based Frontend UI components
+
+If you have created a *front* module using the React template, you will be able to add React components. Expand *Data Model* in the CUBA project tree and right-click on an entity class. Select *New > Frontend Component*.
+
+image::features/frontend_ui/add-front-component.gif[Adding a frontend component,align="center"]
+
+You can choose between the following options:
+
+- link:#blank_component[Blank component]
+- link:#entity_cards[Entity cards] - component that allows to browse the entities.
+- link:#entity_management[Entity management] - components that allow to browse and edit the entities.
+
+image::features/frontend_ui/react-components.png[React components,align="center"]
+
+include::react_components/blank_component.adoc[]
+
+include::react_components/entity_cards.adoc[]
+
+include::react_components/entity_management.adoc[]

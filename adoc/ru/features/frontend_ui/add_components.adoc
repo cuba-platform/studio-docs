@@ -1,0 +1,22 @@
+:sourcesdir: ../../../../source
+
+[[add_components]]
+==== Компоненты фронтенд интерфейса на базе React
+
+Если модуль фронтенд интерфейса был создан с использованием шаблона React, вы сможете  генерировать компоненты React. Для этого в дереве проекта CUBA раскройте элемент *Data Model* и щелкните правой кнопкой мыши по классу сущности. Выберите *New > Frontend Component*.
+
+image::features/frontend_ui/add-front-component.gif[Добавление компонента,align="center"]
+
+Вы можете выбрать один из следующих вариантов:
+
+- link:#blank_component[Blank component] - пустой компонент.
+- link:#entity_cards[Entity cards] - компонент для просмотра сущностей.
+- link:#entity_management[Entity management] - компоненты для просмотра и редактирования сущностей.
+
+image::features/frontend_ui/react-components.png[Компоненты React,align="center"]
+
+include::react_components/blank_component.adoc[]
+
+include::react_components/entity_cards.adoc[]
+
+include::react_components/entity_management.adoc[]

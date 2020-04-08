@@ -1,0 +1,10 @@
+:sourcesdir: ../../../source
+
+[[frontend_ui]]
+=== Frontend UI
+
+Studio allows to generate {main_man_url}/front_ui.html[Frontend UI] module and components. https://www.npmjs.com/package/@cuba-platform/front-generator[@cuba-platform/front-generator] https://www.npmjs.com[npm] package is used to perform the generation.
+
+include::frontend_ui/create_frontend_module.adoc[]
+
+include::frontend_ui/add_components.adoc[]

@@ -1,0 +1,14 @@
+:sourcesdir: ../../../../../source
+
+[[blank_component]]
+===== Blank Component
+
+This is an empty React class-based component. Use it if you need a "clean slate" for creating your own component.
+
+Once you click *Next* you will be presented with the following options screen.
+
+image::features/frontend_ui/blank-component.png[Blank component,align="center"]
+
+* *Directory* - destination directory for the component to be generated into.
+* *Add to menu* - whether to create a navigation menu item for the generated component.
+* *Component class name* - the name of the component class.

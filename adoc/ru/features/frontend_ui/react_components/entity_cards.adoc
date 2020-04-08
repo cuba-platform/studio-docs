@@ -1,0 +1,16 @@
+:sourcesdir: ../../../../../source
+
+[[entity_cards]]
+===== Entity Cards
+
+Список сущностей, отображаемый в виде карточек, без возможности редактирования.
+
+Нажмите *Next*. Будет показан экран выбора опций.
+
+image::features/frontend_ui/entity-cards.png[Entity cards,align="center"]
+
+* *Directory* - директория, в которую будет помещен сгенерированный компонент.
+* *Add to menu* - нужно ли добавить пункт в меню навигации.
+* *Entity* - сущность, для которой создается компонент.
+* *Component class name* - имя класса компонента.
+* *Entity view* - {main_man_url}/views.html[представление], используемое компонентом.

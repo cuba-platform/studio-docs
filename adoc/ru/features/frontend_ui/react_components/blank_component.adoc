@@ -1,0 +1,14 @@
+:sourcesdir: ../../../../../source
+
+[[blank_component]]
+===== Blank Component
+
+Пустой компонент, который можно использовать как шаблон для создания кастомных компонентов.
+
+Нажмите *Next*. Будет показан экран выбора опций.
+
+image::features/frontend_ui/blank-component.png[Blank component,align="center"]
+
+* *Directory* - директория, в которую будет помещен сгенерированный компонент.
+* *Add to menu* - нужно ли добавить пункт в меню навигации.
+* *Component class name* - имя класса компонента.

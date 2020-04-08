@@ -1,0 +1,37 @@
+:sourcesdir: ../../../../../source
+
+[[entity_management]]
+===== Entity Management
+
+CRUD-экраны для сущности (список + редактор). Используйте данную опцию если необходимо дать возможность просматривать, добавлять, удалять и редактировать сущности. Данная опция генерирует 3 компонента:
+
+* *Компонент-редактор (Edit component)* - позволяет редактировать сущность.
+* *Компонент-список (List component)* - позволяет просматривать список сущностей и открывать редактор для выбранной сущности.
+* *CRUD-компонент (CRUD component)* - компонент, который отображает компонент-список или компонент-редактор в зависимости от наличия в пути роута параметра `entityId`.
+
+Нажмите *Next*. Будет показан экран выбора опций.
+
+image::features/frontend_ui/entity-management.png[Entity management,align="center"]
+
+* *Directory* - директория, в которую будут помещены сгенерированные компоненты.
+* *Add to menu* - нужно ли добавить пункт в меню навигации.
+* *Entity* - сущность, для которой создаются экраны.
+* *CRUD component class name* - имя класса CRUD-компонента.
+* *List type* - один из доступных вариантов компонента-списка:
++
+** *list*
++
+image:features/frontend_ui/browser-list.png[Компонент-список типа list,align="center"]
++
+** *cards*
++
+image:features/frontend_ui/browser-cards.png[Компонент-список типа cards,align="center"]
++
+** *table*
++
+image:features/frontend_ui/data-table-demo.gif[Компонент-список типа table,align="center"]
+
+* *List component class* - имя класса компонента-списка.
+* *List view* - {main_man_url}/views.html[представление], которое будет использоваться компонентом-списком.
+* *Edit component class name* - имя класса компонента-редактора.
+* *Edit view* - {main_man_url}/views.html[представление], которое будет использоваться компонентом-редактором.

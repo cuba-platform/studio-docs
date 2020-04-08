@@ -1,0 +1,16 @@
+:sourcesdir: ../../../../../source
+
+[[entity_cards]]
+===== Entity Cards
+
+Read-only list of entities displayed as cards.
+
+Once you click *Next* you will be presented with the following options screen.
+
+image::features/frontend_ui/entity-cards.png[Entity cards component,align="center"]
+
+* *Directory* - destination directory for the component to be generated into.
+* *Add to menu* - whether to create a navigation menu item for the generated component.
+* *Entity* - the entity that should be displayed by the component.
+* *Component class name* - the name of the component class.
+* *Entity view* - the {main_man_url}/views.html[view] that should be used by the component.
