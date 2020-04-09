@@ -5,8 +5,8 @@
 
 CRUD (list + editor) screens for specified entity. Use it if you need to allow browsing, adding, removing and editing entities. Selecting this option will allow you to generate 3 components:
 
-* *Edit component* - allows to edit an entity instance.
-* *List component* - allows to view the list of entities and open the Edit component for a selected entity instance.
+* *Edit component* - allows user to edit an entity instance.
+* *List component* - allows user to view the list of entities and open the Edit component for a selected entity instance.
 * *CRUD component* - component that renders a List component or an Edit component depending on whether the route path contains an `entityId` parameter.
 
 Once you click *Next* you will be presented with the following options screen.
@@ -15,7 +15,7 @@ image::features/frontend_ui/entity-management.png[Entity management components,a
 
 * *Directory* - destination directory for the components to be generated into.
 * *Add to menu* - whether to create a navigation menu item.
-* *Entity* - the entity for which the screens are being created.
+* *Entity* - the entity that the screens are being created for.
 * *CRUD component class name* - the name of the CRUD component class.
 * *List type* - list component is available in one of the following flavors (we call it list types):
 +

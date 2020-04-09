@@ -13,6 +13,6 @@ image::features/frontend_ui/select-preset.png[Selecting preset,align="center"]
 
 WARNING: Polymer presets are deprecated.
 
-The generated Frontend UI application (the frontend client) will placed into `modules/front` directory.
+The generated Frontend UI application (the frontend client) will be placed into the `modules/front` directory.
 
 To remove the *front* module right-click *Project > Modules* and select *Manage modules > Remove 'front' module*.
