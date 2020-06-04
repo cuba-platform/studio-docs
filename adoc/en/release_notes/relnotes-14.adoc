@@ -1,0 +1,86 @@
+[[relnotes_14]]
+
+Version 14::
++
+--
+. An ability to track database schema changes for additional data stores has been added (platform `7.2.0` or later). To enable generating database migration scripts for the data store use the new added radio button group in the Data Store Properties dialog:
++
+image::release_notes/v-14-add-datastore-mode.png[align="center"]
++
+The following database schema management modes are available:
+
+.. *Disabled* - Studio doesn't track database schema changes for this data store. This is the default mode, and this is how previous Studio versions behaved.
+.. *Update Only* - Studio generates *update* database migration scripts and provides ability to update database schema to match updated data model. However, Studio does not provide a way to re-create the database from scratch. This mode should be used for databases that are not fully managed by the CUBA application, e.g. database that are shared with other applications.
+.. *Create and Update* - Studio generates full set of *init* and *update* database migration scripts and provides ability to re-create the database from scratch or update it to match updated data model. Use this mode for database meant to be fully managed by the CUBA application.
+
+. If your project has additional data stores with database schema management enabled, then the *Database Scripts* dialog starts to show database scripts for all managed data stores:
++
+image::release_notes/v-14-db-scripts-dialog.png[align="center"]
++
+Additionally, the *New CUBA Entity* dialog now allows you to specify data store to register the new entity in:
++
+image::release_notes/v-14-new-entity-data-store.png[align="center"]
+
+. A visual designer for the {main_man_url}/roles.html#roles_design_time[roles defined at design time] has been added (platform `7.2.0` or later). It allows you to conveniently construct role definitions from the UI, specifying role settings, available screens and menu items, entity CRUD permissions, available attributes and specific permissions.
++
+image::release_notes/v-14-role-designer.png[align="center"]
+
+. Design-time role definitions are now displayed in the CUBA project tree under *Security* section.
++
+image::release_notes/v-14-roles-in-tree.png[align="center"]
++
+To create new role definition, use context menu -> *New* -> *Role* action in the *Security* section:
++
+image::release_notes/v-14-new-role.png[align="center"]
+
+. Visual editing of the {main_man_url}/permissions.xml.html[specific permissions and categories] project configuration is now available. This functionality is built into the design-time role visual designer, located in the *Specific* tab:
++
+image::release_notes/v-14-specific-permissions.png[align="center"]
+
+. Log files of the local debug Tomcat server are now displayed in the *Logging* section of CUBA project tree:
++
+image::release_notes/v-14-log-files-in-tree.png[align="center"]
+
+. Added ability to customize logging configuration file used by the application (platform `7.2.0` or later). To create custom `logback.xml` configuration file, use the CUBA project tree -> *Logging* section -> *Generate Logback Configuration File* action:
++
+image::release_notes/v-14-customize-logback.png[align="center"]
++
+The generated file can be modified as necessary. It will be used for the local Tomcat debug server and also by the *WAR* and *UberJAR* build artifacts.
+
+. {main_man_url}/integration_tests_mw.html[Middleware] and {main_man_url}/integration_tests_client.html[Web] integration tests are now displayed in the CUBA project tree, grouped under *Middleware* -> *Tests* section:
++
+image::release_notes/v-14-tests-in-tree.png[align="center"]
+
+. Ability to create new integration tests has been added to the CUBA project tree. To create new test class, use context menu in the *Tests* section -> *New* -> *Integration Test (Middleware)* or *Integration Test (Web)*:
++
+image::release_notes/v-14-new-test.png[align="center"]
+
+. Ability to customize screen templates has been added. Press *Copy template* button in the first step of the *Create CUBA Screen* wizard to create own screen template. Template files will be copied to the project and become available for modification. Custom screen templates are displayed in the *Generic UI* -> *Screens* -> *Custom Templates* section of the CUBA project tree:
++
+image::release_notes/v-14-custom-screen-templates.png[align="center"]
++
+You can modify template files for the screen controller and descriptor, or even add new parameters to the wizard by extending the *settings.xml* file. Customized screen templates are available for selection on the *Project Templates* tab of the first step of the *New* -> *Screen* wizard:
++
+image::release_notes/v-14-use-custom-template.png[align="center"]
+
+. Ability to scaffold {main_man_url}/entityPersistingEvent.html[EntityPersistingEvent] event listeners has been added to the *Subscribe to Event* <<middleware_event_listeners,wizard dialog>>:
++
+image::release_notes/v-14-before-persist-event.png[align="center"]
+
+. The *New CUBA Bean* dialog now allows developers to specify target module and create Spring beans in `global`, `web` and `portal` modules in addition to the `core` module:
++
+image::release_notes/v-14-module-in-new-bean.png[align="center"]
+
+
+
+
+
+. Support for the custom components UI metadata has been added to the Screen Designer. It allows to integrate a custom UI component implemented in an add-on or project into UI of the Screen Designer by adding special annotations to component's definition. Read more about UI metadata in the {main_man_url}/own_component_in_studio.html[Developer's Manual].
+
+. Standalone IDE version of the Studio has been upgraded to the IntelliJ Community platform *2019.3*. Previously downloaded standalone Studio IDE will not be upgraded - you should download the new version from the {cuba-download-site}[CUBA Platform] web site.
+
+. Numerous small improvements and bug fixes:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2014.0[Studio 14.0 Resolved Issues\]]
+
+--
