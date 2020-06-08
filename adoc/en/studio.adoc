@@ -25,6 +25,7 @@
 :rel_notes_url: http://files.cuba-platform.com/cuba/release-notes/7.2
 :gradle_user_guide_url: https://docs.gradle.org/5.6.4/userguide
 :cuba-download-site: https://www.cuba-platform.com/tools/
+:cuba-store-site: https://www.cuba-platform.com/store/#/store/studio
 :plugin-repository-site: https://plugins.jetbrains.com/plugin/7249-cuba/versions
 :revnumber: 14
 

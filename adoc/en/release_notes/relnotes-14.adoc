@@ -71,13 +71,62 @@ image::release_notes/v-14-before-persist-event.png[align="center"]
 +
 image::release_notes/v-14-module-in-new-bean.png[align="center"]
 
+. The *Create CUBA Screen* wizard has been extended with steps to configure entity browser and editor views. Developer is now able to select necessary properties right in the wizard without opening modal dialogs. Selected properties also determine which fields will be displayed in the browser table and edited in the editor form:
++
+image::release_notes/v-14-views-in-screen-wizard.png[align="center"]
 
+. Form creation wizard dialogs has been added to the Screen Designer. It activates when user places new form to the screen layout. This dialog provides ability to choose existing or configure new data container and set up other required form attributes:
++
+image::release_notes/v-14-form-wizard.png[align="center"]
 
+. *Component Palette* panel of the Screen Designer now allows developer to drag-and-drop components from the palette to the source code. Selected component will be added as last child component in the containing tag.
 
+. Switching main menu from *Composite* to *Single* mode for menu customization has been simplified. Menu designer now suggests developer to copy menus and items inherited from the platform and add-ons to the project's configuration.
+
+. Additional DDL generation settings have been added to the Entity Designer. Developer now can choose one of three database script generation modes for the particular entity: *Create and drop*, *Create only*, *Disabled*. Also it is now possible to specify unmapped columns or constraints (ones that are not mapped to the JPA entity model, but exist in the database and should not be dropped the Studio).
++
+image::release_notes/v-14-ddl-gen-settings.png[align="center"]
+
+. The *Add new attributes to existing screens* feature (previously available only as intention action) has been improved and became easier to access. Now it is available in the entity source code as *Add attributes to screens* top actions panel's button:
++
+image::release_notes/v-14-add-attrs-top-action.png[align="center"]
++
+Similar action has been added to the Entity Designer as *Add to Screens* button above the attributes table. It allows developer to add a new attribute to already existing screens:
++
+image::release_notes/v-14-add-attr-entity-designer.png[align="center"]
+
+. Inspection has been added that detects usages of the `System.out` or `System.err` statements in the code. It provides quick fixes to the developer (available by pressing Alt+Enter / Option+Enter) to transform the statement to use injected or static Logger:
++
+image::release_notes/v-14-sout-logger.gif[align="center"]
+
+. The "Entity is created by calling constructor" inspection has been extended with a quick fix. By pressing Alt+Enter (Option+Enter) you can transform the statement to use the recommended `DataManager#create(Entity.class)` factory method:
++
+image::release_notes/v-14-datamanager-create.gif[align="center"]
+
+. The "GUI component is created by calling constructor" inspection has been extended with a quick fix. By pressing Alt+Enter (Option+Enter) you can transform the statement to use the recommended `UiComponents#create(Component.class)` factory method:
++
+image::release_notes/v-14-uicomp-create.gif[align="center"]
 
 . Support for the custom components UI metadata has been added to the Screen Designer. It allows to integrate a custom UI component implemented in an add-on or project into UI of the Screen Designer by adding special annotations to component's definition. Read more about UI metadata in the {main_man_url}/own_component_in_studio.html[Developer's Manual].
 
+. Integration with the {cuba-store-site}[CUBA Store] has been added. Now you can log in to your CUBA profile by pressing the *CUBA User Profile* button on the toolbar:
++
+image::release_notes/v-14-login-cuba-account.png[align="center"]
++
+After logging in the following features become available:
+
+* Automatic downloading and installing trial versions of the commercial add-ons in the *Marketplace* window.
+* Displaying available trial add-ons in the *Subscription Information* dialog.
+
+. Processing time of the *Generate Database Scripts* operation has been significantly optimized (reduced). The same done to the database schema check happening before the *CUBA Application* run configuration is started.
+
+. Studio now uses MariaDB connector when connecting to both MySQL and MariaDB databases. It is no longer required to download MySQL proprietary driver in order to use MySQL with the Studio. In case if using MySQL driver is essential for some reason, it can be enabled by adding the `disableMariaDbDriver` parameter to the connection string.
+
+. Default memory settings for the standalone IDE version of the Studio have been increased. Now it is configured to use up to `-Xmx1200m`, up from previously used `-Xmx768m` value.
+
 . Standalone IDE version of the Studio has been upgraded to the IntelliJ Community platform *2019.3*. Previously downloaded standalone Studio IDE will not be upgraded - you should download the new version from the {cuba-download-site}[CUBA Platform] web site.
+
+. The JxBrowser browser implementation has been removed. Now Studio uses JavaFX to show embedded web pages. It helped to significantly reduce size of the plugin bundle.
 
 . Numerous small improvements and bug fixes:
 
