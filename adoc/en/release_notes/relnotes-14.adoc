@@ -3,17 +3,17 @@
 Version 14::
 +
 --
-. An ability to track database schema changes for additional data stores has been added (platform `7.2.0` or later). To enable generating database migration scripts for the data store use the new added radio button group in the Data Store Properties dialog:
+. An ability to track database schema changes for additional data stores has been added (platform `7.2.0` or later). To enable generating database migration scripts for the data store - use the new added radio button group in the *Data Store Properties* dialog:
 +
 image::release_notes/v-14-add-datastore-mode.png[align="center"]
 +
 The following database schema management modes are available:
 
-.. *Disabled* - Studio doesn't track database schema changes for this data store. This is the default mode, and this is how previous Studio versions behaved.
-.. *Update Only* - Studio generates *update* database migration scripts and provides ability to update database schema to match updated data model. However, Studio does not provide a way to re-create the database from scratch. This mode should be used for databases that are not fully managed by the CUBA application, e.g. database that are shared with other applications.
-.. *Create and Update* - Studio generates full set of *init* and *update* database migration scripts and provides ability to re-create the database from scratch or update it to match updated data model. Use this mode for database meant to be fully managed by the CUBA application.
+.. *Disabled* - Studio doesn't track database schema changes for this data store. This is the default mode, and this is how previous Studio versions used to behave.
+.. *Update Only* - Studio generates *update* database migration scripts and provides ability to update database schema to match updated data model. However, Studio does not provide a way to re-create the database from scratch. This mode should be used for databases that are not fully managed by the CUBA application, e.g. databases shared with other applications.
+.. *Create and Update* - Studio generates full set of *init* and *update* database migration scripts and provides ability to re-create the database from scratch or update it to match updated data model. Use this mode for a database meant to be fully managed by the CUBA application.
 
-. If your project has additional data stores with database schema management enabled, then the *Database Scripts* dialog starts to show database scripts for all managed data stores:
+. If your project has additional data stores with database schema management enabled, then the *Database Scripts* dialog will show database scripts for all managed data stores:
 +
 image::release_notes/v-14-db-scripts-dialog.png[align="center"]
 +
@@ -21,7 +21,7 @@ Additionally, the *New CUBA Entity* dialog now allows you to specify data store 
 +
 image::release_notes/v-14-new-entity-data-store.png[align="center"]
 
-. A visual designer for the {main_man_url}/roles.html#roles_design_time[roles defined at design time] has been added (platform `7.2.0` or later). It allows you to conveniently construct role definitions from the UI, specifying role settings, available screens and menu items, entity CRUD permissions, available attributes and specific permissions.
+. A visual designer for the {main_man_url}/roles.html#roles_design_time[roles defined at design time] has been added (platform `7.2.0` or later). It allows you to conveniently construct role definitions, specifying role settings, available screens and menu items, entity CRUD permissions, available attributes and specific permissions.
 +
 image::release_notes/v-14-role-designer.png[align="center"]
 
@@ -37,21 +37,21 @@ image::release_notes/v-14-new-role.png[align="center"]
 +
 image::release_notes/v-14-specific-permissions.png[align="center"]
 
-. Log files of the local debug Tomcat server are now displayed in the *Logging* section of CUBA project tree:
+. Log files of the local debug Tomcat server are now displayed in the *Logging* section of the CUBA project tree:
 +
 image::release_notes/v-14-log-files-in-tree.png[align="center"]
 
-. Added ability to customize logging configuration file used by the application (platform `7.2.0` or later). To create custom `logback.xml` configuration file, use the CUBA project tree -> *Logging* section -> *Generate Logback Configuration File* action:
+. Added ability to customize {main_man_url}/logging.html[logging configuration file] used by the application (platform `7.2.0` or later). To create custom `logback.xml` configuration file, use the CUBA project tree -> *Logging* section -> *Generate Logback Configuration File* action:
 +
 image::release_notes/v-14-customize-logback.png[align="center"]
 +
-The generated file can be modified as necessary. It will be used for the local Tomcat debug server and also by the *WAR* and *UberJAR* build artifacts.
+The generated file can be modified as necessary. It will be used by the local Tomcat debug server. It will be also used as a default logging configuration file in the *WAR Settings* and *UberJAR Settings* dialogs.
 
 . {main_man_url}/integration_tests_mw.html[Middleware] and {main_man_url}/integration_tests_client.html[Web] integration tests are now displayed in the CUBA project tree, grouped under *Middleware* -> *Tests* section:
 +
 image::release_notes/v-14-tests-in-tree.png[align="center"]
 
-. Ability to create new integration tests has been added to the CUBA project tree. To create new test class, use context menu in the *Tests* section -> *New* -> *Integration Test (Middleware)* or *Integration Test (Web)*:
+. Ability to create new integration test classes has been added. To create new test class, use context menu in the CUBA project tree -> *Tests* section -> *New* -> *Integration Test (Middleware)* or *Integration Test (Web)*:
 +
 image::release_notes/v-14-new-test.png[align="center"]
 
@@ -71,7 +71,7 @@ image::release_notes/v-14-before-persist-event.png[align="center"]
 +
 image::release_notes/v-14-module-in-new-bean.png[align="center"]
 
-. The *Create CUBA Screen* wizard has been extended with steps to configure entity browser and editor views. Developer is now able to select necessary properties right in the wizard without opening modal dialogs. Selected properties also determine which fields will be displayed in the browser table and edited in the editor form:
+. The *Create CUBA Screen* wizard has been extended with steps to configure entity browser and editor views. Developer is now able to select necessary properties right in the wizard without opening modal dialogs. Selected properties also determine which fields will be displayed in the browser table or edited in the editor form:
 +
 image::release_notes/v-14-views-in-screen-wizard.png[align="center"]
 
@@ -79,23 +79,25 @@ image::release_notes/v-14-views-in-screen-wizard.png[align="center"]
 +
 image::release_notes/v-14-form-wizard.png[align="center"]
 
-. *Component Palette* panel of the Screen Designer now allows developer to drag-and-drop components from the palette to the source code. Selected component will be added as last child component in the containing tag.
+. *Component Palette* panel of the Screen Designer now allows developer to drag-and-drop components from the palette to the source code. Selected component will be added as a last child component in the containing tag.
 
 . Switching main menu from *Composite* to *Single* mode for menu customization has been simplified. Menu designer now suggests developer to copy menus and items inherited from the platform and add-ons to the project's configuration.
 
-. Additional DDL generation settings have been added to the Entity Designer. Developer now can choose one of three database script generation modes for the particular entity: *Create and drop*, *Create only*, *Disabled*. Also it is now possible to specify unmapped columns or constraints (ones that are not mapped to the JPA entity model, but exist in the database and should not be dropped the Studio).
+. Additional DDL generation settings have been added to the Entity Designer. Developer now can choose one of three database script generation modes for the particular entity: *Create and drop*, *Create only*, *Disabled*. Also it is now possible to specify unmapped columns or constraints (ones that are not mapped to the JPA entity model but exist in the database, and Studio should not suggest dropping them).
 +
 image::release_notes/v-14-ddl-gen-settings.png[align="center"]
 
-. The *Add new attributes to existing screens* feature (previously available only as intention action) has been improved and became easier to access. Now it is available in the entity source code as *Add attributes to screens* top actions panel's button:
+. The *Add new attributes to existing screens* feature (previously available only as intention action) has been improved and became easier to access. Now it is available in the entity source code as the *Add attributes to screens* top actions panel's button:
 +
 image::release_notes/v-14-add-attrs-top-action.png[align="center"]
 +
-Similar action has been added to the Entity Designer as *Add to Screens* button above the attributes table. It allows developer to add a new attribute to already existing screens:
+image::release_notes/v-14-add-attrs-display.png[align="center"]
++
+Similar action has been added to the Entity Designer as the *Add to Screens* button above the attributes table:
 +
 image::release_notes/v-14-add-attr-entity-designer.png[align="center"]
 
-. Inspection has been added that detects usages of the `System.out` or `System.err` statements in the code. It provides quick fixes to the developer (available by pressing Alt+Enter / Option+Enter) to transform the statement to use injected or static Logger:
+. Inspection has been added that detects usages of the `System.out.println` or `System.err.println` statements in the code. It provides quick fixes to the developer (available by pressing Alt+Enter / Option+Enter) to transform the statement to use injected or static Logger:
 +
 image::release_notes/v-14-sout-logger.gif[align="center"]
 
