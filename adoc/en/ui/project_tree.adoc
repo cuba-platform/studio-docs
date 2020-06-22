@@ -24,15 +24,19 @@ image::ui/cuba_tree.png[align="center"]
 By default there is only one `Main` data store.
 
 * <<deployment,Deployment>> - enables defining the project deployment options.
+* <<config_interfaces,Config Interfaces>> - displays and manages project's configuration interfaces.
+* <<logging,Logging>> - displays logging configuration file along with local debug server log files.
 --
 
 . <<data_model,Data model>> - displays and manages the data model of the project.
 
-. <<middleware,Middleware>> - displays and manages middleware services and managed beans.
+. <<middleware,Business Logic>> - displays and manages middleware services, Spring beans and integration tests.
 
 . <<generic_ui,Generic UI>> - contains everything related to the project user interface, such as screens, themes, and so on.
 
-. *REST API* - lets you configure the {main_man_url}/rest_api_v2.html[REST API] functionality.
+. *REST API* - lets you configure the {restapi_man_url}[REST API] functionality.
+
+. *Security* - displays and lets you visually design roles defined at design time.
 
 . *Runs At...* - allows you to open the running application in the external or embedded web browser.
 

@@ -8,6 +8,7 @@ Event listener is a Spring bean having one or more listener methods that accept 
 Studio allows you to scaffold listeners for various application events:
 
 * {main_man_url}/entityChangedEvent.html[EntityChangedEvent]
+* {main_man_url}/entityPersistingEvent.html[EntityPersistingEvent]
 * {main_man_url}/app_lifecycle_events.html[Application lifecycle events]
 * {main_man_url}/login.html#login_events[Authentication events and hooks]
 
@@ -15,7 +16,7 @@ You can generate new listener class or add listeners to existing bean classes.
 
 [[middleware_event_listeners_new_class]]
 New listener class::
-In order to generate new listener class, go to the *Middleware* section of the CUBA project tree and then invoke a right click -> *New* -> *Event Listener* context menu item.
+In order to generate new listener class, go to the *Business Logic* section of the CUBA project tree and then invoke a right click -> *New* -> *Event Listener* context menu item.
 
 image::features/middleware/create_event_listener.png[align="center"]
 

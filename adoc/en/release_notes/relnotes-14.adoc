@@ -47,7 +47,7 @@ image::release_notes/v-14-customize-logback.png[align="center"]
 +
 The generated file can be modified as necessary. It will be used by the local Tomcat debug server. It will be also used as a default logging configuration file in the *WAR Settings* and *UberJAR Settings* dialogs.
 
-. {main_man_url}/integration_tests_mw.html[Middleware] and {main_man_url}/integration_tests_client.html[Web] integration tests are now displayed in the CUBA project tree, grouped under *Middleware* -> *Tests* section:
+. {main_man_url}/integration_tests_mw.html[Middleware] and {main_man_url}/integration_tests_client.html[Web] integration tests are now displayed in the CUBA project tree, grouped under *Business Logic* -> *Tests* section:
 +
 image::release_notes/v-14-tests-in-tree.png[align="center"]
 
@@ -127,6 +127,11 @@ After logging in the following features become available:
 . Default memory settings for the standalone IDE version of the Studio have been increased. Now it is configured to use up to `-Xmx1200m`, up from previously used `-Xmx768m` value.
 
 . Standalone IDE version of the Studio has been upgraded to the IntelliJ Community platform *2019.3*. Previously downloaded standalone Studio IDE will not be upgraded - you should download the new version from the {cuba-download-site}[CUBA Platform] web site.
+
+. The following infrastructure improvements have been implemented for developers located in China:
+* Added new built-in CUBA artifact repository `https://nexus.cuba-platform.cn/repository/cuba/`, located in China.
+* <<add_ons,Add-ons>> information in the marketplace has been translated into Chinese.
+* Optimized location of the external resources used by the Studio for better network accessibility.
 
 . The JxBrowser browser implementation has been removed. Now Studio uses JavaFX to show embedded web pages. It helped to significantly reduce size of the plugin bundle.
 

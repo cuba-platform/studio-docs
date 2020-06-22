@@ -1,0 +1,30 @@
+:sourcesdir: ../../../../source
+
+[[middleware_integration_tests]]
+==== Creating Integration Tests
+--
+CUBA applications can be tested using well-known approaches: unit, integration and UI testing. Studio provides developer with support for the following categories of tests:
+
+* {main_man_url}/integration_tests_mw.html[Middleware integration tests]. This category of tests is used to test middleware functionality: services, beans, event listeners, logic of the ORM and communicating with the database. Middleware tests run in a fully functional Spring container connected to the database.
+* {main_man_url}/integration_tests_client.html[Web integration tests]. Those run in the Spring container of the Web Client block. Web test container works independently from the middleware, and the framework creates stubs for all middleware services.
+
+Both groups of tests are displayed in the *Business Logic* -> *Tests* section of the CUBA project tree, grouped by module:
+
+image::features/middleware/tests_in_tree.png[align="center"]
+
+In order to create a new integration test, select the *Business Logic* -> *Tests* project tree section and click *New* -> *Integration Test (Middleware)* or *Integration Test (Web)* in the context menu:
+
+image::features/middleware/create_test_menu.png[align="center"]
+
+If your project doesn't yet contain test source root or test container, Studio will show an additional confirmation dialog before creating necessary files and classes.
+
+In the appearing dialog you need to enter the following parameters:
+
+* *Class Name* - name of the test class.
+* *Package* - package to place test class into.
+* *Test container class* - name of the test container class. Default `Common` container is created automatically for you, but you can also create other container classes, e.g. to test your application using another DBMS type.
+* *Testing library* - choose between *JUnit5* or *JUnit4*. Note that CUBA projects which were created using previous platform versions up to 7.1 support only *JUnit4*, even if they were migrated to CUBA 7.2.
+
+image::features/middleware/create_mw_test_dialog.png[align="center"]
+
+--

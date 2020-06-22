@@ -1,0 +1,20 @@
+:sourcesdir: ../../../../source
+
+[[middleware_jmx_beans]]
+==== Creating JMX Beans
+--
+{main_man_url}/jmx_beans.html[JMX Beans] are a special kind of Spring beans. JMX beans allow system administrator to view and change the state of the program in runtime. They are usually used to provide statistics, monitoring information, access to the configuration or other internal operations.
+
+Studio shows JMX beans together with other Spring beans in the *Business Logic* -> *Beans* section of the project tree. JMX beans can be created in *core*, *global* and *web* modules of the project.
+
+In order to create a new JMX bean, select the *Business Logic* -> *Beans* project tree section and click *New* -> *JMX Bean* in the context menu. The *Create JMX Bean* dialog will appear:
+
+image::features/middleware/create_jmx_bean_dialog.png[align="center"]
+
+* *Module* - select the module to place the new bean into.
+* *Interface Class* - enter the name of the bean interface. This interface contains methods that will be exposed to JMX. This name should end with the `MBean` postfix.
+* *Bean Class* - enter the name of the bean class.
+* *Bean Name* - enter the unique name of the bean. When interface class is entered, it is generated automatically.
+* *Package* - enter the package to place bean into.
+* *Description* - description of the bean, it will be shown to the user in the JMX clients (such as CUBA {main_man_url}/jmx_console.html[built-in JMX Console]).
+--

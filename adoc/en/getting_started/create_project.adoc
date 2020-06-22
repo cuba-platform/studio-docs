@@ -41,6 +41,6 @@ CUBA Studio provides an easy way to create new CUBA projects from scratch. Just 
 
 . When the project synchronization and indexing process is completed, you will see the CUBA project tree in the *Project* tool window.
 
-. Open the *Gradle* tool window which is docked on the right side by default. Click the "wrench" icon (*Gradle Settings*) and select `Use JAVA_HOME` in the *Gradle JVM* field. If you don't see such item in the drop-down list, make sure you have set up your development environment correctly as described in the {main_man_url}/setup.html[Setup] section of the CUBA Developer's Manual. Click *OK*.
+. Open the *Gradle* tool window which is docked on the right side by default. Click the "wrench" icon (*Gradle Settings*) and select `Project SDK` in the *Gradle JVM* field. Click *OK*.
 
 . Now you can start working with the project.
