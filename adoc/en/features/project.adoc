@@ -14,3 +14,7 @@ include::project/modules.adoc[]
 include::project/data_stores.adoc[]
 
 include::project/deployment.adoc[]
+
+include::project/config_interfaces.adoc[]
+
+include::project/logging.adoc[]

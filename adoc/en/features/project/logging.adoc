@@ -1,0 +1,23 @@
+:sourcesdir: ../../../../../source
+
+[[logging]]
+==== Logging
+--
+The *Logging* section of the CUBA project tree serves the following purposes:
+
+* Display log files of the local Tomcat debug server.
+* Allow developers to create and edit project-specific logging configuration.
+
+image::features/project/logging_tree.png[align="center"]
+
+Log files are displayed in two folders reflecting their location in the file system. The same layout can be observed when the application is deployed to the production environment:
+
+* *app_home.logs* - {main_man_url}/logging.html[CUBA log files]. These logs are configured in the `logback.xml` configuration file.
+* *tomcat.logs* - https://tomcat.apache.org/tomcat-9.0-doc/logging.html[Tomcat log files]. These logs are configured in the Tomcat.
+
+The `logback.xml` file displayed in this section is a customized logging configuration file located at the `etc/logback.xml` location relative to the project root directory. This file is used as a CUBA logging configuration file for the local debug Tomcat server. The same file will be suggested to be used by default in the <<deployment_war_settings,WAR Settings>> and <<deployment_uber_jar_settings,UberJar Settings>> dialogs. You can create customized logging configuration file by right-clicking the *Logging* CUBA project tree section and choosing the *Generate Logback Configuration File...* item in the context menu:
+
+image::features/project/create_logback_xml.png[align="center"]
+
+The generated `logback.xml` file can be customized, e.g. you can add your own appenders and limit logging messages by category. Read more about configuring logback on its http://logback.qos.ch/manual/configuration.html#syntax[manual page].
+--

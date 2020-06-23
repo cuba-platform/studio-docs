@@ -15,9 +15,9 @@ The *CUBA* section itself contains the settings common to all projects opened in
 
 * *Visual designer and embedded browser zoom percentage* - default zoom for screen designer's layout preview. You can adjust it later using one of actions located on the top of the preview panel.
 
-* *Enable integration* - select this checkbox if you want to integrate this IDE instance with the old Studio SE or Studio Browser Edition. You will be able to open projects from the old Studio in this IDE. Also this checkbox enables communicating with the Frontend Generator command line tool.
+* *Enable integration* - select this checkbox if you want to integrate this IDE instance with the old Studio SE or Studio Browser Edition. You will be able to open projects from the old Studio in this IDE. This checkbox also enables communicating with the Frontend Generator command line tool.
 
-* *Listening port* - a port for the old Studio integration. Make sure it is the same as specified in the old Studio *IDE Port* field.
+* *Listening port* - a port for the Studio integration with the old Studio and Frontend Generator. Make sure it is the same as specified in the old Studio *IDE Port* field.
 --
 
 Project settings::
