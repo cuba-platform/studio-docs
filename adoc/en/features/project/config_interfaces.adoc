@@ -3,7 +3,7 @@
 [[config_interfaces]]
 ==== Configuration Interfaces
 --
-The configuration interfaces mechanism enables working with application configuration parameters using Java interface methods, providing type-safe access to the properties. You can learn more about configuration interfaces in the {main_man_url}/config_interfaces.html[corresponding section] of the developer's manual.
+The configuration interfaces mechanism enables convenient working with application configuration parameters using Java interface methods, providing type-safe access to the properties.
 
 Studio displays all configuration interfaces defined in the project in the *Project* -> *Config Interfaces* section of the CUBA project tree:
 
@@ -16,5 +16,10 @@ image::features/project/create_config_interface.png[align="center"]
 * *Module* - choose the module to place configuration interface into.
 * *Class* - enter the name of the interface class.
 * *Package* - choose the package where configuration interface should be created.
-* *Source type* - choose where property values should be stored. Refer to the {main_man_url}/config_interface_usage.html[developer's manual] for the description of source types.
+* *Source type* - choose where property values should be stored:
+** *DATABASE* - values will be taken from the database.
+** *APP* - values will be taken from `app.properties` files.
+** *SYSTEM* - values will be taken from the system properties of the JVM.
+
+You can learn more about configuration interfaces in the {main_man_url}/config_interfaces.html[corresponding section] of the developer's manual.
 --
