@@ -1,0 +1,18 @@
+:sourcesdir: ../../../../source
+
+[[creating_roles]]
+==== Creating Role Definitions
+--
+
+You can create new design-time role definitions by right-clicking the *Security* section and choosing the *New* -> *Role* context menu action. The *New Role* dialog appears:
+
+image::features/security/create_role.png[align="center"]
+
+* *Role Name* - enter the name of the role. It is a technical name that can be used later in the code.
+* *Class* - enter the name of the class defining the role. It will be filled automatically after you enter role name.
+* *Security Scope* - choose which type of the client role permissions should be applied to:
+** *GENERIC_UI* - permissions are applied to the {main_man_url}/gui_framework.html[Generic User Interface].
+** *REST* - permissions are applied to the {restapi_man_url}[REST API] client.
+
+After clicking *OK* the role definition class will be created. You can specify role permissions manually in the source code by using rules explained in the {main_man_url}/roles.html#roles_design_time[corresponding section] of the Developer's Manual. Users with active CUBA Studio subscription can construct role definition by using a visual designer.
+--

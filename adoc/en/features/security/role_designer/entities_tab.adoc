@@ -1,0 +1,29 @@
+:sourcesdir: ../../../../../../source
+
+[[role_designer_entities]]
+===== Entities Tab
+--
+The *Entities* tab of the role designer provides editing of the permissions for entities and entity attributes.
+
+image::features/security/role_tab_entities.png[align="center"]
+
+The table on the left side of the panel displays entities defined in the project as well as entities inherited from platform and add-ons. Entity list can be filtered by name with help of search text box located above of the table.
+
+A toolbar is displayed above the entities table. It contains the following actions:
+
+* *Show Inherited from Platform and Add-Ons* - toggle to hide or display inherited entities.
+* *Show Assigned Only* - toggle to show or hide all entities, including those which don't have permissions defined.
+
+All entity operations are denied by default. Using check boxes in the table you can allow particular operations (*Create*, *Read*, *Update* and *Delete*) for the selected entity.
+
+The table on the right displays attribute permissions for the selected entity. All entity attributes are denied to view and modify by default. By clicking *View* and *Modify* checkboxes you can set desired access level for the selected attribute.
+
+The wildcard image:features/security/wildcard.png[] option in the attributes table allows you to mark all attributes as available for *View* or *Modify*, including those attributes that will be added to the selected entity in the future. Note that you can combine in one entity wildcard *Modify* for most attributes with *View* permission as an exception for a few selected attributes.
+
+[WARNING]
+====
+Wildcard attribute permissions option is convenient, but you should use it with care. By using it you are assuming that you will never in the future add a new privileged attribute to the selected entity that shouldn't be visible or editable by the current role.
+====
+
+The *Allow All* checkbox in the entities table permits all CRUD operations and allows *Modify* for all attributes, making the selected entity fully accessible for the current role.
+--

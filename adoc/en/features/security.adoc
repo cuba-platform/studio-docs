@@ -1,0 +1,16 @@
+:sourcesdir: ../../../source
+
+[[security]]
+=== Security
+--
+Starting from 7.2.0 version, CUBA allows developers to define roles and access groups at design time, in addition to roles and groups created at run-time in the running application. At the moment Studio provides support for design-time role definitions.
+
+Studio displays classes that define design-time roles in the CUBA project tree, under *Security* section:
+
+image::features/security/security_section.png[align="center"]
+
+--
+
+include::security/creating_roles.adoc[]
+
+include::security/role_designer.adoc[]

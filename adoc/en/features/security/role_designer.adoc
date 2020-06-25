@@ -1,0 +1,31 @@
+:sourcesdir: ../../../../source
+
+[[role_designer]]
+==== Using Role Designer
+--
+
+The code editor for the define-time role definitions is integrated with the *Role Designer*. Role Designer provides UI controls that allow you to visually configure role settings and all necessary permissions. You can edit the source code directly or use Designer's controls to generate the code for you.
+
+The *Role Designer* represents a tab sheet with tab switch control located at the bottom of the code editor. The following tabs are available:
+
+* *Text* - displays and provides editing of the Java/Kotlin source code.
+* *Definition* - defines basic role attributes.
+* *Screens* - defines permissions for menu items and screens.
+* *Entities* - defines CRUD permissions for entities and entity attributes.
+* *Specific* - defines role specific permissions and provides editing of the project's specific permission configuration.
+
+[TIP]
+====
+Role Designer is available only for users with active CUBA Studio subscription.
+====
+
+image::features/security/role_designer_tabs.png[align="center"]
+--
+
+include::role_designer/definition_tab.adoc[]
+
+include::role_designer/screens_tab.adoc[]
+
+include::role_designer/entities_tab.adoc[]
+
+include::role_designer/specific_tab.adoc[]

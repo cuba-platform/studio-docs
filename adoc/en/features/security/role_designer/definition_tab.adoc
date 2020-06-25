@@ -1,0 +1,22 @@
+:sourcesdir: ../../../../../../source
+
+[[role_designer_definition]]
+===== Definition Tab
+--
+The *Definition* tab provides editing of basic role attributes.
+
+image::features/security/role_tab_definition.png[align="center"]
+
+* *Name* - enter the unique name of the role. It is a technical name that can be used later in the code.
+* *Scope* - choose which type of the client role permissions should be applied to:
+** *GENERIC_UI* - permissions are applied to the {main_man_url}/gui_framework.html[Generic User Interface].
+** *REST* - permissions are applied to the {restapi_man_url}[REST API] client.
+* *Default Role* - the role is assigned to new users automatically. This flag allows you to grant a certain set of permissions to each new user by default.
+* *Super Role* - users having this role become super users with all permissions granted.
+* *Description* - free text description of the role, it will be shown in the Role Browser and Editor screens of the running application.
+
+[WARNING]
+====
+Note that role name identifies design-time roles in the database, therefore it should not be changed after the role has been assigned to any users (or a database migration will be required).
+====
+--

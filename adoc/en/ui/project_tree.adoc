@@ -34,9 +34,9 @@ By default there is only one `Main` data store.
 
 . <<generic_ui,Generic UI>> - contains everything related to the project user interface, such as screens, themes, and so on.
 
-. *REST API* - lets you configure the {restapi_man_url}[REST API] functionality.
+. <<rest_api,REST API>> - lets you configure the {restapi_man_url}[REST API] functionality.
 
-. *Security* - displays and lets you visually design roles defined at design time.
+. <<security,Security>> - displays and allows you visually construct design-time role definitions.
 
 . *Runs At...* - allows you to open the running application in the external or embedded web browser.
 

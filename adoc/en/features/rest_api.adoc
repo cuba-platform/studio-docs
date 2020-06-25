@@ -1,0 +1,56 @@
+:sourcesdir: ../../../source
+
+[[rest_api]]
+=== REST API
+--
+REST API is a CUBA add-on that provides your application with the ability to perform CRUD operations, execution of predefined JPQL queries, service methods and other possibilities via the REST web services. REST API is also a standard way how the <<frontend_ui,frontend UI>> communicates with the server. Read more about this add-on in the {restapi_man_url}[official documentation].
+
+In order to use REST API functionality in your project, install the add-on by using the <<addons_marketplace,CUBA Add-Ons>> Studio window.
+
+Studio provides the following support for the REST API functionality:
+
+* Automatically generating required application properties.
+* Creating and displaying configuration files in the CUBA project tree.
+* Assisting with registering service methods to be exposed via REST API.
+--
+
+[[rest_api_client_creds]]
+Client credentials::
+--
+When Studio adds the REST API add-on to the project, it automatically generates unique values for the {restapi_man_url}/#cuba.rest.client.id[cuba.rest.client.id] and {restapi_man_url}/#cuba.rest.client.secret[cuba.rest.client.secret] application properties and puts them to the `web-app.properties` file. These properties define credentials used by the REST API client to authenticate itself (client application, not the CUBA user) to the server. Note that it is recommended to change both of these values in the production environment.
+--
+
+[[rest_api_tree_section]]
+Project tree section::
+--
+Once you have added the REST API add-on to the project, CUBA project tree starts to display an additional *REST API* section:
+
+image::features/rest_api/tree_section.png[align="center"]
+
+The following configuration files are displayed in this section:
+
+* `rest-queries.xml` - contains {restapi_man_url}/#rest_api_v2_queries_config[predefined JPQL queries].
+* `rest-services.xml` - contains {restapi_man_url}/#rest_api_v2_services_config[list of service methods] that are exposed externally and can be invoked via the API.
+
+If mentioned files don't exist yet, you can create them by right-clicking the *REST API* project tree section and using the *Create REST Queries Configuration* and *Create REST Services Configuration* context menu items:
+
+image::features/rest_api/create_config_files.png[align="center"]
+
+Created configuration files are automatically registered in the `web-app.properties` application properties file. After that content of these files can be modified manually.
+--
+
+[[rest_api_adding_services]]
+Exposing middleware service methods::
+--
+To be able to call <<middleware_services,middleware service>> methods via REST API, you need to register them in the `rest-services.xml` configuration file.
+
+To quickly register required service method in the configuration, use the intention action provided by the Studio:
+
+* Open service interface class and move cursor to the required method.
+* Press Alt+Enter (Option+Enter) to see the list of available intention actions.
+* Choose the *Register rest method* action in the popup.
+* The signature of the selected method will be put to the `rest-services.xml`, and you will be able to navigate from the service interface to the XML by using appearing "arrow" line marker on the gutter:
+
+image::features/rest_api/register_rest_method.gif[align="center"]
+
+--

@@ -14,3 +14,7 @@ include::features/middleware.adoc[]
 include::features/generic_ui.adoc[]
 
 include::features/frontend_ui.adoc[]
+
+include::features/rest_api.adoc[]
+
+include::features/security.adoc[]

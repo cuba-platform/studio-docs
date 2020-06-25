@@ -1,0 +1,57 @@
+:sourcesdir: ../../../../../../source
+
+[[role_designer_specific]]
+===== Specific Tab
+--
+The *Specific* tab of the role designer provides the following capabilities:
+
+* Granting specific permissions to the currently edited role.
+* Editing the project's configuration of the specific permissions and categories.
+
+Specific permissions are permissions on arbitrary named functionality, not necessarily linked to screens or entity CRUD. Categories are used to hierarchically group several semantically related permissions together. Learn more about using specific permissions in the developer's manual: {main_man_url}/permissions.html[Specific permissions], {main_man_url}/permissions.xml.html[permissions.xml].
+
+image::features/security/role_tab_specific.png[align="center"]
+
+The tree on the left side of the panel displays specific permissions and categories defined in the project or inherited from platform and add-ons. You can search permissions by name by focusing the tree and typing search text.
+
+Right side of the panel contains the following controls:
+
+* *Permission Id* - unique identifier of the permission.
+* *Caption* - localized caption of the permission. Can be edited for permissions and categories defined in the project.
+* *Allow* and **Deny** - grant or revoke permission for the current role.
+
+All specific permissions are denied by default.
+
+The toolbar above the table contains the following controls:
+
+* *New* -> *Permission* -> allows you to declare a new project-defined specific permission.
+* *New* -> *Category* -> allows you to declare a new project-defined category.
+* *Delete* - deletes selected project-defined category or permission.
+* *Expand All*, *Collapse All* - expands or collapses permission tree items.
+
+--
+
+Defining new specific permissions::
+--
+In order to define new specific permission in your project, first you should create an enclosing category. Use the *+* -> *Category* action on the toolbar. The *Create Specific Category* button appears:
+
+image::features/security/create_specific_category.png[align="center"]
+
+* *Id* - unique identifier of the category. It's recommended to use compound identifiers for nested categories, e.g. *sales* -> *sales.audit* -> *sales.audit.bills*.
+* *Permissions Config* - configuration file where category will be defined.
+* *Parent Category* - parent category or empty if no parent.
+
+After clicking *OK* new category will be added to the tree. Select the new category and define localized caption by using the *Caption* field on the right side of the panel.
+
+To create new permission, select Use *+* -> *Permission* button on the toolbar. The *Create Specific Permission* button appears:
+
+image::features/security/create_specific_permission.png[align="center"]
+
+* *Id* - unique identifier of the permission. This is the identifier that will be used in your code.
+
+After clicking *OK* the new permission will be added to the tree. Select the permission and define localized caption by using the *Caption* field on the right side of the panel.
+
+Project-defined categories and permissions are registered in the `web-permissions.xml` configuration file. You can jump to source code by right-clicking the permission item in the tree and choosing the *Jump to Source* item:
+
+image::features/security/specific_context_menu.png[align="center"]
+--

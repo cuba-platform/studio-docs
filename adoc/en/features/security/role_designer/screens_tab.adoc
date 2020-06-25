@@ -1,0 +1,39 @@
+:sourcesdir: ../../../../../../source
+
+[[role_designer_screens]]
+===== Screens Tab
+--
+The *Screens* tab of the role designer provides editing of the permissions for the following application elements:
+
+* Menus and items in the main menu.
+* Other screens (not directly available through the main menu).
+* UI components inside of the screens.
+
+image::features/security/role_tab_screens.png[align="center"]
+
+The tree on the left displays the structure of the main menu, both project-defined screens and inherited screens from platform and add-ons. The *Other Screens* group in the tree displays all remaining application screens that are not directly available through the main menu. Screen list can be filtered by name with help of search text box located above of the tree. If any component permissions were defined for a screen, they are displayed as sub-nodes of the screen node.
+
+All menu items and screens are denied by default. By choosing the item on the left and clicking *Allow* on the right side of the panel you will add the permission to the role to open the corresponding menu item or screen.
+
+A toolbar is displayed above the screens tree. It contains the following actions:
+
+* *Add Component Permission (+)* - create permission for a component in the selected screen.
+* *Delete Component Permission (-)* - delete previously defined component permission.
+* *Expand All*, *Collapse All* - expand or collapse tree nodes.
+* *Settings* -> *Show Assigned Only* - toggle displaying screens and menu items that don't have permissions specified.
+--
+
+Component Permissions::
+--
+Component permissions allow you to hide or make read-only particular UI components of a screen, regardless of whether they are bound to entities or not. By default components are fully available to the user. In order to define a component permission, select node related to the screen where this component is located and press *+ (Add Component Permission)* button. The *Create Component Permission* dialog will appear:
+
+image::features/security/create_component_permission.png[align="center"]
+
+* *Component* - enter component ID. This field provides auto-completion, you can press Ctrl+Enter to see list of the possible options.
+* *Permission* - specify permission level for the component:
+** *Modify* - component is visible and editable.
+** *Deny* - component is hidden.
+** *View* - component is visible but not editable (applicable e.g. to form fields).
+
+After clicking *OK* the permission will be created and added to the tree as a sub-node of the containing screen.
+--
