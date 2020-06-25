@@ -11,7 +11,7 @@ image::features/generic_ui/theme_extension.png[align="center"]
 
 Все созданные темы отображаются в секции *Themes* дерева проекта.
 
-image::features/generic_ui/halo_ext.png[align="center"]
+image::features/generic_ui/theme_files_in_tree.png[align="center"]
 
 После расширения или создания темы вы можете изменять переменные стилей как вручную в файле SCSS, так и в визуальном редакторе: для этого в контекстном меню новой темы выберите пункт *Open Variables File*. Этот файл также можно открыть из главного меню CUBA: выберите *Advanced > Manage themes > Edit theme variables*.
 

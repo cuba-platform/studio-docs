@@ -2,11 +2,24 @@
 
 [[generic_ui_menu]]
 ==== Working with Application Menu
+--
+Application menu configuration is stored in the `web-menu.xml` configuration file located in the web module of the project. To edit main menu configuration, use the *Generic UI* -> *Main Menu* item in the CUBA project tree:
 
-The menu designer allows you to define the application main menu and store it in the `web-menu.xml` configuration file. The *Structure* tab displays the graphical designer, the XML code of the menu can be edited on the *Text* tab.
+image::features/generic_ui/main_menu_in_tree.png[align="center"]
+
+The menu designer allows you to visually configure the application main menu structure. The *Structure* tab displays the graphical designer, while the XML code of the menu can be edited on the *Text* tab.
 
 image::features/generic_ui/web_menu.png[align="center"]
 
+[TIP]
+====
+Menu designer is available only for users with active CUBA Studio subscription.
+====
+
+--
+
+Main Menu Modes::
+--
 The menu can be created in two modes:
 
  * In the *Single mode* the menu contains items from the project's `web-menu.xml` file only. In this case you need to create all items, including those existing in the app components if necessary, but you have full control over the menu structure.
@@ -16,12 +29,28 @@ The menu can be created in two modes:
 Additionally, on the *Text* tab, you can define for the menu items the `ìnsertBefore` or `insertAfter` attribute. These attributes define where to insert the current item. These attributes help to combine the project menu items with the items inherited from the application components in the *Composite* mode.
 +
 For example, if you want to place your menu structure to the left of the _Administration_ item, set `insertBefore="administration"` for the root item of your hierarchy.
++
+In the visual designer you can just drag-and-drop menu items in the tree to change their location in the menu structure.
 
-The list of menu configuration files is defined by the {main_man_url}/app_properties_reference.html#cuba.menuConfig[cuba.menuConfig] application property, which is updated when you select the mode.
+The list of menu configuration files is defined by the {main_man_url}/app_properties_reference.html#cuba.menuConfig[cuba.menuConfig] application property which is updated when you select the mode.
 
-In order to add a menu item, select an existing item (or the configuration file to create a top-level item) and click image:plus_button.png[+]. The Menu item editor window will be opened in a modal window.
+When you are switching menu from *Composite* to *Single* mode, Studio suggests you to retain menu items inherited from platform and add-ons:
+
+image::features/generic_ui/menu_switch_mode_single.png[align="center"]
+
+If you decide to retain inherited menu items, their structure will be copied to your project and you will be able to customize them as you like (e.g. add icons, change captions).
+
+If later at some point you decide to switch main menu back to *Composite* mode, note that you will need to manually remove all duplicated menus and items from your project's configuration. Otherwise, the menu would become broken as menu structure doesn't allow duplicated items.
+--
+
+Adding menu items::
+--
+In order to add a menu item, select an existing item (or the configuration file to create a top-level item) and click image:plus_button.png[+]. The Menu Item editor window will be opened in a modal window.
+
+After the new menu item is created, you can drag-and-drop it in the tree to change its location in the menu structure.
 
 You can create the following types of menu items:
+--
 
 Screen::
 +
@@ -30,48 +59,31 @@ image::features/generic_ui/web_menu_create.png[float="right"]
 
 A menu item which opens an application screen.
 
-You should specify the following properties for a *Screen* item:
+The following properties are specific to a *Screen* item:
 
 * *Screen* - non-unique ID of screen that is opened by this menu item.
-* *Id* - an arbitrary unique ID of the item.
 * *Open type* - defines whether the screen should be opened in a new tab or in a modal window (`NEW_TAB` or `DIALOG`). `NEW_TAB` is used by default.
-* *Shortcut* - a keyboard shortcut which opens the screen. Possible modifiers (ALT, CTRL, SHIFT) are separated by a "-", for example ALT-C.
-* *Style name* - defines a style name for the menu item. See {main_man_url}/gui_themes.html[Themes] for details.
-////
-* *Caption* - a menu item caption. The *Edit* button opens the localization window where you should enter captions in languages available for the project. Menu captions are placed in the corresponding main message pack with keys in `menu-config.{item_id}` format, where `{item_id}` is the item identifier, which in this case equals to the ID of the screen being opened.
-* *Insert before / Insert after* - a menu item, before/after which you want to insert the current item. This property helps to combine the project menu items with the items inherited from the app components in the *Composite* mode. For example, if you want to place your menu structure to the left of the _Administration_ item, set administration in the *Insert before* field of the root item of your hierarchy.
-* *Params* - screen parameters passed to the `init()` method of the opening screen's controller. See {main_man_url}/menu.xml.html[menu.xml] for detailed explanation.
-* *Permissions* - allows user to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. For detailed explanation see {main_man_url}/menu.xml.html[menu.xml], however there is a simpler way to manage access - through the *Screens* tab of the security role editor.
-////
 --
 
 Menu::
 +
 --
-image::features/generic_ui/web_menu_create_2.png[float="right"]
-
 A menu item which contains other items (submenu).
 
-You need to specify the following properties for a *Menu* item:
-
-* *Id* - an arbitrary unique ID of the item.
-* *Style name* - defines a style name for the menu item.
+image::features/generic_ui/web_menu_create_2.png[align="center"]
 --
 
 Bean::
 +
 --
-image::features/generic_ui/web_menu_create_3.png[float="right"]
+A menu item which invokes a method of a {main_man_url}/managed_beans.html[managed bean]. The bean should be located in the *web* project module.
 
-A menu item which invokes a method of a {main_man_url}/managed_beans.html[managed bean].
+The following properties are specific to a *Bean* item:
 
-You need to specify the following properties for a *Bean* item:
-
-* *Id* - an arbitrary unique ID of the item.
 * *Bean* - the name of bean which can be obtained by `AppBeans` (e.g. `cuba_Messages`).
 * *Bean method* - the name of method from bean to be invoked.
-* *Shortcut* - a keyboard shortcut which invokes the method. Possible modifiers (ALT, CTRL, SHIFT) are separated by a "-", for example ALT-C.
-* *Style name* - defines a style name for the menu item.
+
+image::features/generic_ui/web_menu_create_3.png[align="center"]
 --
 
 Class::
@@ -79,15 +91,37 @@ Class::
 --
 image::features/generic_ui/web_menu_create_4.png[float="right"]
 
-A menu item which executes the `run()` method of a given class.
+A menu item which executes the method of a given class.
 
-You need to specify the following properties for a *Class* item:
+The following properties are specific to a *Class* item:
 
-* *Id* - an arbitrary unique ID of the item.
-* *Class* - a fully qualified name of class which extends `Runnable`.
-* *Shortcut* - a keyboard shortcut which invokes the method. Possible modifiers (ALT, CTRL, SHIFT) are separated by a "-", for example ALT-C.
-* *Style name* - defines a style name for the menu item.
+* *Class* - a fully qualified name of class which implements one of supported interfaces:
+** `java.lang.Runnable`,
+** `java.util.function.Consumer<Map<String, Object>>`
+** or `com.haulmont.cuba.gui.config.MenuItemRunnable`.
 --
 
 Separator::
+--
 A horizontal line separating menu items.
+--
+
+Common parameters::
+--
+The following parameters are available for various types of menu items:
+
+* *Menu item* - parent menu or sub-menu to place menu item into.
+* *Id* - an arbitrary unique ID of the item. This attribute is not mandatory, however it's recommended to assign it if you plan to {main_man_url}/gui_AppMenu.html[manage menu configuration dynamically].
+* *Caption* - localized item caption. By pressing the globe button you can open *Localized Message* dialog and enter localized captions for all supported locales.
+* *Shortcut* - a keyboard shortcut which triggers the menu item. Possible modifiers (ALT, CTRL, SHIFT) are separated by a "-", for example ALT-C.
+* *Style name* - defines a style name for the menu item. See {main_man_url}/gui_themes.html[Themes] for details.
+
+The following parameters become available for editing on the right panel of the designer after the menu item is created:
+
+* *Icon* - icon of the menu element.
+* *Description* - a localized text shown as a tooltip on mouse hover. By pressing the globe button you can open *Localized Message* dialog and enter localized description text for all supported locales.
+* *Params* - screen parameters passed to the `init()` method of the opening screen's controller. Please note that using *Params* is a deprecated way to specify screen opening parameters. The recommended way is to use `properties` menu item sub-tag (though it is not supported by menu designer yet).
+* *Permissions* - allows user to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. Note that there is a simpler way to manage access - with help of role's screen permissions.
+
+Please proceed to the {main_man_url}/menu.xml.html[Developer's Manual] for more detailed explanation of mentioned parameters.
+--
