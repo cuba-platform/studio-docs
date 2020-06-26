@@ -17,3 +17,15 @@ In order to install one or more add-ons, press *Install* for the ones you're int
 and then click *Apply* or *Apply & Close* button.
 After the confirmation Studio will make necessary changes to your project's build scripts and configuration files,
 download new libraries and refresh Gradle project configuration.
+
+Installing Commercial Add-ons::
+--
+Using commercial CUBA add-ons requires you to have an add-on subscription. However, for the purpose of evaluation you can you install a trial version of the particular add-on (available for 30 days).
+
+Detailed steps you need to perform in order to install the commercial add-on depend on specifics of how you paid for add-on subscription. Below the following installation scenarios are described using the *BProc* add-on as an example:
+
+* <<addons_install_trial,Trial add-on version>>.
+* Add-on <<addons_install_personally_purchased,purchased personally by you>> in your {cuba-store-site}[cuba-platform.com] user profile.
+* Add-on <<addons_install_by_studio_subscription,included with CUBA Studio subscription>>.
+* Add-on <<addons_install_by_separate_key,purchased with separate license key>>.
+--

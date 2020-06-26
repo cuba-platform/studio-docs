@@ -10,11 +10,19 @@ The *CUBA Add-ons* dialog allows you to manage add-ons included in your project.
 It can be opened:
 
 * by double-clicking *Project* -> *Add-ons* in the CUBA project tree,
-* from main menu: *CUBA* -> *Marketplace...*
+* from the Main Menu: *CUBA* -> *Marketplace...*
 
 The dialog has three tabs: *Marketplace*, *Installed* and *Updates*.
 
 include::addons/addons_marketplace.adoc[]
+
+include::addons/addons_installing_trial.adoc[]
+
+include::addons/addons_installing_personally_purchased.adoc[]
+
+include::addons/addons_installing_by_subscription_key.adoc[]
+
+include::addons/addons_installing_by_separate_key.adoc[]
 
 include::addons/addons_installing_by_coordinates.adoc[]
 

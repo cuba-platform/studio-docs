@@ -12,3 +12,7 @@ include::ui/ui_menu.adoc[]
 include::ui/welcome_screen.adoc[]
 
 include::ui/settings.adoc[]
+
+include::ui/subscription.adoc[]
+
+include::ui/user_profile.adoc[]

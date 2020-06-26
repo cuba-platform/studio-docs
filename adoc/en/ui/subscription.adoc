@@ -1,0 +1,31 @@
+:sourcesdir: ../../../source
+
+[[subscription_information]]
+=== Subscription Information
+--
+image::ui/subscription_dialog.png[float="right"]
+
+The *Subscription Information* dialog can be opened from the Main Menu: *CUBA* -> *Subscription Information*.
+
+The dialog provides the following functionality to the user:
+
+* Request CUBA Studio subscription trial.
+* Enter commercial Studio subscription key.
+* View current subscription details.
+
+CUBA Studio subscription unlocks the following premium functionality:
+
+* Entity designer.
+* Enumeration designer.
+* Screen designer.
+* View designer.
+* Role designer.
+* Visual editor for the theme variables.
+--
+
+Trial Subscription::
+--
+Trial subscription can be requested once by every new user. It allows developer to evaluate full capabilities of the Studio for 28 days. Click *Request Trial* in the *Subscription Information* dialog to check if you are eligible for the trial:
+
+image::ui/subscription_trial.png[align="center"]
+--

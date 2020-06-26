@@ -1,0 +1,20 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_install_personally_purchased]]
+===== Installing Personally Purchased Add-On
+--
+Use this scenario if you have purchased the commercial add-on personally in your CUBA user profile.
+
+* Sign in to the <<cuba_user_profile,CUBA user profile>> by clicking the button on the toolbar. After signing in the Studio will be able to fetch information about purchased add-ons.
++
+image::ui/user_profile_sign_in.png[align="center"]
++
+* Open the <<addons_marketplace,Marketplace>> window, e.g. from the main menu: *CUBA* -> *Marketplace*.
+* Find the required add-on and click *Install* next to it.
++
+image::features/project/addon_install_step1.png[align="center"]
++
+* Click *Apply* or *Apply & Close* button, and then *Continue* in the confirmation dialog.
+
+After the confirmation Studio will make necessary changes to your project’s build scripts and configuration files, download new libraries and refresh Gradle project configuration.
+--

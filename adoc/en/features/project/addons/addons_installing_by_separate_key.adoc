@@ -1,0 +1,53 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_install_by_separate_key]]
+===== Installing Add-On with Separate Key
+--
+Use this scenario:
+
+* if the commercial add-on has been purchased separately from the CUBA Studio subscription,
+* or if you don't have CUBA Studio subscription at all.
+
+In both cases you should have obtained a subscription key that is required for add-ons access but cannot be used in the <<subscription_information,Subscription Information>> dialog. This key will be used to set up premium repository credentials.
+--
+
+Providing Repository Credentials::
+--
+Your license key consists of two parts: the first part before the dash is a repository user name, the part after the dash is a password. For example, if your key is `111111222222-abcdefabcdef`, then the user name is `111111222222` and the password is `abcdefabcdef`. In case of Bintray, the user name must be followed by `@cuba-platform`.
+
+You can provide the credentials in one of the following ways:
+
+* The recommended way is to create a `~/.gradle/gradle.properties` file in your user home directory (e.g. `C:\users\john\.gradle\gradle.properties` on Windows or `/Users/helen/.gradle/gradle.properties` on Mac). Then open this file and set properties in it:
++
+[source]
+----
+premiumRepoUser=111111222222
+bintrayPremiumRepoUser=111111222222@cuba-platform
+premiumRepoPass=abcdefabcdef
+----
++
+* Alternatively, you can specify the credentials in the CUBA_PREMIUM_USER and CUBA_PREMIUM_PASSWORD environment variables.
+* When you run Gradle tasks from the command line (e.g. during Continious Integration), you can also pass the properties as command-line arguments with the `-P` prefix, for example:
++
+[source]
+----
+gradlew assemble -PpremiumRepoUser=111111222222 -PpremiumRepoPass=abcdefabcdef
+----
+--
+
+Installing the Add-On::
+--
+* Commit your project into version control, or backup project files. Your project structure may become broken during add-on installation if the credentials were specified incorrectly.
+* Open the <<addons_marketplace,Marketplace>> window, e.g. from the main menu: *CUBA* -> *Marketplace*.
+* Find the required add-on and click *Try* next to it.
++
+image::features/project/addon_try_step1.png[align="center"]
++
+* Click *Full Version* in the appearing dialog window.
++
+image::features/project/addon_install_full.png[align="center"]
++
+* Click *Apply* or *Apply & Close* button, and then *Continue* in the confirmation dialog.
+
+After the confirmation Studio will make necessary changes to your project’s build scripts and configuration files, download new libraries and refresh Gradle project configuration.
+--

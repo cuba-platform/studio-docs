@@ -1,0 +1,32 @@
+:sourcesdir: ../../../../../../source
+
+[[addons_install_trial]]
+===== Installing Add-On Trial
+--
+* Open the <<addons_marketplace,Marketplace>> window, e.g. from the main menu: *CUBA* -> *Marketplace*.
+* Find the required add-on and click *Try* next to it.
++
+image::features/project/addon_try_step1.png[align="center"]
++
+* Click *Trial Version* in the appearing dialog window.
++
+image::features/project/addon_try_step2.png[align="center"]
++
+* If you are not signed in to the <<cuba_user_profile,CUBA user profile>> yet, click *Sign In* in the appeared window.
++
+image::features/project/addon_try_step3.png[align="center"]
++
+* Register or log in on the CUBA website.
+* Read the instructions and click *Install*.
++
+image::features/project/addon_try_step4.png[align="center"]
++
+* Click *Apply*. A trial version of the add-on will be installed into your project.
+
+When the trial period expires, CUBA Studio will inform you. Keep being signed in to your <<cuba_user_profile,CUBA user profile>> to not miss the end of the trial period.
+
+[WARNING]
+====
+Please pay attention that you won't be able to run your application with the expired trial version of the add-on.
+====
+--
