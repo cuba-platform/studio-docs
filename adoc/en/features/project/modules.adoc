@@ -2,7 +2,14 @@
 
 [[modules]]
 ==== Managing Modules
-
+--
 Studio lets you create, edit and remove optional modules of your project: *core*, *gui*, *web*, *web-toolkit*, *portal* and *front*. You can do it using *CUBA > Advanced > Manage Modules* main menu or from the context menu of the *Project > Modules* item of the project tree.
 
 The *Modules* section of the project tree displays modules currently used in the project. When you create a new project, it contains *global*, *core* and *web*. For each module, Studio displays configuration files located in this module.
+--
+Automatic module management::
+--
+Note that in some cases Studio may automatically add modules to your project.
+
+For example, Studio automatically adds the *web-toolkit* module to the project when it detects that the project contains two or more add-ons that define widgetsets (components with client-side Vaadin code). In such cases having the *web-toolkit* module in your project is necessary to build a complete widgetset that contains client-side code of UI components from CUBA and all attached add-ons.
+--
