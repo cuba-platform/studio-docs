@@ -1,0 +1,21 @@
+:sourcesdir: ../../../../../../source
+
+[[data_stores_db_scripts]]
+===== Database init and update scripts
+--
+{main_man_url}/db_scripts.html[Database init and update scripts] are available for *Main Data Store* and displayed under its element:
+
+image::features/project/db-scripts.png[align="center"]
+
+* *Init* scripts contain DDL and DML statements creating the database from scratch, bringing the database structure to the state consistent with the current state of the data model.
+* *Update* scripts contain statements that update already existing database structure to the current state of the data model from any of the previous states.
+
+Studio automatically maintains init and update scripts according to the data model changes, read more about it in the  <<database_migration>> section.
+
+You can also create additional database scripts if necessary. Use the following actions in the CUBA project tree under the *Data Stores* -> *Main Data Store* section:
+
+* init -> context menu -> *New* -> *Database init script*
+* update -> context menu -> *New* -> *Database update script*
+
+image::features/project/new-update-script.png[align="center"]
+--

@@ -1,0 +1,30 @@
+:sourcesdir: ../../../../../../source
+
+[[data_stores_properties]]
+===== Data Store Properties
+--
+The following properties are available both for Main and Additional data stores:
+
+* *Define JDBC DataSource in* - determines which component is responsible to create connection pool to the database (available for projects based on CUBA 7.2 or later). Available values are *Application* and *JNDI*.
+** *Application* - connection pool is created and managed by the CUBA platform using the https://github.com/brettwooldridge/HikariCP[HikariCP] library. This is the recommended DataSource mode.
+** *JNDI* - connection pool is created by the application server and put into JNDI. CUBA application obtains the data source from the JNDI registry by its JNDI name.
+* *Database type* - {main_man_url}/dbms_types.html[type of the database server]. Studio supports *PostgreSQL*, *Microsoft SQL Server*, *Oracle*, *MySQL*, *MariaDB*, *Amazon RedShift* and *HSQLDB* out of the box. It is also possible to integrate with other databases if necessary, refer to <<custom_db, this section>> for details.
+* *Database URL* - specify host, port and database name.
+* *Connection params* - specify other connection parameters. Format of connection parameters depends on the selected DBMS. The string should include a separator between the database name and parameters.
+For example, to specify a Microsoft SQL Server 2008+ instance name, use the following string in the field:
++
+[source]
+----
+;instanceName=myinstance
+----
++
+You can use "pencil" button in the right part of the *Connection params* field to enter connection parameters conveniently. In this case Studio automatically forms connection string by adding DBMS-specific separator characters.
+* *Custom database URL* - specify a custom database connection URL. *Host* and *Database* name should be provided in this case, as they are used separately for database creation.
+* *Database user* and *Password* - database connection credentials.
+* *Integrated Security* - enable the corresponding authentication option when connecting to the *Microsoft SQL Server 2012+* database.
+
+In case of HSQLDB the Studio itself serves the database and stores its files in the `build/hsqldb` directory.
+
+image::features/project/add-store-settings.png[align="center"]
+
+--

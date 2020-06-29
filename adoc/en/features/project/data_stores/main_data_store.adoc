@@ -1,0 +1,13 @@
+:sourcesdir: ../../../../../../source
+
+[[main_data_store]]
+===== Main Data Store
+--
+The main data store specifies connection to the main database used by the CUBA application. This data store contains system entities, and it's mandatory for any CUBA project.
+
+The *Main Data Store Properties* dialog displays settings of the main data store.
+It can be opened:
+
+* by double-clicking *Project* -> *Data Stores* -> *Main Data Store* in the CUBA project tree
+* from the main menu: *CUBA* -> *Main Data Store Settings...*
+--

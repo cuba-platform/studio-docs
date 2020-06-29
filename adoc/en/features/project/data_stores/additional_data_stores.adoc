@@ -1,0 +1,39 @@
+:sourcesdir: ../../../../../../source
+
+[[data_stores_additional]]
+===== Additional Data Stores
+--
+You can add {main_man_url}/data_store.html[additional data stores] to the project in order to store data in separate database, or to allow CUBA application reading data produced by another system.
+
+In order to create the additional data store in the project,
+right-click *Data Stores* item in the CUBA project tree and choose *New* -> *Additional Data Store* context menu item.
+Additional data stores registered in the project are displayed as sub-items under the *Data Stores* section:
+
+image::features/project/additional-stores.png[align="center"]
+
+By right-clicking on an additional datastore item, a context menu is opened:
+
+The *Data Store* dialog appears when you create or edit an additional data store. It has the following fields:
+
+* *Data store name* - the name of the data store. It may contain only alphanumeric characters and underscores and should be different from the project name.
+* *Data store type* - the type of the data store: either `RdbmsStore` or `Custom`, see the {main_man_url}/data_store.html[documentation] for details.
+* *DataSource JNDI name* - automatically set by Studio on the basis of the data store name.
+* In case of `RdbmsStore` you need to specify additional properties which are described in a section above.
+* *DB schema management* - choose the mode defining how Studio should manage the database and track changes to entities located in the data store.
+
+--
+[[data_store_schema_mode]]
+DB Schema management modes::
+--
+Unlike with main data store, there can be several usage patterns of how CUBA application and Studio should treat additional data store.
+
+. *3rd-party database*. In this scenario an existing database produced by another computer system is attached to the CUBA application for the purpose of system integration on data storage level. In this case data schema and data formats are fully determined by another system, and CUBA application should not attempt to modify or drop existing tables. Entities are not created from scratch but mostly imported with the <<generate_model,Generate Model>> Studio feature.
+. *Shared database*. In this scenario an existing database is also attached to the CUBA application for the purpose of system integration. However in this case the database is meant to be shared by several applications, and CUBA applications is allowed to create its own tables as well as modify existing ones. Boundaries between applications can be defined on the database level with role restrictions. Entities are created with Entity Designer, as well as imported with the <<generate_model,Generate Model>> Studio feature. Studio is allowed to update database schema, but not allowed to create the database from scratch.
+. *Owned database*. In this scenario the database is planned to be fully managed by the CUBA application. Studio is allowed to re-create database from scratch as the project's data model has all necessary information on how to initialize database schema. Entities are created with Entity Designer.
+
+Based on that, decide what database schema management mode is suitable for your purposes:
+
+. *Disabled* - Studio doesn't track database schema changes for this data store. This is the default mode, and this is how previous Studio versions used to behave. Use this mode for attaching *3rd-party* databases.
+. *Update Only* - Studio generates *update* database migration scripts and provides ability to update database schema to match updated data model. However, Studio does not provide a way to re-create the database from scratch. Use this mode for *shared* databases.
+. *Create and Update* - Studio generates full set of *init* and *update* database migration scripts and provides ability (Gradle tasks and actions in UI) to re-create the database from scratch or update it to match updated data model. Use this mode for *owned* databases.
+--

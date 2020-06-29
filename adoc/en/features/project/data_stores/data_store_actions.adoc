@@ -1,0 +1,19 @@
+:sourcesdir: ../../../../../../source
+
+[[data_store_actions]]
+===== Data Store Actions
+--
+By right-clicking the data store item in the CUBA project tree you can open its context menu:
+
+image::features/project/data_store_context_menu.png[align="center"]
+
+Number of actions shown in the menu depends on the data store type and DB schema management mode.
+
+* *Delete Data Store* - remove the data store along with all associated configuration files and database migration scripts from the project.
+* *Edit Data Store* - open the dialog to edit data store settings.
+* *Create Database* - re-create database belonging to the selected data store. Applicable for Main data store and additional datastores with *Create and Update* schema management type.
+* *Update Database* - update database schema for the selected data store by running not yet applied update scripts. Applicable for Main data store and additional datastores with *Update only* and *Create and Update* schema management types.
+* *Generate Database Scripts...* - generate <<database_migration,DDL scripts>> for the selected data store by comparing data model with the database schema. Applicable for Main data store and additional datastores with *Update only* and *Create and Update* schema management types.
+* *Generate Model...* - <<generate_model,generate data model>> from the selected data store.
+
+--
