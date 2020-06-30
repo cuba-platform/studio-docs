@@ -1,7 +1,7 @@
 :sourcesdir: ../../../../../../source
 
 [[addons_install_by_studio_subscription]]
-===== Installing Add-On Included with Studio Subscription
+===== Installing Add-on Included with Studio Subscription
 --
 Use this scenario if the commercial add-on has been included together with the CUBA Studio subscription. In this case you have *the same subscription key* both for CUBA Studio premium functionality and for commercial add-ons access.
 

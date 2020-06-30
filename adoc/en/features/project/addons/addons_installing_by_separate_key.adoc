@@ -1,7 +1,7 @@
 :sourcesdir: ../../../../../../source
 
 [[addons_install_by_separate_key]]
-===== Installing Add-On with Separate Key
+===== Installing Add-on with Separate Key
 --
 Use this scenario:
 
@@ -35,7 +35,7 @@ gradlew assemble -PpremiumRepoUser=111111222222 -PpremiumRepoPass=abcdefabcdef
 ----
 --
 
-Installing the Add-On::
+Installing the Add-on::
 --
 * Commit your project into version control, or backup project files. Your project structure may become broken during add-on installation if the credentials were specified incorrectly.
 * Open the <<addons_marketplace,Marketplace>> window, e.g. from the main menu: *CUBA* -> *Marketplace*.

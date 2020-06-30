@@ -1,7 +1,7 @@
 :sourcesdir: ../../../../../../source
 
 [[addons_install_personally_purchased]]
-===== Installing Personally Purchased Add-On
+===== Installing Personally Purchased Add-on
 --
 Use this scenario if you have purchased the commercial add-on personally in your CUBA user profile.
 
