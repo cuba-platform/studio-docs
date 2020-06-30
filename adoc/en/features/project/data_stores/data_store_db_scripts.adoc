@@ -3,7 +3,7 @@
 [[data_stores_db_scripts]]
 ===== Database init and update scripts
 --
-{main_man_url}/db_scripts.html[Database init and update scripts] are available for *Main Data Store* and displayed under its element:
+{main_man_url}/db_scripts.html[Database init and update scripts] are available for *Main Data Store* and additional data stores with *Create and Update* or *Update Only* schema management modes. Init and update scripts are displayed under the data store element:
 
 image::features/project/db-scripts.png[align="center"]
 
@@ -12,7 +12,7 @@ image::features/project/db-scripts.png[align="center"]
 
 Studio automatically maintains init and update scripts according to the data model changes, read more about it in the  <<database_migration>> section.
 
-You can also create additional database scripts if necessary. Use the following actions in the CUBA project tree under the *Data Stores* -> *Main Data Store* section:
+You can also create additional database scripts if necessary. Use the following actions in the CUBA project tree under the *Data Stores* -> *Main Data Store* or *Data Stores* -> *(Name of the additional data store)* sections:
 
 * init -> context menu -> *New* -> *Database init script*
 * update -> context menu -> *New* -> *Database update script*
