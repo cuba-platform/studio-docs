@@ -1,0 +1,39 @@
+:sourcesdir: ../../../../../../source
+
+[[custom_screen_templates]]
+===== Custom Screen Templates
+--
+Studio provides you with the ability to copy standard screen templates to your project and customize them, changing template file for the screen descriptor, screen controller or even adding new parameters to the wizard.
+
+Select template you want to customize and press *Copy template* button in the first step of the *Create CUBA Screen* wizard to create own screen template. Enter code name of the custom template. Template files will be copied to the project and become available for modification. Custom screen templates are displayed in the *Generic UI* -> *Screens* -> *Custom Templates* section of the CUBA project tree:
+
+image::features/generic_ui/custom_screen_templates_tree.png[align="center"]
+
+You can modify template files for the screen controller and descriptor, or even add new parameters to the wizard by extending the *settings.xml* file.
+
+Customized screen templates are available for selection on the *Project Templates* tab of the first step of the *New* -> *Screen* wizard:
+
+image::features/generic_ui/screen_wizard_custom_template.png[align="center"]
+--
+Customization Example::
+--
+To make entity browser's dialog width and height to be adjustable wizard parameters, do the following:
+
+. Edit `settings.xml` and add the following tags there:
++
+[source,xml]
+----
+<property caption="Dialog Width" code="dialogWidth" propertyType="INTEGER" defaultValue="800" preferences="true"/>
+<property caption="Dialog Height" code="dialogHeight" propertyType="INTEGER" defaultValue="600" preferences="true"/>
+----
+. Edit `descriptor.xml` and change `dialogMode` tag declaration to the following:
++
+[source,xml]
+----
+<dialogMode height="${dialogHeight}"
+            width="${dialogWidth}"/>
+----
+. Try to use modified template in the screen wizard. New parameters have been added to the wizard:
++
+image::features/generic_ui/custom_screen_template_parameter.png[align="center"]
+--
