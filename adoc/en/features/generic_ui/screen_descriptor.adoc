@@ -92,7 +92,10 @@ The *Component Palette* tool window is displayed in the down-right corner of the
 
 You can search components in the palette by typing name in the search box.
 
-In order to add a component to the layout, drag it from the palette onto the *Component Hierarchy* panel.
+In order to add a component to the layout, drag it from the palette:
+
+* Onto the *Component Hierarchy* panel.
+* Or to the appropriate place in the source XML code.
 
 By right-clicking the component in the palette, you can open context menu with the following actions:
 
@@ -146,6 +149,14 @@ For some types of selected elements the *+ Add* button is shown that provides a 
 
 image::features/generic_ui/component_inspector_add_button.png[align="center"]
 
+--
+
+[[screen_designer_custom_components]]
+Support for Custom Components::
+--
+Screen Designer allows to integrate a custom UI component implemented in an add-on or project by adding special annotations to component's definition. Properly annotated component will be displayed in the *Component Palette* panel, and its properties will be editable in the *Component Inspector* panel. Custom UI components are supported for projects based on CUBA platform versions `7.1.7` and later, or `7.2.5` and later.
+
+Read more about custom component UI metadata in the {main_man_url}/own_component_in_studio.html[Developer's Manual].
 --
 
 [[screen_descriptor_inspections]]
