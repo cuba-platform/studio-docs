@@ -41,7 +41,7 @@ image::features/data_model/new_attribute_2.png[align="center"]
 
 Studio поможет добавить новые атрибуты к экранам UI, уже созданным для данной сущности. Поместите курсор на строку, в которой описан атрибут, и нажмите Alt+Enter (Option+Enter), или кликните по значку с лампочкой и выберите *Add entity attribute to screens*:
 
-image::features/data_model/add_attribute_to_screens.png[align="center"]
+image::features/data_model/add_attrs_to_screens.png[align="center"]
 
 По нажатию клавиши Enter в Studio откроется диалоговое окно со списком экранов, работающих с редактируемой сущностью. Выберите нужные экраны, и Studio сама добавит атрибут к подходящим визуальным компонентам этих экранов, например, к таблице или форме редактирования.
 --

@@ -11,13 +11,25 @@ Creating new entity::
 
 . The *New CUBA Entity* dialog appears. Enter the name of the entity class in the *Entity name* field, select the type of the entity and its id.
 
-. Studio will create the entity class and register it in `persistence.xml` or `metadata.xml`, depending on the entity type. The created class will be opened in the source code editor. Three tabs will be displayed at the bottom of the editor:
+. Studio will create the entity class and register it in `persistence.xml` or `metadata.xml`, depending on the entity type. The created class will be opened in the source code editor.
 
-** *Text* contains the source code.
+Studio displays four tabs which be displayed at the bottom of the entities source code editor. Together they form the visual Entity Designer:
 
-** *Designer* shows the entity designer where you can configure the entity and its attributes using graphical interface instead of writing Java code.
+* *Text* contains the source code.
 
-** *DDL Preview* contains the read-only DDL code of the corresponding table and its referential constraints.
+* *Designer* shows the entity structure where you can configure the entity and its attributes using graphical interface instead of writing Java code.
+
+* *Indexes* displays and allows you to create new indexes for the selected entity.
+
+* *DDL Preview* displays the read-only DDL code of the corresponding table and its referential constraints.
+
+image::features/data_model/entity_designer.png[align="center"]
+
+[TIP]
+====
+Entity designer is available only for users with active CUBA Studio subscription.
+====
+
 --
 
 [[data_model_attribute]]
@@ -41,11 +53,11 @@ image::features/data_model/new_attribute_2.png[align="center"]
 
 * You can also write attribute fields by hand, generate getters and setters, and then select *JPA Annotations* in the *Generate* menu to add JPA annotations with default parameters.
 
-Studio can help you to add the new attribute to UI screens created for this entity. Position the cursor to the line containing the attribute and press Alt+Enter (Option+Enter) or click the light bulb icon and select *Add entity attribute to screens*:
+Studio can help you to add the new attribute to existing UI screens containing this entity. Open the *Text* tab and click the *Add attributes to screens* action located at the top actions panel of the source code editor. Studio will search all screens working with the current entity and analyze which attributes can be added to their UI components. You will be able to select desired attributes and components in the dialog:
 
-image::features/data_model/add_attribute_to_screens.png[align="center"]
+image::features/data_model/add_attrs_to_screens.png[align="center"]
 
-Press Enter, and Studio will open a dialog with the list of screens working with the edited entity. You can select a screen and Studio will add the attribute to the appropriate UI components of this screen, for example to a table or a form.
+Another *Add to Screens* button with similar functionality is located in the *Designer* entity tab above the *Attributes* table.
 --
 
 [[data_model_name_pattern]]
@@ -70,6 +82,12 @@ image::features/data_model/create_message_1.png[align="center"]
 Click Alt+Enter (Option+Enter) on the highlighted attribute and select *Create message in the message bundle*:
 
 image::features/data_model/create_message.png[align="center"]
+--
+
+[[entity_ddl_generation_settings]]
+DDL Generation Settings::
+--
+The *Designer* entity editor tab allows you to set up <<migration_entity_ddl_settings,DDL generation settings>> which alter the way how Studio generates database migration scripts for the edited entity.
 --
 
 [[remove_entity]]

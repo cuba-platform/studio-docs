@@ -66,3 +66,20 @@ Click *Save and close* to save all generated scripts. You can find the scripts i
 In order to run the update scripts, stop the application server if it is running and execute *Update Database* or *Update All Databases* from the *CUBA* main menu. If you want to update only one data store, select corresponding node in the CUBA project tree, right-click to open context menu and choose *Update Database* item.
 
 If you want to re-create the database from scratch with the init scripts, execute *Create Database* or *Create All Databases*. To re-create only one database, select the corresponding data store node in the CUBA project tree, right-click to open context menu and choose *Create Database* item.
+
+[[migration_entity_ddl_settings]]
+Entity DDL Generation Settings::
+--
+You can customize Studio database migration scripts generation behavior on the entity level. The *Designer* tab of the <<data_model_entity,Entity Designer>> allows you to configure *DDL generation settings* for the edited entity:
+
+image::features/data_model/entity_ddl_gen_settings.png[align="center"]
+
+* *DB script generation mode* - select suitable mode:
+** *CREATE_AND_DROP* - when generating DDL scripts, Studio can create table, columns and constraints in the database as well as drop any of its columns or constraints if corresponding attributes are missing in the data model. Both *init* and *update* scripts are generated according to the data model. Default mode.
+** *CREATE_ONLY* - Studio will not attempt to drop table columns or constraints when generating database *update* scripts. *Init* scripts are generated according to the data model.
+** *DISABLED* - Studio will not generate database *init* and *update* scripts at all for this entity.
+* *Unmapped columns* - list of columns that exist in the database table but are not mapped to entity attributes. Studio will not attempt to drop columns mentioned in this list.
+* *Unmapped constraints* - list of constraints that exist in the database table but are not mapped to entity attributes. Studio will not attempt to drop them in the database update scripts.
+
+These settings can also be specified manually in the source code, see the `com.haulmont.cuba.core.global.DdlGeneration` annotation (available since platform version 7.1.6 and 7.2.2).
+--
