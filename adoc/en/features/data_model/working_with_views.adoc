@@ -2,12 +2,14 @@
 
 [[data_model_view]]
 ==== Working with Views
+--
+{main_man_url}/views.html[View] is a descriptor of object graph defining which attributes, collections and sub-entities should be loaded from the database when particular entity is loaded. Views can be declared declaratively right in the screen descriptors, or they can be defined separately in a shared `views.xml` file and re-used by the application code.
 
-To create a new {main_man_url}/views.html[view] for an entity, select the entity in the project tree and click *New > View* in the context menu.
+To create a new shared view for an entity, select the entity in the project tree and click *New > View* in the context menu.
 
 image::features/data_model/create_view.png[align="center"]
 
-The view designer will be opened. It contains the following fields:
+The view creation dialog will be opened. It contains the following fields:
 
 * *Entity name* - the name of the entity the view is created for.
 * *Name* - the name of the new view.
@@ -31,15 +33,14 @@ When you click *OK* and close the designer, you can find the new view in the pro
 
 image::features/data_model/create_view_2.png[align="center"]
 
-If you double-click the view item in the project tree, Studio will open `views.xml` in the code editor and position the cursor on the view definition. The code editor has two tabs at the bottom: *Text* and *Structure*. The latter displays the list of views defined in this configuration file.
+--
 
-When editing a view definition in XML, use Ctrl+Space for auto-completion of attribute names:
+[[view_designer]]
+View Designer::
+--
+If you double-click the view item in the project tree, Studio will open `views.xml` in the code editor and focus requested view item in the view list. The code editor has two tabs at the bottom: *Text* and *Structure*. The *Structure* tab displays the list of views defined in this configuration file and allows to visually construct view definitions:
 
-image::features/data_model/view_edit_1.png[align="center"]
-
-and pay attention to highlighted attributes, most probably they do not exist:
-
-image::features/data_model/view_edit_2.png[align="center"]
+image::features/data_model/view_designer.png[align="center"]
 
 You can open the graphical designer for a view in a number of ways:
 
@@ -48,3 +49,25 @@ You can open the graphical designer for a view in a number of ways:
 * Position the cursor on the view element in the configuration file code, press Alt+Enter (Option+Enter), select *Edit view* in the popup menu and press enter.
 
 * Switch to the *Structure* tab of the configuration file code editor, select the view and click *Edit* button.
+
+View designer allows you to safely rename view definition, automatically changing all references in the code to the previous view name that can be type-safely detected. To rename a view, press the "pencil" button located inside of the *Name* field on the right side of the designer.
+
+[TIP]
+====
+View designer is available only for users with active CUBA Studio subscription.
+====
+--
+
+[[view_editing]]
+Editing Views Manually::
+--
+It is possible to edit view definitions manually by modifying source code of the `views.xml`. Studio provides comprehensive coding assistance for the XML structure of view configuration files.
+
+When editing a view definition in XML, use Ctrl+Space for auto-completion of attribute names:
+
+image::features/data_model/view_edit_1.png[align="center"]
+
+and pay attention to highlighted attributes, most probably they do not exist:
+
+image::features/data_model/view_edit_2.png[align="center"]
+--
