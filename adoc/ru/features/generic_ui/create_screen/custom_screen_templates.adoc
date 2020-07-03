@@ -1,0 +1,39 @@
+:sourcesdir: ../../../../../../source
+
+[[custom_screen_templates]]
+===== Пользовательские шаблоны экранов
+--
+Studio предоставляет возможность скопировать стандартные шаблоны экранов в проект и кастомизировать их, изменяя файлы шаблонов дескриптора и контроллера экрана.
+
+Чтобы создать пользовательский шаблон экрана, на первом шаге мастера *Create CUBA Screen* выберите шаблон, который вы хотите модифицировать, и нажмите кнопку *Copy template*. Введите кодовое имя пользовательского шаблона. Файлы шаблона будут скопированы в проект и станут доступными для изменения. Пользовательские шаблоны экранов отображаются в секции *Generic UI* -> *Screens* -> *Custom Templates* дерева проекта CUBA:
+
+image::features/generic_ui/custom_screen_templates_tree.png[align="center"]
+
+Вы можете модифицировать файлы шаблонов контроллера и дескриптора экрана, а также можете добавить новые параметры в мастер, расширив файл *settings.xml*.
+
+Пользовательские шаблоны экранов доступны для выбора на вкладке *Project Templates*, на первом шаге мастера *New* -> *Screen*:
+
+image::features/generic_ui/screen_wizard_custom_template.png[align="center"]
+--
+Пример кастомизации::
+--
+Чтобы сделать высоту и ширину при открытии браузера сущности как диалога настраиваемыми параметрами, нужно проделать следующее:
+
+. Отредактировать `settings.xml` и добавить туда дополнительные теги:
++
+[source,xml]
+----
+<property caption="Dialog Width" code="dialogWidth" propertyType="INTEGER" defaultValue="800" preferences="true"/>
+<property caption="Dialog Height" code="dialogHeight" propertyType="INTEGER" defaultValue="600" preferences="true"/>
+----
+. Открыть на редактирование `descriptor.xml` и изменить код тега `dialogMode` на следующий:
++
+[source,xml]
+----
+<dialogMode height="${dialogHeight}"
+            width="${dialogWidth}"/>
+----
+. Попробуйте использовать измененный шаблон в мастере создания экранов. Новые параметры добавлены в мастер:
++
+image::features/generic_ui/custom_screen_template_parameter.png[align="center"]
+--

@@ -152,7 +152,7 @@ image::features/generic_ui/component_inspector_add_button.png[align="center"]
 --
 
 [[screen_designer_custom_components]]
-Support for Custom Components::
+Support for Custom UI Components::
 --
 Screen Designer allows to integrate a custom UI component implemented in an add-on or project by adding special annotations to component's definition. Properly annotated component will be displayed in the *Component Palette* panel, and its properties will be editable in the *Component Inspector* panel. Custom UI components are supported for projects based on CUBA platform versions `7.1.7` and later, or `7.2.5` and later.
 

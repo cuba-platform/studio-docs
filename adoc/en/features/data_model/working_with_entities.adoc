@@ -13,7 +13,7 @@ Creating new entity::
 
 . Studio will create the entity class and register it in `persistence.xml` or `metadata.xml`, depending on the entity type. The created class will be opened in the source code editor.
 
-Studio displays four tabs which be displayed at the bottom of the entities source code editor. Together they form the visual Entity Designer:
+Studio displays four tabs at the bottom of the entities source code editor. Together they form the visual Entity Designer:
 
 * *Text* contains the source code.
 

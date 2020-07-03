@@ -3,7 +3,7 @@
 [[data_model_view]]
 ==== Working with Views
 --
-{main_man_url}/views.html[View] is a descriptor of object graph defining which attributes, collections and sub-entities should be loaded from the database when particular entity is loaded. Views can be declared declaratively right in the screen descriptors, or they can be defined separately in a shared `views.xml` file and re-used by the application code.
+{main_man_url}/views.html[View] is a descriptor of object graph defining which attributes, collections and sub-entities should be loaded from the database when particular entity is loaded. Views can be defined right in the screen descriptors, or they can be defined separately in a shared `views.xml` file and re-used by the application code.
 
 To create a new shared view for an entity, select the entity in the project tree and click *New > View* in the context menu.
 

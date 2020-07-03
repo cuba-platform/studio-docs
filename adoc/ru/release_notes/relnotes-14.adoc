@@ -93,7 +93,7 @@ image::release_notes/v-14-add-attrs-top-action.png[align="center"]
 +
 image::release_notes/v-14-add-attrs-display.png[align="center"]
 +
-Похожее действие было добавлено в дизайнер сущности как кнопка *Add to Screens* над таблицей атрибутов:
+Похожее действие было добавлено в дизайнер сущностей как кнопка *Add to Screens* над таблицей атрибутов:
 +
 image::release_notes/v-14-add-attr-entity-designer.png[align="center"]
 

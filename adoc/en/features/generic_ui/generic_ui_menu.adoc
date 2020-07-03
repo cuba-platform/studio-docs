@@ -120,8 +120,8 @@ The following parameters become available for editing on the right panel of the 
 
 * *Icon* - icon of the menu element.
 * *Description* - a localized text shown as a tooltip on mouse hover. By pressing the globe button you can open *Localized Message* dialog and enter localized description text for all supported locales.
-* *Params* - screen parameters passed to the `init()` method of the opening screen's controller. Please note that using *Params* is a deprecated way to specify screen opening parameters. The recommended way is to use `properties` menu item sub-tag (though it is not supported by menu designer yet).
-* *Permissions* - allows user to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. Note that there is a simpler way to manage access - with help of role's screen permissions.
+* *Params* - screen parameters passed to the `init()` method of the opening screen's controller.
+* *Permissions* - allows you to restrict access to a menu item. If a user does not have permissions to access the item, it is not displayed. Note that there is a simpler way to manage access - with help of role's screen permissions.
 
 Please proceed to the {main_man_url}/menu.xml.html[Developer's Manual] for more detailed explanation of mentioned parameters.
 --
