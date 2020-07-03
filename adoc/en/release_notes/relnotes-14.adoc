@@ -55,7 +55,7 @@ image::release_notes/v-14-tests-in-tree.png[align="center"]
 +
 image::release_notes/v-14-new-test.png[align="center"]
 
-. Ability to customize screen templates has been added. Press *Copy template* button in the first step of the *Create CUBA Screen* wizard to create own screen template. Template files will be copied to the project and become available for modification. Custom screen templates are displayed in the *Generic UI* -> *Screens* -> *Custom Templates* section of the CUBA project tree:
+. Ability to <<custom_screen_templates,customize screen templates>> has been added. Press *Copy template* button in the first step of the *Create CUBA Screen* wizard to create own screen template. Template files will be copied to the project and become available for modification. Custom screen templates are displayed in the *Generic UI* -> *Screens* -> *Custom Templates* section of the CUBA project tree:
 +
 image::release_notes/v-14-custom-screen-templates.png[align="center"]
 +
@@ -75,11 +75,11 @@ image::release_notes/v-14-module-in-new-bean.png[align="center"]
 +
 image::release_notes/v-14-views-in-screen-wizard.png[align="center"]
 
-. Form creation wizard dialogs has been added to the Screen Designer. It activates when user places new form to the screen layout. This dialog provides ability to choose existing or configure new data container and set up other required form attributes:
+. `Form` creation wizard dialogs has been added to the Screen Designer. It activates when user places new `Form` to the screen layout. This dialog provides ability to choose existing or configure new data container and set up other required `Form` attributes:
 +
 image::release_notes/v-14-form-wizard.png[align="center"]
 
-. *Component Palette* panel of the Screen Designer now allows developer to drag-and-drop components from the palette to the source code. Selected component will be added as a last child component in the containing tag.
+. *Component Palette* panel of the Screen Designer now allows developer to drag-and-drop components from the palette to the source code. Selected component will be added as a child component in the containing tag.
 
 . Switching main menu from *Composite* to *Single* mode for menu customization has been simplified. Menu designer now suggests developer to copy menus and items inherited from the platform and add-ons to the project's configuration.
 
@@ -97,7 +97,7 @@ Similar action has been added to the Entity Designer as the *Add to Screens* but
 +
 image::release_notes/v-14-add-attr-entity-designer.png[align="center"]
 
-. Inspection has been added that detects usages of the `System.out.println` or `System.err.println` statements in the code. It provides quick fixes to the developer (available by pressing Alt+Enter / Option+Enter) to transform the statement to use injected or static Logger:
+. Inspection has been added that detects usages of the `System.out.println` or `System.err.println` statements in the code. It provides quick fixes to the developer (available by pressing Alt+Enter / Option+Enter) to transform the statement to use injected or static SLF4J Logger:
 +
 image::release_notes/v-14-sout-logger.gif[align="center"]
 

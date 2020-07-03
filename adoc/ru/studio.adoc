@@ -18,16 +18,17 @@
 :lang: en
 :version-label: IntelliJ Plugin Version
 :revremark: Copyright (c) 2020 Haulmont (www.haulmont.ru)
-:plugin-version: 13
-:idea-version: 2019.2
-:minimal-idea-version: 2019.1
+:plugin-version: 14
+:idea-version: 2019.3
+:minimal-idea-version: 2019.3
 :main_man_url: https://doc.cuba-platform.com/manual-7.2-ru
 :restapi_man_url: https://doc.cuba-platform.com/restapi-7.2-ru
 :rel_notes_url: http://files.cuba-platform.com/cuba/release-notes/7.2
 :gradle_user_guide_url: https://docs.gradle.org/5.6.4/userguide
-:cuba-download-site: https://www.cuba-platform.ru/download
+:cuba-download-site: https://www.cuba-platform.ru/tools/
+:cuba-store-site: https://www.cuba-platform.com/store/#/store/studio
 :plugin-repository-site: https://plugins.jetbrains.com/plugin/7249-cuba/versions
-:revnumber: 13
+:revnumber: 14
 
 :!sectnums:
 
