@@ -1,12 +1,16 @@
 :sourcesdir: ../../../../source
 
 [[middleware]]
-=== Компоненты среднего слоя
+=== Компоненты бизнес-логики
 
-В <<project_tree,дереве проекта>> внутри элемента *Middleware* отображаются все сервисы среднего слоя и управляемые бины, созданные в проекте. В данном разделе мы рассмотрим, как создавать сервисы и бины.
+В <<project_tree,дереве проекта>> внутри элемента *Business Logic* отображаются все сервисы среднего слоя, управляемые бины и интеграционные тесты, созданные в проекте. В данном разделе мы рассмотрим, как создавать сервисы, бины и тесты.
 
 include::middleware/middleware_services.adoc[]
 
 include::middleware/middleware_beans.adoc[]
 
+include::middleware/middleware_jmx_beans.adoc[]
+
 include::middleware/middleware_event_listeners.adoc[]
+
+include::middleware/middleware_integration_tests.adoc[]
