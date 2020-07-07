@@ -26,7 +26,7 @@ bintrayPremiumRepoUser=111111222222@cuba-platform
 premiumRepoPass=abcdefabcdef
 ----
 +
-* Alternatively, you can specify the credentials in the CUBA_PREMIUM_USER and CUBA_PREMIUM_PASSWORD environment variables.
+* Alternatively, you can specify the credentials in the `CUBA_PREMIUM_USER` and `CUBA_PREMIUM_PASSWORD` environment variables.
 * When you run Gradle tasks from the command line (e.g. during Continious Integration), you can also pass the properties as command-line arguments with the `-P` prefix, for example:
 +
 [source]
