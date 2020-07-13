@@ -115,10 +115,7 @@ image::release_notes/v-14-uicomp-create.gif[align="center"]
 +
 image::release_notes/v-14-login-cuba-account.png[align="center"]
 +
-After logging in the following features become available:
-
-* Automatic downloading and installing trial versions of the commercial add-ons in the *Marketplace* window.
-* Displaying available trial add-ons in the *Subscription Information* dialog.
+After logging in you will be able to download and install trial versions of the commercial add-ons in the *Marketplace* window.
 
 . Processing time of the *Generate Database Scripts* operation has been significantly optimized (reduced). The same done to the database schema check happening before the *CUBA Application* run configuration is started.
 

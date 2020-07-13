@@ -18,7 +18,7 @@
 
 * *Enable integration* - поставьте этот флажок, если вы хотите интегрировать текущий экземпляр IDE со старой Studio SE или Studio Browser Edition. Таким образом вы сможете открывать проекты из старой Studio в этой IDE. Также этот флажок разрешает взаимодействие Studio с инструментом командной строки Frontend Generator.
 
-* *Listening port* - порт интеграции со старой Studio. Убедитесь, что этот же порт указан в настройках старой Studio в поле *IDE Port*.
+* *Listening port* - порт интеграции со старой Studio и инструментом Frontend Generator. Убедитесь, что этот же порт указан в настройках старой Studio в поле *IDE Port*.
 --
 
 Секция Project settings::
