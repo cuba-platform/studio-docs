@@ -2,7 +2,7 @@
 
 [[custom_db]]
 ==== Поддержка произвольной СУБД
-
+--
 Как описано в {main_man_url}/arbitrary_dbms.html[документации], вы можете реализовать работу с любой СУБД, поддерживаемой фреймворком EclipseLink ORM, на уровне конкретного проекта. Studio позволяет автоматически создавать файлы, необходимые для интеграции с нестандартными СУБД.
 
 Выберите *CUBA > Advanced > Define Custom Database* в главном меню.
@@ -20,19 +20,15 @@
 
 Наконец, если это необходимо, модифицируйте класс `com.haulmont.studio.db.{db_id}.{db_id}DdlGenerator` для правильной генерации скриптов *init* и *update* в Studio. Пропустите этот шаг, если вы не планируете создавать DDL-скрипты для новой базы данных.
 
-Если вы планируете использовать нестандартную СУБД в качестве основного хранилища данных проекта, сгенерируйте скрипты инициализации и обновления БД, чтобы Studio могла создать *init*-скрипты для всех компонентов приложения, включая сам фреймворк. Эти скрипты не включают в себя некоторые данные, необходимые для инициализации БД, поэтом добавьте вручную следующие команды в скрипт *Init data* вашего проекта (`30.create-db.sql`):
+Если вы планируете использовать нестандартную СУБД в качестве основного хранилища данных проекта, сгенерируйте скрипты инициализации и обновления БД, чтобы Studio могла создать *init*-скрипты для всех компонентов приложения, включая сам фреймворк. Эти скрипты не включают в себя некоторые данные, необходимые для инициализации БД, поэтом добавьте вручную следующие команды в скрипт *Init data* вашего проекта (`30.create-db.sql`), актуально для версии платформы `7.2`:
 
 [source, sql]
 ----
-insert into SEC_GROUP (ID, CREATE_TS, VERSION, NAME, PARENT_ID)
-values ('0fa2b1a5-1d68-4d69-9fbd-dff348347f93', current_timestamp, 0, 'Company', null)^
-
-insert into SEC_USER (ID, CREATE_TS, VERSION, LOGIN, LOGIN_LC, PASSWORD, NAME, GROUP_ID, ACTIVE)
-values ('60885987-1b61-4247-94c7-dff348347f93', current_timestamp, 0, 'admin', 'admin',
-'cc2229d1b8a052423d9e1c9ef0113b850086586a',
-'Administrator', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 1)^
-
-insert into SEC_USER (ID, CREATE_TS, VERSION, LOGIN, LOGIN_LC, PASSWORD, NAME, GROUP_ID, ACTIVE)
-values ('a405db59-e674-4f63-8afe-269dda788fe8', current_timestamp, 0, 'anonymous', 'anonymous', null,
-'Anonymous', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 1)^
+include::{sourcesdir}/features/data_model/cuba-init-data.sql[]
 ----
+--
+
+Пример интеграции с СУБД Firebird::
+--
+Пример встраивания сторонней СУБД (Firebird) в CUBA и Studio доступен здесь: https://github.com/cuba-labs/firebird-sample. Этот пример также можно использовать как аддон, чтобы добавить поддержку Firebird в ваш проект.
+--

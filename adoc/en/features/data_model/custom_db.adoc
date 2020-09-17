@@ -2,7 +2,7 @@
 
 [[custom_db]]
 ==== Integrating with Custom Database
-
+--
 As described in the {main_man_url}/arbitrary_dbms.html[documentation], the framework allows you to use any DBMS supported by EclipseLink ORM as your project database. And Studio can help you to create files required for such integration.
 
 Select *CUBA > Advanced > Define Custom Database* in the menu.
@@ -20,19 +20,15 @@ In order to connect to your database at runtime, fix `{db_id}DbmsFeatures` and `
 
 Finally, fix the `com.haulmont.studio.db.{db_id}.{db_id}DdlGenerator` class for correct generation of *init* and *update* database scripts by Studio, if needed. Skip this step if you don't need to generate DDL scripts for this database.
 
-If you use the custom database as a main data store, when you generate database scripts, Studio will create *init* scripts for all application components, including CUBA. These scripts won’t include some required initialization data, so you have to add the following to the *Init data* script of your project (`30.create-db.sql`):
+If you use the custom database as a main data store, when you generate database scripts, Studio will create *init* scripts for all application components, including CUBA. These scripts won’t include some required initialization data, so you have to add the following to the *Init data* script of your project (`30.create-db.sql`), actual for the platform version `7.2`:
 
 [source, sql]
 ----
-insert into SEC_GROUP (ID, CREATE_TS, VERSION, NAME, PARENT_ID)
-values ('0fa2b1a5-1d68-4d69-9fbd-dff348347f93', current_timestamp, 0, 'Company', null)^
-
-insert into SEC_USER (ID, CREATE_TS, VERSION, LOGIN, LOGIN_LC, PASSWORD, NAME, GROUP_ID, ACTIVE)
-values ('60885987-1b61-4247-94c7-dff348347f93', current_timestamp, 0, 'admin', 'admin',
-'cc2229d1b8a052423d9e1c9ef0113b850086586a',
-'Administrator', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 1)^
-
-insert into SEC_USER (ID, CREATE_TS, VERSION, LOGIN, LOGIN_LC, PASSWORD, NAME, GROUP_ID, ACTIVE)
-values ('a405db59-e674-4f63-8afe-269dda788fe8', current_timestamp, 0, 'anonymous', 'anonymous', null,
-'Anonymous', '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', 1)^
+include::{sourcesdir}/features/data_model/cuba-init-data.sql[]
 ----
+--
+
+Firebird database integration example::
+--
+An example of integrating a custom database (Firebird) into the CUBA and Studio can be found here: https://github.com/cuba-labs/firebird-sample. This sample can also be used as an add-on to add support for the Firebird database to your project.
+--
