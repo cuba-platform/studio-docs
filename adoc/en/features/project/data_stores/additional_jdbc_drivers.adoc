@@ -1,0 +1,29 @@
+:sourcesdir: ../../../../../../source
+
+[[additional_jdbc_drivers]]
+===== Additional JDBC drivers
+--
+When generating database migration scripts, Studio connects to the database and therefore needs JDBC driver for the used DBMS. Studio contains built-in JDBC drivers for the following DBMS types:
+
+* PostgreSQL
+* HSQLDB
+* Microsoft SQL Server
+* MariaDB
+* MySQL (with MariaDB driver)
+
+Using the following DBMS types requires you to download JDBC drivers manually and add them to the Studio:
+
+* Oracle
+* Amazon RedShift
+* MySQL (with proprietary driver)
+
+Adding driver files is performed in the settings screen: main menu -> *CUBA* -> *Settings* -> *Database Proprietary Drivers*.
+
+When integrating with a <<custom_db,custom database>>, you need to copy driver files manually to the `{USER_HOME}/.haulmont/studio/lib` folder (e.g. `C:\Users\\{username}\.haulmont\studio\lib` for Windows). The same folder should be used to put additional JDBC driver files for supported databases.
+
+After manual adding JDBC driver files don't forget to:
+
+* restart IDE.
+* shutdown Gradle daemon (run `gradlew --stop` in terminal).
+
+--

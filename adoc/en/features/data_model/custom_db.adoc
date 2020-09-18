@@ -19,13 +19,26 @@ First, fix the `com.haulmont.studio.db.{db_id}.{db_id}DbProperties` class. When 
 In order to connect to your database at runtime, fix `{db_id}DbmsFeatures` and `{db_id}DbTypeConverter` classes of the `com.haulmont.cuba.core.sys.persistence` package. The `{db_id}SequenceSupport` class is used only for generating integer identifiers and unique numbers.
 
 Finally, fix the `com.haulmont.studio.db.{db_id}.{db_id}DdlGenerator` class for correct generation of *init* and *update* database scripts by Studio, if needed. Skip this step if you don't need to generate DDL scripts for this database.
+--
 
+Init data scripts for main data store::
+--
 If you use the custom database as a main data store, when you generate database scripts, Studio will create *init* scripts for all application components, including CUBA. These scripts won’t include some required initialization data, so you have to add the following to the *Init data* script of your project (`30.create-db.sql`), actual for the platform version `7.2`:
 
 [source, sql]
 ----
 include::{sourcesdir}/features/data_model/cuba-init-data.sql[]
 ----
+--
+
+Adding JDBC driver::
+--
+When generating database migration scripts, Studio needs JDBC driver for the used DBMS. For a custom database you need to download required JDBC driver files manually and put them to the `{USER_HOME}/.haulmont/studio/lib` folder (e.g. `C:\Users\\{username}\.haulmont\studio\lib` for Windows).
+
+After adding driver files to the appropriate folder don't forget to:
+
+* restart IDE.
+* shutdown Gradle daemon (run `gradlew --stop` in terminal).
 --
 
 Firebird database integration example::
