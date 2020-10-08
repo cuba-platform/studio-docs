@@ -134,6 +134,7 @@ After logging in you will be able to download and install trial versions of the 
 
 . Numerous small improvements and bug fixes:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2014.3[Studio 14.3 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2014.1[Studio 14.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2014.0[Studio 14.0 Resolved Issues\]]
 
