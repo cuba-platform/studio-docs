@@ -5,6 +5,7 @@
 
 include::data_stores/main_data_store.adoc[]
 include::data_stores/data_store_properties.adoc[]
+include::data_stores/data_store_env_vars.adoc[]
 include::data_stores/additional_data_stores.adoc[]
 include::data_stores/data_store_actions.adoc[]
 include::data_stores/data_store_db_scripts.adoc[]

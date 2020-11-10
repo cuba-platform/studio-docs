@@ -1,0 +1,48 @@
+[[relnotes_15]]
+
+Version 15::
++
+--
+. An ability to use environment variables for sensitive database connection parameters has been added (supported for CUBA `7.2.7` or later). It helps to avoid storing such parameters in the version control. Read more in the <<data_stores_env_vars>> section.
+
+. The new *All sources* section has been added to the CUBA project tree. It displays all source files located in the modules of the project without filtering them by file type. This section allows developer to locate files or classes that aren't grouped into one of specialized project tree sections (services, screen controllers, entities etc).
++
+image::release_notes/v-15-all-sources.png[align="center"]
+
+. Ability to organize database update scripts by per-month folders has been added. For large project teams the current behavior of grouping database update scripts into per-year folders may be inconvenient. So the new setting was introduced: *CUBA* -> *Settings* -> *Group update scripts by*. After it is changed to *MONTH*, new update scripts are grouped to per-month folders (e.g. `/2020/10/`, `/2020/11/` etc). Note that already existing update script files will not be (and cannot be) re-organized.
++
+image::release_notes/v-15-scripts-by-month.png[align="center"]
+
+. The user interface for the `zipProject` Gradle task has been added, available in the main menu (*CUBA* -> *Advanced* -> *Zip Project*). It can be used for code sharing purposes.
++
+image::release_notes/v-15-zip-project.png[align="center"]
+
+. Existing *Subscribe to Event* and *Install Delegate* dialogs have been unified into one dialog for convenience.
++
+image::release_notes/v-15-generate-handler.png[align="center"]
+
+. The ability to change Platform Version has been extracted as a separate dialog from the *Project Properties* dialog. It now also shows links to release notes for related platform versions.
++
+image::release_notes/v-15-platform-version.png[align="center"]
+
+. UI to install trial and full version of commercial add-ons has been improved. Additional cases are now processed automatically (such as commercial add-on arfifacts uploaded to a custom project-specified repository).
++
+image::release_notes/v-15-commercial-addons.png[align="center"]
+
+. Studio now displays description for standard actions. Description is displayed in the action creation dialog and in the table creation wizard dialog (as mouseover tooltip).
++
+image::release_notes/v-15-action-description.png[align="center"]
+
+. A new inspection has been added to detect the popular problem: when users manually add `appComponent` dependency to the `build.gradle` file but forget to register this add-on in the `web.xml` file(s) of the project.
++
+image::release_notes/v-15-app-component-inspection.png[align="center"]
+
+. Ability to edit `~/.gradle/gradle.properties` file in the IDE has been added. Use *CUBA* -> *Advanced* -> *Edit Gradle properties* action in the main menu to edit global Gradle settings file.
+
+. Standalone IDE version of the Studio has been upgraded to the IntelliJ Community platform *2020.2*. Previously downloaded standalone Studio IDE will not be upgraded - you should download the new version from the {cuba-download-site}[CUBA Platform] web site.
+
+. Numerous small improvements and bug fixes:
+
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.0[Studio 15.0 Resolved Issues\]]
+
+--
