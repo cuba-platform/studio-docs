@@ -5,7 +5,7 @@ Version 15::
 --
 . An ability to use environment variables for sensitive database connection parameters has been added (supported for CUBA `7.2.7` or later). It helps to avoid storing such parameters in the version control. Read more in the <<data_stores_env_vars>> section.
 
-. The new *All sources* section has been added to the CUBA project tree. It displays all source files located in the modules of the project without filtering them by file type. This section allows developer to locate files or classes that aren't grouped into one of specialized project tree sections (services, screen controllers, entities etc).
+. The new *All sources* section has been added to the CUBA project tree. It displays all source files located in the modules of the project without filtering them by file type. This section allows developer to locate files or classes that aren't included into one of specialized project tree sections (services, screen controllers, entities etc).
 +
 image::release_notes/v-15-all-sources.png[align="center"]
 

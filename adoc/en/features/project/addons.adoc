@@ -16,6 +16,8 @@ The dialog has three tabs: *Marketplace*, *Installed* and *Updates*.
 
 include::addons/addons_marketplace.adoc[]
 
+include::addons/user_profile.adoc[]
+
 include::addons/addons_installing_trial.adoc[]
 
 include::addons/addons_installing_personally_purchased.adoc[]

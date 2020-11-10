@@ -7,4 +7,4 @@ The *CUBA* main menu provides quick access to the CUBA-specific features of the 
 
 image::ui/cuba_menu.png[align="center"]
 
-You can add frequently used menu items to the main toolbar by clicking on the toolbar and selecting *Customize Menus and Toolbars*. In the *Menus and Toolbars* dialog, expand the *Main Toolbar* item and use *Add Action* command to add items from the *Main Menu > CUBA* tree.
+You can add frequently used menu items to the main toolbar by right-clicking on the toolbar and selecting *Customize Menus and Toolbars*. In the *Menus and Toolbars* dialog, expand the *Main Toolbar* item and use *Add Action* command to add items from the *Main Menu > CUBA* tree.

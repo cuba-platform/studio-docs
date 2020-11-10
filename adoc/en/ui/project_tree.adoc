@@ -18,7 +18,7 @@ image::ui/cuba_tree.png[align="center"]
 
 * *Build Script* - contains two main project scripts: {main_man_url}/build.gradle.html[build.gradle] (defines the build configuration) and `settings.gradle` (defines the project name and the set of modules).
 
-* <<modules,Modules>> - displays all project modules.
+* *Config Files* - displays project's important configuration files grouped by their module.
 
 * <<data_stores,Data Stores>> - displays and manages the list of {main_man_url}/data_store.html[data stores] the project is connected to.
 By default there is only one `Main` data store.
@@ -34,9 +34,13 @@ By default there is only one `Main` data store.
 
 . <<generic_ui,Generic UI>> - contains everything related to the project user interface, such as screens, themes, and so on.
 
+. <<frontend_ui,Frontend UI>> - contains files related to the frontend user interface of the application.
+
 . <<rest_api,REST API>> - lets you configure the {restapi_man_url}[REST API] functionality.
 
 . <<security,Security>> - displays and allows you visually construct design-time role definitions.
+
+. *All Sources* - displays all source files located in the modules of the project without filtering them by file type. This section allows you to locate files or classes that aren't included into one of specialized project tree sections.
 
 . *Runs At...* - allows you to open the running application in the external or embedded web browser.
 

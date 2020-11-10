@@ -14,9 +14,11 @@ It is recommended to put the project under version control and commit all pendin
 
 * Click *CUBA > Project Properties* in the main menu or double-click *Project > Properties* in the CUBA project tree.
 
-* In the *CUBA Project Properties* dialog, select the desired CUBA version in the *Platform version* field.
+* In the *CUBA Project Properties* dialog, click the *Change...* link located near the *Platform version* label.
 
-* For the purpose of beta-testing or early accessing new CUBA platform features you might want to use one of unstable CUBA platform versions, ones that end with `BETA` or `SNAPSHOT` suffixes. To see them in the *Platform version* drop-down list, you need to select the *Show unstable versions* checkbox.
+* The *Change Platform Version* dialog appears. Select the desired CUBA version in the drop-down field.
+
+* For the purpose of beta-testing or early accessing new CUBA platform features you might want to use one of unstable CUBA platform versions, ones that end with `BETA` or `SNAPSHOT` suffixes. To see them in the platform version drop-down list, you need to select the *Show unstable versions* checkbox.
 +
 [TIP]
 ====
@@ -28,9 +30,14 @@ SNAPSHOT versions are available only if you use the `repo.cuba-platform.com` rep
 Both `BETA` and `SNAPSHOT` versions are strongly not recommended for use in production.
 ====
 
-* Click *OK*, then confirm.
+* You can press the *Release Notes* link and navigate to the documentation page that describes new features, improvements and breaking changes in the API of the new platform version.
 
-* If you are upgrading to a newer feature release (for example, from 6.10.X to 7.0.X or from 7.0.Y to 7.1.Y), the *Migration Required* dialog appears. This dialog contains information about migration steps which will be performed automatically by Studio. Review the information and click *Migrate*.
+* If you are upgrading to a newer feature release (for example, from 6.10.X to 7.0.X or from 7.0.Y to 7.1.Y), the *Migration Required* section appears in the *Change Platform Version* dialog.
+** By pressing the *More info...* link, you can open another dialog containing information about changes that will be automatically performed by the Studio to the project structure, build scripts or individual project files. Review the information.
+
+image::getting_started/platform-version-migration-required.png[align="center"]
+
+* Click *OK* to confirm platform version upgrade, and click *OK* in the *Project Properties* dialog.
 
 * Studio performs automatic migration (if needed) and runs Gradle `clean` and `undeploy` tasks.
 

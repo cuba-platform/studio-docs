@@ -33,6 +33,8 @@ The nested *Project settings* section contains the settings of the currently ope
 
 * *Generate script name in format* - specify `yyMMddHHmm` to add current time to the names of generated database update scripts, which may help to ensure correct sequence of scripts when working in a team.
 
+* *Group update scripts by* - determines how automatically generated database update scripts are grouped by folders. If *YEAR* is selected, scripts are put to per-year folders (`2020`, `2021` etc). If *MONTH* is selected, scripts are put to nested per-month folders (`2020/10`, `2020/11` etc). The latter setting value is more convenient for large development teams.
+
 * *Do not delete columns started with* - this field allows you to specify a prefix for table columns, that should not be tracked by Studio. If you add a column to a table mapped to an entity, and not map the column to an entity attribute, Studio will generate an update script dropping this column. To avoid dropping, you can exclude this script in the *Database Scripts* dialog, and it will not be generated again. Alternatively, you can set a common prefix for such columns in the *Do not delete columns started with* field and name the column accordingly. For example, enter `NOT_MAPPED_` in the field and name the column `NOT_MAPPED_CODE`.
 
 * *Column length for enums with ID of String type* - this field allows you to set a length of the database column which is mapped to an attribute of enum type with the identifier of String type. For example, if you use short identifiers always consisting of one character, you can set 1 in this field to save database space.

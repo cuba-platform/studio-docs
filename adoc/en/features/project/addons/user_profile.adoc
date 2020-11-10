@@ -1,0 +1,16 @@
+:sourcesdir: ../../../../../../source
+
+[[cuba_user_profile]]
+===== CUBA User Profile
+--
+Signing in to your {cuba-store-site}[cuba-platform.com] user profile allows you to install trial versions of the CUBA commercial add-ons such as *Maps* and *Bproc* to your project.
+
+In order to sign in to your user profile, use the *Sign In to CUBA* button located in the top right corner of the *CUBA Add-Ons* window:
+
+image::features/project/user_profile_sign_in.png[align="center"]
+
+You will be redirected to your browser. After logging in, you will get a notification in the IDE. Clicking the same button again will open a dialog with your profile details and the list of available trial add-on versions:
+
+image::features/project/user_profile_info.png[align="center"]
+
+--

@@ -1,7 +1,43 @@
 :sourcesdir: ../../../../../../source
 
 [[data_stores_env_vars]]
-===== TODO
+===== Environment variables as connection parameters
 --
+Some database connection parameters can be specified as environment variables. It allows development team to avoid storing these parameters in the version control system. The following parameters are supported:
 
+* database host,
+* database port,
+* database name,
+* user,
+* password.
+
+The data store should have *Define JDBC DataSource In* setting set to *Application*.
+
+For example, define environment variables:
+----
+PG_DB_HOST=127.0.0.1
+PG_DB_NAME=salespg
+PG_DB_USER=admin
+PG_DB_PASSWORD=admin
+----
+
+Restart IDE to receive updated environment variables. Then change database connection settings in the app.properties file:
+----
+cuba.dataSourceProvider=application
+cuba.dataSource.username=${PG_DB_USER}
+cuba.dataSource.password=${PG_DB_PASSWORD}
+cuba.dataSource.dbName=${PG_DB_NAME}
+cuba.dataSource.host=${PG_DB_HOST}
+cuba.dataSource.port=
+----
+
+Studio support includes the following:
+
+* The *Data Store Properties* dialog correctly detects and shows setting values.
+* *Create database*, *Update database*, *Generate database scripts* and *Generate Model* actions take values from the environment.
+* Debug Tomcat server also takes values from environment.
+
+Detected setting values are displayed read-only in the Data Store Settings dialog, you need to modify them manually in app.properties files when necessary.
+
+image::features/project/db-conn-env-props.png[align="center"]
 --
