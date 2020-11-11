@@ -15,12 +15,11 @@ Top actions panel::
 --
 Actions panel is located on the top of the controller source code editor. It displays the following actions:
 
-* *<entity class name>* - navigates to the entity associated with current browser or editor screen.
 * *Descriptor* - navigates to the corresponding screen descriptor
-* *Main Menu* - allows you to include current screen to the main menu or to navigate to the main menu configuration.
+* *<entity class name>* - navigates to the entity associated with current browser or editor screen.
+* *Main Menu* - allows you to include the current screen to the main menu or to navigate to the main menu configuration.
 * *Inject* - helps to inject dependencies to the controller class, described below.
-* *Subscribe to Event* - allows subscribing the controller to various events, described below.
-* *Install Delegate* - allows generating components' delegates, described below.
+* *Generate Handler* - provides subscribing the controller to various events and generating components' delegates, described below.
 
 --
 
@@ -46,44 +45,36 @@ The following objects can be injected into controllers:
 * SLF4J Logger instance.
 --
 
-[[controller_events]]
-Event handling::
+[[controller_events_delegates]]
+Event handlers and delegates::
 +
 --
-By creating event handlers, you can execute code at various points in the screen lifecycle and react to user actions. A handler is a controller method annotated with `@Subscribe` and having the event as a parameter. You can create such method in Studio:
+There are two ways to add logic related to the screen lifecycle and components behavior to the screen controller: event handlers and component delegates. These two are implemented differently in the framework but used similarly in the Studio UI.
 
-* by clicking the *Subscribe to Event* action on the top actions panel,
-* or by pressing Alt+Insert (Cmd+N) and selecting *Subscribe to Event* in the *Generate* popup menu:
+By creating event handlers you can execute code at various points in the screen lifecycle and react to user actions. A handler is a controller method annotated with `@Subscribe` and having the event as a parameter.
 
-image::features/generic_ui/subscribe_dialog.png[align="center"]
+Using delegates you can provide code that will be used by various screen mechanisms instead of their standard implementations. For example, you can provide your own function to commit data or to select icons for table rows. A delegate is a controller method with a specific signature and annotated with `@Install`.
 
-Each event in the window is provided with a description on the right which is extracted from the event's Javadoc.
+You can create event handlers and delegates in Studio:
 
-The following events are available in the opened window:
+* by clicking the *Generate Handler* action on the top actions panel,
+* or by pressing Alt+Insert (Cmd+N) and selecting *Generate Handler* in the *Generate* popup menu:
 
-* Controller events represent the lifecycle of the screen.
+image::features/generic_ui/generate_handler_dialog.png[align="center"]
 
-* Components events allow you to react on buttons clicks, table selections, actions etc.
+Each event or delegate in the window is provided with a description on the right which is extracted from the event's Javadoc.
 
-* Frame events represent the lifecycle of the outer frame component of this screen.
+The following events and delegates are available in the opened window:
 
-* Data context events allow you to react on the data context changes and execute code before and after data commit.
+* Controller handlers represent the lifecycle of the screen.
 
-* Data containers events enable receiving notifications on changes in the state of data containers and entities.
---
+* Component handlers allow you to react on buttons clicks, table selections, actions etc.
 
-[[controller_delegates]]
-Delegates::
-+
---
-Using delegates, you can provide code that will be used by various screen mechanisms instead of their standard implementations. For example, you can provide your own function to commit data or to select icons for table rows.
+* Frame handlers represent the lifecycle of the outer frame component of this screen.
 
-A delegate is a controller method with a specific signature and annotated with `@Install`. You can create such method in Studio:
+* Data context handlers allow you to react on the data context changes and execute code before and after data commit.
 
-* by clicking the *Install Delegate* action on the top actions panel,
-* or by pressing Alt+Insert (Cmd+N) and selecting *Install Delegate* in the *Generate* popup menu:
+* Data container handlers enable receiving notifications on changes in the state of data containers and entities.
 
-image::features/generic_ui/install_dialog.png[align="center"]
-
-Each delegate in the window is provided with a description on the right which is extracted from the framework Javadocs.
+* Data loader handlers enable implementing your own or customizing standard logic of loading data for screen components.
 --

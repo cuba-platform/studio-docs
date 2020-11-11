@@ -15,7 +15,7 @@ Basic settings::
 
 * The *Repositories* table displays the repositories currently used in the project. Studio scans these repositories to discover what platform versions are available. Use the buttons next to the field to configure the access to repository. For more details see {main_man_url}/access_to_repo.html[documentation]. You can also manually register any number of additional repositories containing application components in the `build.gradle` script.
 
-* The *Platform version* field allows you to select a version of the platform. If you choose a newer version, an automatic migration will be performed if required.
+* The *Platform version* field displays version of the CUBA platform used in the project. The *Change...* link located nearby allows you to upgrade platform version, an automatic migration will be performed if required. Read more here: <<upgrade_project>>.
 
 * The *Show unstable versions* checkbox enables displaying of unstable CUBA releases whose versions end with `BETA` or `SNAPSHOT` suffixes.
 
