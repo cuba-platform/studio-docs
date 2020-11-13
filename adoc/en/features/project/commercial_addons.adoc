@@ -3,7 +3,7 @@
 [[commercial_addon_installation]]
 ==== Commercial Add-on Installation
 --
-Using commercial CUBA add-ons requires you to have an add-on subscription. However, for the purpose of evaluation you can you install a trial version of the particular add-on (available for 30 days).
+Using commercial CUBA add-ons requires you to have an add-on subscription. You can purchase the subscription on the {cuba-store-site}[CUBA Store] web site. Also, for the purpose of evaluation you can install a trial version of the particular add-on (available for 30 days).
 
 Below are described the following installation scenarios:
 

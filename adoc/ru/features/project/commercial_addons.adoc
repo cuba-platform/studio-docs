@@ -1,0 +1,19 @@
+:sourcesdir: ../../../../../source
+
+[[commercial_addon_installation]]
+==== Установка коммерческих аддонов
+--
+Чтобы использовать коммерческие аддоны CUBA, необходимо купить подписку на аддон. Купить подписку можно на сайте {cuba-store-site}[CUBA Store]. Также для предварительного ознакомления вы можете установить ознакомительную версию соответствующего аддона (работоспособна в течение 30 дней).
+
+Ниже описаны следующие сценарии установки:
+
+* <<addons_install_trial,Установка ознакомительной версии аддона>>.
+* <<addons_install_with_license_key,Автоматическая установка>> купленного аддона.
+* <<addons_install_manually,Ручная установка>> купленного аддона.
+--
+
+include::commercial_addons/addons_installing_trial.adoc[]
+
+include::commercial_addons/addons_installing_with_license_key.adoc[]
+
+include::commercial_addons/addons_installing_manually.adoc[]

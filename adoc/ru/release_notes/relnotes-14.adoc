@@ -54,7 +54,7 @@ image::release_notes/v-14-tests-in-tree.png[align="center"]
 . Добавлена возможность создавать новые классы интеграционных тестов. Чтобы создать новый класс теста, используйте контекстное меню в дереве проекта CUBA -> секция *Tests* -> *New* -> *Integration Test (Middleware)* или *Integration Test (Web)*:
 +
 image::release_notes/v-14-new-test.png[align="center"]
-// TODO section link
+
 . Добавлена возможность кастомизировать шаблоны экранов. Чтобы создать собственный шаблон экранов, нажмите кнопку *Copy template* в первом шаге мастера *Create CUBA Screen*. Файлы выбранного шаблона будут скопированы в проект и станут доступны для изменения. Собственные шаблоны экранов отображаются в секции *Generic UI* -> *Screens* -> *Custom Templates* дерева проекта CUBA:
 +
 image::release_notes/v-14-custom-screen-templates.png[align="center"]

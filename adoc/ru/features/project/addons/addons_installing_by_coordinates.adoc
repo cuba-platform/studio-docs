@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../../source
+:sourcesdir: ../../../../../source
 
 [[addons_installing_by_coordinates]]
 ===== Установка аддона по координатам

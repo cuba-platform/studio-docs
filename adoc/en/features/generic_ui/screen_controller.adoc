@@ -15,7 +15,7 @@ Top actions panel::
 --
 Actions panel is located on the top of the controller source code editor. It displays the following actions:
 
-* *Descriptor* - navigates to the corresponding screen descriptor
+* *Descriptor* - navigates to the corresponding screen descriptor.
 * *<entity class name>* - navigates to the entity associated with current browser or editor screen.
 * *Main Menu* - allows you to include the current screen to the main menu or to navigate to the main menu configuration.
 * *Inject* - helps to inject dependencies to the controller class, described below.

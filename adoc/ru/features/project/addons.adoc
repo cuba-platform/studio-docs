@@ -16,14 +16,6 @@
 
 include::addons/addons_marketplace.adoc[]
 
-include::addons/addons_installing_trial.adoc[]
-
-include::addons/addons_installing_personally_purchased.adoc[]
-
-include::addons/addons_installing_by_subscription_key.adoc[]
-
-include::addons/addons_installing_by_separate_key.adoc[]
-
 include::addons/addons_installing_by_coordinates.adoc[]
 
 include::addons/addons_installed.adoc[]

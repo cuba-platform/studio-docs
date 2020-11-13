@@ -1,0 +1,81 @@
+:sourcesdir: ../../../../../source
+
+[[addons_install_manually]]
+===== Ручная установка аддона
+--
+Используйте этот способ установки коммерческого аддона, если у вас возникли проблемы с автоматической установкой, или если вам нужно настроить среду для сборки вашего проекта из командной строки (например на сервере непрерывной интеграции).
+
+Вам понадобится лицензионный ключ, полученный после покупки аддона. Этот ключ будет использован для установки параметров доступа к премиум репозиторию.
+--
+
+Добавление премиум репозитория::
+--
+Откройте файл `build.gradle` и добавьте еще один репозиторий, *добавив его последним в списке*:
+
+* Если основной репозиторий - `repo.cuba-platform.com`, то добавьте `++https://repo.cuba-platform.com/content/groups/premium++`
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/nexus_premium_repository.gradle[]
+----
++
+* Если основной репозиторий - Bintray, то добавьте `++https://cuba-platform.bintray.com/premium++`
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/bintray_premium_repository.gradle[]
+----
+--
+
+Простановка логина и пароля к репозиторию::
+--
+Ваш лицензионный ключ состоит из двух частей: первая часть перед тире - это имя пользователя в репозитории, а часть после тире - это пароль. Например, если ваш ключ - `111111222222-abcdefabcdef`, тогда имя пользователя - `111111222222`, а пароль - `abcdefabcdef`. В случае Bintray к имени пользователя еще добавляется суффикс `@cuba-platform`.
+
+* Рекомендуемый способ - создать файл `~/.gradle/gradle.properties` в вашем домашнем каталоге (например `C:\users\john\.gradle\gradle.properties` под Windows или `/Users/helen/.gradle/gradle.properties` на Mac). Затем откройте этот файл и установите в нем свойства:
++
+[source]
+----
+include::{sourcesdir}/features/project/addons/premium_repo_creds.txt[]
+----
++
+* Как вариант, вы можете указать учетные данные в переменных среды `CUBA_PREMIUM_USER` и `CUBA_PREMIUM_PASSWORD`.
+* Также когда вы запускаете задачи Gradle из командной строки (например в рамках непрерывной интеграции), вы также можете передавать свойства как аргументы командной строки с префиксом `-P`, например:
++
+[source]
+----
+gradlew assemble -PpremiumRepoUser=111111222222 -PpremiumRepoPass=abcdefabcdef
+----
+
+[TIP]
+====
+Файл `~/.gradle/gradle.properties` также можно открыть для редактирования из IDE, выбрав пункт главного меню: *CUBA* -> *Advanced* -> *Edit Gradle Properties*.
+====
+--
+
+Добавление компонента::
+--
+. В файле `build.gradle` укажите координаты артефактов аддона в секции `dependencies`, как указано ниже:
++
+[source]
+----
+com.haulmont.addon.<addon-name>:<addon-name>-global:<addon-version>
+----
++
+Например:
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/app_component_dep.gradle[]
+----
++
+. Укажите идентификатор аддона (например `com.haulmont.addon.maps`) в файлах `web.xml` в модулях `core`, `web` (и `portal`, если он есть), в параметре контекста `appComponents`. Например:
++
+[source,xml]
+----
+include::{sourcesdir}/features/project/addons/app_component_web_xml.xml[]
+----
++
+. Если вы запускаете задачи Gradle из командной строки, выполните `gradlew assemble`.
+
+Аддон будет добавлен в ваш проект.
+--

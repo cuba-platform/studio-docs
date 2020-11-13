@@ -3,14 +3,14 @@
 [[addons_install_manually]]
 ===== Manual Add-on Installation
 --
-Use this way of commercial add-on installation if you have any problems with automatic installation, or if you need to build your project from command line (e.g. in continious integration server).
+Use this way of commercial add-on installation if you have any problems with automatic installation, or if you need to setup environment for building your project from command line (e.g. in continuous integration server).
 
 You need a license key which is received after add-on purchase. This key will be used to set up premium repository credentials.
 --
 
 Adding Premium Repository::
 --
-Open `build.gradle` file and add one more repository *as last repository in the list*:
+Open `build.gradle` file and add one more repository *as the last repository in the list*:
 
 * If the main repository is `repo.cuba-platform.com`, add `++https://repo.cuba-platform.com/content/groups/premium++`
 +

@@ -18,7 +18,7 @@ For example, define environment variables:
 include::{sourcesdir}/features/project/data_stores/env-vars.txt[]
 ----
 
-Restart IDE to receive updated environment variables. Then change database connection settings in the app.properties file:
+Restart IDE to receive updated environment variables. Then change database connection settings in the `app.properties` file of the `core` module:
 ----
 include::{sourcesdir}/features/project/data_stores/env-app-properties.txt[]
 ----
@@ -29,7 +29,7 @@ Studio support includes the following:
 * *Create database*, *Update database*, *Generate database scripts* and *Generate Model* actions take values from the environment.
 * Debug Tomcat server also takes values from environment.
 
-Detected setting values are displayed read-only in the Data Store Settings dialog, you need to modify them manually in app.properties files when necessary.
+Detected setting values are displayed read-only in the *Data Store Settings* dialog, you need to modify them manually in the `app.properties` file when necessary.
 
 image::features/project/db-conn-env-props.png[align="center"]
 --

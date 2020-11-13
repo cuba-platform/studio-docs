@@ -25,7 +25,7 @@ CUBA Studio subscription unlocks the following premium functionality:
 
 Trial Subscription::
 --
-Trial subscription can be requested once by every new user. It allows developer to evaluate full capabilities of the Studio for 28 days. Click *Get Trial* in the *Subscription Information* dialog to check if you are eligible for the trial:
+Trial subscription can be requested once by every new user. It allows developer to evaluate full capabilities of the Studio for 28 days. Click *Request Trial* in the *Subscription Information* dialog to check if you are eligible for the trial:
 
 image::ui/subscription_trial.png[align="center"]
 --
