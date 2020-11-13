@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../../source
+:sourcesdir: ../../../../../source
 
 [[addons_installing_by_coordinates]]
 ===== Installing Add-on by Coordinates

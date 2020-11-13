@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../../source
+:sourcesdir: ../../../../../source
 
 [[addons_updates]]
 ===== Add-ons Updates

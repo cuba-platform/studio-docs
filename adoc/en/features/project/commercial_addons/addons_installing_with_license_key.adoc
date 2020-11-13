@@ -1,0 +1,22 @@
+:sourcesdir: ../../../../../source
+
+[[addons_install_with_license_key]]
+===== Installing Purchased Add-on
+--
+After having purchased the add-on you will receive the license key. It may be the same license key as for Studio Premium, or a separate license key if the Studio is not included into your subscription or if the add-on was purchased separately.
+
+* Open the <<addons_marketplace,Marketplace>> window, e.g. from the main menu: *CUBA* -> *Marketplace*.
+* Find the required add-on and click *Install* next to it.
++
+image::features/project/addon_install_step1.png[align="center"]
++
+* Enter the license key for the add-on in the appearing dialog.
++
+image::features/project/addon_install_step2.png[align="center"]
++
+* Click *Install* in the *Commercial Add-On Installation* dialog.
++
+* Click *Apply* or *Apply & Close* button, and then *Continue* in the confirmation dialog.
+
+After the confirmation Studio will make necessary changes to your project’s build scripts and configuration files, download new libraries and refresh Gradle project configuration.
+--

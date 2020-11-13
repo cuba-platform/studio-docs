@@ -1,4 +1,4 @@
-:sourcesdir: ../../../../../../source
+:sourcesdir: ../../../../../source
 
 [[data_stores_env_vars]]
 ===== Environment variables as connection parameters
@@ -15,20 +15,12 @@ The data store should have *Define JDBC DataSource In* setting set to *Applicati
 
 For example, define environment variables:
 ----
-PG_DB_HOST=127.0.0.1
-PG_DB_NAME=salespg
-PG_DB_USER=admin
-PG_DB_PASSWORD=admin
+include::{sourcesdir}/features/project/data_stores/env-vars.txt[]
 ----
 
 Restart IDE to receive updated environment variables. Then change database connection settings in the app.properties file:
 ----
-cuba.dataSourceProvider=application
-cuba.dataSource.username=${PG_DB_USER}
-cuba.dataSource.password=${PG_DB_PASSWORD}
-cuba.dataSource.dbName=${PG_DB_NAME}
-cuba.dataSource.host=${PG_DB_HOST}
-cuba.dataSource.port=
+include::{sourcesdir}/features/project/data_stores/env-app-properties.txt[]
 ----
 
 Studio support includes the following:

@@ -1,0 +1,19 @@
+:sourcesdir: ../../../../../source
+
+[[commercial_addon_installation]]
+==== Commercial Add-on Installation
+--
+Using commercial CUBA add-ons requires you to have an add-on subscription. However, for the purpose of evaluation you can you install a trial version of the particular add-on (available for 30 days).
+
+Below are described the following installation scenarios:
+
+* <<addons_install_trial,Installing add-on trial>>.
+* <<addons_install_with_license_key,Automated installation>> of the purchased add-on.
+* <<addons_install_manually,Manual installation>> of the purchased add-on.
+--
+
+include::commercial_addons/addons_installing_trial.adoc[]
+
+include::commercial_addons/addons_installing_with_license_key.adoc[]
+
+include::commercial_addons/addons_installing_manually.adoc[]

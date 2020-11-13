@@ -9,6 +9,8 @@ include::project/project_properties.adoc[]
 
 include::project/addons.adoc[]
 
+include::project/commercial_addons.adoc[]
+
 include::project/modules.adoc[]
 
 include::project/data_stores.adoc[]

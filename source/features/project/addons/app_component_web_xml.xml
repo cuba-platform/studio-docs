@@ -1,0 +1,4 @@
+<context-param>
+    <param-name>appComponents</param-name>
+    <param-value>com.haulmont.cuba com.haulmont.addon.maps</param-value>
+</context-param>

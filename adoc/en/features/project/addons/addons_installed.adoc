@@ -1,9 +1,9 @@
-:sourcesdir: ../../../../../../source
+:sourcesdir: ../../../../../source
 
 [[addons_installed]]
 ===== Installed Add-ons
 
-The *Installed* tab displays add-ons that are already connected to current project.
+The *Installed* tab displays add-ons that are already connected to the current project.
 
 image::features/project/addons-installed.png[align="center"]
 

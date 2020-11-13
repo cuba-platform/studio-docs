@@ -1,0 +1,83 @@
+:sourcesdir: ../../../../../source
+
+[[addons_install_manually]]
+===== Manual Add-on Installation
+--
+Use this way of commercial add-on installation if you have any problems with automatic installation, or if you need to build your project from command line (e.g. in continious integration server).
+
+You need a license key which is received after add-on purchase. This key will be used to set up premium repository credentials.
+--
+
+Adding Premium Repository::
+--
+Open `build.gradle` file and add one more repository *as last repository in the list*:
+
+* If the main repository is `repo.cuba-platform.com`, add `++https://repo.cuba-platform.com/content/groups/premium++`
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/nexus_premium_repository.gradle[]
+----
++
+* If the main repository is Bintray, add `++https://cuba-platform.bintray.com/premium++`
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/bintray_premium_repository.gradle[]
+----
+--
+
+Providing Repository Credentials::
+--
+Your license key consists of two parts: the first part before the dash is a repository user name, the part after the dash is a password. For example, if your key is `111111222222-abcdefabcdef`, then the user name is `111111222222` and the password is `abcdefabcdef`. In case of Bintray, the user name must be followed by `@cuba-platform`.
+
+You can provide the credentials in one of the following ways:
+
+* The recommended way is to create a `~/.gradle/gradle.properties` file in your user home directory (e.g. `C:\users\john\.gradle\gradle.properties` on Windows or `/Users/helen/.gradle/gradle.properties` on Mac). Then open this file and set properties in it:
++
+[source]
+----
+include::{sourcesdir}/features/project/addons/premium_repo_creds.txt[]
+----
++
+* Alternatively, you can specify the credentials in the `CUBA_PREMIUM_USER` and `CUBA_PREMIUM_PASSWORD` environment variables.
+* When you run Gradle tasks from the command line (e.g. during Continious Integration), you can also pass the properties as command-line arguments with the `-P` prefix, for example:
++
+[source]
+----
+gradlew assemble -PpremiumRepoUser=111111222222 -PpremiumRepoPass=abcdefabcdef
+----
+
+[TIP]
+====
+The `~/.gradle/gradle.properties` file can be opened for editing from the IDE by invoking the main menu action: *CUBA* -> *Advanced* -> *Edit Gradle Properties*.
+====
+--
+
+Adding Component::
+--
+. In the `build.gradle` file specify the component artifact coordinates in the dependencies section as follows:
++
+[source]
+----
+com.haulmont.addon.<addon-name>:<addon-name>-global:<addon-version>
+----
++
+For example:
++
+[source,java]
+----
+include::{sourcesdir}/features/project/addons/app_component_dep.gradle[]
+----
++
+. Specify the add-on identifier (e.g. `com.haulmont.addon.maps`) in the `web.xml` files of the `core`, `web` (and `portal` if it exists) modules in the `appComponents` context parameter. For example:
++
+[source,xml]
+----
+include::{sourcesdir}/features/project/addons/app_component_web_xml.xml[]
+----
++
+. If you run Gradle tasks from the command line run `gradlew assemble`.
+
+The add-on will be included in your project.
+--

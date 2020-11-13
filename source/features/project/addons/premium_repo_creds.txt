@@ -1,0 +1,3 @@
+premiumRepoUser=111111222222
+bintrayPremiumRepoUser=111111222222@cuba-platform
+premiumRepoPass=abcdefabcdef
