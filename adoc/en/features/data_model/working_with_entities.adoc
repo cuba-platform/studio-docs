@@ -64,7 +64,17 @@ Another *Add to Screens* button with similar functionality is located in the *De
 Creating the instance name::
 +
 --
-An entity that can be used as a reference attribute of another entity (for example `Customer` can be an attribute of `Order`) requires a pattern to generate the meaningful name of an instance. This pattern is defined by the {main_man_url}/entity_class_annotations.html#namePattern_annotation[@NamePattern] annotation on the entity class. It can be created in Studio if you position the cursor on the class name, click Alt+Enter (Option+Enter) and select *Add name pattern* (this item is shown only if the entity has no `@NamePattern` annotation):
+An entity that can be used as a reference attribute of another entity (for example `Customer` can be an attribute of `Order`) requires a pattern to generate the meaningful name of an instance. This pattern is defined by the {main_man_url}/entity_class_annotations.html#namePattern_annotation[@NamePattern] annotation on the entity class.
+
+If you are using the Entity Designer to edit the entity, the instance name can be set up using two different ways:
+
+* Using the visual constructor. It can be opened by pressing the pencil button in the *Instance name* field:
++
+image::features/data_model/entity_designer_instance_name.png[align="center"]
++
+* Automatically. The Entity Designer automatically assigns instance name when attribute with one of the following names is added to the entity: `name`, `title`, `caption`, `label`, `summary`, `description`, `firstName`, `lastName`, `middleName`.
+
+Instance name can also be created from the source code of the entity if you position the cursor on the class name, click `Alt+Enter` (`Option+Enter`) and select *Add name pattern* (this item is shown only if the entity has no `@NamePattern` annotation):
 
 image::features/data_model/create_name_pattern.png[align="center"]
 
