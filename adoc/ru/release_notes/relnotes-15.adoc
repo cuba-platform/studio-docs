@@ -43,6 +43,7 @@ image::release_notes/v-15-app-component-inspection.png[align="center"]
 
 . Прочие небольшие улучшения и исправления:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.1[Studio 15.1 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.0[Studio 15.0 Resolved Issues\]]
 
 --
