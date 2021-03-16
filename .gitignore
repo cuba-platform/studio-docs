@@ -8,3 +8,4 @@ deploy/*
 out
 .shelf/
 .vscode/
+.DS_Store
