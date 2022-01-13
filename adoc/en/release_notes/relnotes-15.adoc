@@ -43,6 +43,7 @@ image::release_notes/v-15-app-component-inspection.png[align="center"]
 
 . Numerous small improvements and bug fixes:
 
+** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.8[Studio 15.8 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.7[Studio 15.7 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.6[Studio 15.6 Resolved Issues\]]
 ** pass:macros[https://youtrack.cuba-platform.com/issues/STUDIO?q=Fixed%20in%20builds:%2015.4[Studio 15.4 Resolved Issues\]]
